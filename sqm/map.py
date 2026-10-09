@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 
 from sqm.model import QualityModel
-from sqm.store import Level
+from sqm.store import Level, trim_cache
 
 _worker = {}
 
@@ -97,6 +97,7 @@ def main():
                 details.append({"origin_zyx": list(origin), "quality": q, **values})
             if n % 100 == 0:
                 print(f"{n + 1}/{len(origins)}", flush=True)
+                trim_cache()
     args.out.mkdir(parents=True, exist_ok=True)
     level0_step = step * 2**args.level
     level0_origin = [(a[0] + args.block / 2) * 2**args.level if len(a) else 0 for a in axes]

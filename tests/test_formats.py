@@ -45,3 +45,18 @@ def test_level_reads_across_chunk_borders(tmp_path, monkeypatch):
     block, start = level.read((5, 6, 7), (17, 18, 19))
     np.testing.assert_array_equal(block, data[5:17, 6:18, 7:19])
     assert start == [5, 6, 7]
+
+
+def test_cache_trims_when_disk_is_nearly_full(tmp_path, monkeypatch):
+    import shutil
+    import sqm.store as store
+    monkeypatch.setattr(store, "CACHE_ROOT", tmp_path)
+    monkeypatch.setattr(store, "CACHE_LIMIT_BYTES", 10**12)
+    monkeypatch.setattr(store, "MIN_FREE_BYTES", 2500)
+    chunks = tmp_path / "chunks"
+    chunks.mkdir()
+    for i in range(5):
+        (chunks / f"c{i}").write_bytes(b"x" * 1000)
+    monkeypatch.setattr(shutil, "disk_usage", lambda path: shutil._ntuple_diskusage(10**9, 10**9, 0))
+    store.trim_cache()
+    assert len(list(chunks.iterdir())) == 2

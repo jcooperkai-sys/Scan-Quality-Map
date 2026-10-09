@@ -10,6 +10,8 @@ import requests
 
 CACHE_ROOT = Path(os.environ.get("SQM_CACHE", Path.home() / ".cache" / "sqm"))
 CACHE_LIMIT_BYTES = int(float(os.environ.get("SQM_CACHE_GB", "5")) * 1024**3)
+MIN_FREE_BYTES = int(float(os.environ.get("SQM_MIN_FREE_GB", "3")) * 1024**3)
+_writes = [0]
 
 _session = requests.Session()
 _session.mount("https://", requests.adapters.HTTPAdapter(pool_connections=16, pool_maxsize=16))
@@ -41,6 +43,9 @@ def fetch(url):
         response.raise_for_status()
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.parent / f"{path.name}.{os.getpid()}.{threading.get_ident()}.part"
+    _writes[0] += 1
+    if _writes[0] % 50 == 0:
+        trim_cache()
     tmp.write_bytes(response.content)
     try:
         tmp.replace(path)
@@ -50,6 +55,7 @@ def fetch(url):
 
 
 def trim_cache():
+    (CACHE_ROOT / "chunks").mkdir(parents=True, exist_ok=True)
     with _lock:
         files = []
         for p in (CACHE_ROOT / "chunks").glob("*"):
@@ -68,9 +74,12 @@ def trim_cache():
             except OSError:
                 sizes[p] = 0
         total = sum(sizes.values())
+        import shutil
+        free = shutil.disk_usage(CACHE_ROOT).free
         for p in files:
-            if total <= CACHE_LIMIT_BYTES:
+            if total <= CACHE_LIMIT_BYTES and free >= MIN_FREE_BYTES:
                 break
+            free += sizes[p]
             total -= sizes[p]
             try:
                 p.unlink(missing_ok=True)

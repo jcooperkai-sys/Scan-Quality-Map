@@ -35,7 +35,10 @@ def scan_for(sample, meta):
                         base = url.rstrip("/")
                     else:
                         continue
-                    candidate = {"volume_id": vid, "voxel_um": voxel, "url": f"{base}/{origin['path'].strip('/')}"}
+                    energy = re.search(r"-([0-9]+)keV", volume.get("long_id", ""))
+                    protocol = f"{voxel} um, {energy.group(1)} keV" if energy else f"{voxel} um"
+                    candidate = {"volume_id": vid, "voxel_um": voxel, "protocol": protocol,
+                                 "url": f"{base}/{origin['path'].strip('/')}"}
                     if best is None or "masked" in candidate["url"] and "masked" not in best["url"]:
                         best = candidate
     return best
@@ -52,7 +55,8 @@ def summarize(sample, scan, out):
     clear = [p for p in profile if p["blocks"] >= 5]
     best = max(clear, key=lambda p: p["median_quality"]) if clear else None
     return {
-        "scroll": sample, "volume_id": scan["volume_id"], "voxel_um": scan["voxel_um"], "blocks": int(len(blocks)),
+        "scroll": sample, "volume_id": scan["volume_id"], "voxel_um": scan["voxel_um"], "protocol": scan.get("protocol", ""),
+        "blocks": int(len(blocks)),
         "median_quality": float(np.median(quality)) if len(blocks) else None,
         "share_clear": float(np.mean(quality >= 0.6)) if len(blocks) else None,
         "share_hazy": float(np.mean(quality < 0.4)) if len(blocks) else None,
@@ -113,12 +117,13 @@ def main():
         print(f"{sample}: {summary['blocks']} blocks, median {summary['median_quality']:.2f}, "
               f"clear {summary['share_clear']:.0%}, hazy {summary['share_hazy']:.0%}", flush=True)
     plot_profiles(summaries, args.out / "atlas_profiles.png")
-    ranked = sorted(summaries, key=lambda s: -(s["median_quality"] or 0))
-    lines = ["| Scroll | Scan | Blocks | Median quality | Clear (>= 0.6) | Hazy (< 0.4) | Clearest band (z) |",
-             "|---|---|---|---|---|---|---|"]
+    ranked = sorted(summaries, key=lambda s: (s.get("protocol", ""), -(s["median_quality"] or 0)))
+    lines = ["Compare scrolls only within the same scan protocol. Across protocols, scores also reflect scan settings.", "",
+             "| Scan protocol | Scroll | Blocks | Median quality | Clear (>= 0.6) | Hazy (< 0.4) | Clearest band (z) | Its median |",
+             "|---|---|---|---|---|---|---|---|"]
     for s in ranked:
-        lines.append(f"| {s['scroll']} | {s['voxel_um']} um | {s['blocks']} | {s['median_quality']:.2f} | {s['share_clear']:.0%} | "
-                     f"{s['share_hazy']:.0%} | {s['best_band_z']} |")
+        lines.append(f"| {s.get('protocol', '')} | {s['scroll']} | {s['blocks']} | {s['median_quality']:.2f} | {s['share_clear']:.0%} | "
+                     f"{s['share_hazy']:.0%} | {s['best_band_z']} | {s['best_band_median']:.2f} |")
     (args.out / "atlas.md").write_text("\n".join(lines) + "\n")
     print("\n".join(lines))
 

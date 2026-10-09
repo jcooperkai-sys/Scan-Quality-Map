@@ -7,7 +7,7 @@ import numpy as np
 
 from sqm import tifxyz
 from sqm.model import QualityModel
-from sqm.store import Level
+from sqm.store import Level, trim_cache
 
 _worker = {}
 
@@ -87,6 +87,7 @@ def main():
                 details.append({"row": r0, "col": c0, "quality": q, **values})
             if i % 50 == 0:
                 print(f"{i + 1}/{len(tasks)}", flush=True)
+                trim_cache()
     quality[~valid] = np.nan
     tifxyz.write_channel(args.out, "quality", quality, meta, points)
     render(quality, valid, args.out / "quality.png")
