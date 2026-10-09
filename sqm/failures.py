@@ -68,7 +68,7 @@ def main():
     parser.add_argument("--seed", type=int, default=3)
     args = parser.parse_args()
     keys = json.loads(args.chunks.read_text())
-    chunks = [tuple(int(v) for v in k.split(".")) for k in keys]
+    chunks = [tuple(int(v) for v in k.split(".")) for k in keys if len(k.split(".")) == 3 and all(v.isdigit() for v in k.split("."))]
     rng = np.random.default_rng(args.seed)
     order = rng.permutation(len(chunks))
     rows = json.loads(args.out.read_text())["rows"] if args.out.exists() else []

@@ -3,3 +3,6 @@ scipy
 requests
 pillow
 numcodecs
+tifffile
+matplotlib
+zarr>=3

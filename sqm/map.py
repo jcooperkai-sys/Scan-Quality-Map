@@ -55,10 +55,9 @@ def render_slices(grid, out_dir):
     from PIL import Image
     import matplotlib
     matplotlib.use("Agg")
-    from matplotlib import cm
     out_dir.mkdir(parents=True, exist_ok=True)
     for z in range(grid.shape[0]):
-        rgba = cm.get_cmap("RdYlGn")(np.nan_to_num(grid[z], nan=0.0))
+        rgba = matplotlib.colormaps["RdYlGn"](np.nan_to_num(grid[z], nan=0.0))
         rgba[~np.isfinite(grid[z])] = (0.85, 0.85, 0.85, 1.0)
         image = Image.fromarray((rgba[..., :3] * 255).astype(np.uint8))
         scale = max(1, 512 // max(grid.shape[1:]))

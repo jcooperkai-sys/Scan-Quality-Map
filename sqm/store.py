@@ -42,19 +42,40 @@ def fetch(url):
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.parent / f"{path.name}.{os.getpid()}.{threading.get_ident()}.part"
     tmp.write_bytes(response.content)
-    tmp.replace(path)
+    try:
+        tmp.replace(path)
+    except OSError:
+        tmp.unlink(missing_ok=True)
     return response.content
 
 
 def trim_cache():
     with _lock:
-        files = sorted((CACHE_ROOT / "chunks").glob("*"), key=lambda p: p.stat().st_atime)
-        total = sum(p.stat().st_size for p in files)
+        files = []
+        for p in (CACHE_ROOT / "chunks").glob("*"):
+            if p.name.endswith(".part"):
+                continue
+            try:
+                files.append((p.stat().st_atime, p.stat().st_size, p))
+            except OSError:
+                continue
+        files.sort()
+        files = [p for _, _, p in files]
+        sizes = {}
+        for p in files:
+            try:
+                sizes[p] = p.stat().st_size
+            except OSError:
+                sizes[p] = 0
+        total = sum(sizes.values())
         for p in files:
             if total <= CACHE_LIMIT_BYTES:
                 break
-            total -= p.stat().st_size
-            p.unlink(missing_ok=True)
+            total -= sizes[p]
+            try:
+                p.unlink(missing_ok=True)
+            except OSError:
+                pass
         return total
 
 

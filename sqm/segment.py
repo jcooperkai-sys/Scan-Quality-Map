@@ -34,8 +34,7 @@ def render(quality, valid, path):
     from PIL import Image
     import matplotlib
     matplotlib.use("Agg")
-    from matplotlib import cm
-    rgba = cm.get_cmap("RdYlGn")(np.nan_to_num(quality, nan=0.0))
+    rgba = matplotlib.colormaps["RdYlGn"](np.nan_to_num(quality, nan=0.0))
     rgba[~np.isfinite(quality) | ~valid] = (0.85, 0.85, 0.85, 1.0)
     Image.fromarray((rgba[..., :3] * 255).astype(np.uint8)).save(path)
 

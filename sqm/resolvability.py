@@ -16,6 +16,9 @@ DLS_CUBE = 96
 LINES = 7
 MIN_SHEET_SPACING_UM = 30.0
 PROMINENCE = 0.15
+HIT_TOLERANCE_UM = 40.0
+PAIR_WINDOW_UM = 20.0
+PAIR_MAX_GAP_UM = 250.0
 
 _worker = {}
 
@@ -42,12 +45,49 @@ def count_runs(values):
     return int(np.sum(on[1:] & ~on[:-1]))
 
 
-def count_peaks(profile, spacing_voxels):
+def peak_positions(profile, spacing_voxels):
     span = np.percentile(profile, 95) - np.percentile(profile, 5)
     if span <= 0:
-        return 0
+        return np.array([], dtype=float)
     peaks, _ = find_peaks(profile, distance=max(2, spacing_voxels), prominence=PROMINENCE * span)
-    return len(peaks)
+    return peaks.astype(float) / max(len(profile) - 1, 1)
+
+
+def count_peaks(profile, spacing_voxels):
+    return len(peak_positions(profile, spacing_voxels))
+
+
+def pair_separations(profile, centers, length_um):
+    span = np.percentile(profile, 95) - np.percentile(profile, 5)
+    if span <= 0 or len(centers) < 2:
+        return []
+    n = len(profile)
+    window = max(1, int(round(PAIR_WINDOW_UM / length_um * (n - 1))))
+    results = []
+    for a, b in zip(centers[:-1], centers[1:]):
+        if (b - a) * length_um > PAIR_MAX_GAP_UM:
+            continue
+        ia, ib = int(round(a * (n - 1))), int(round(b * (n - 1)))
+        if ib - ia < 2:
+            results.append(False)
+            continue
+        la, ha = max(0, ia - window), min(n, ia + window + 1)
+        lb, hb = max(0, ib - window), min(n, ib + window + 1)
+        pa = la + int(np.argmax(profile[la:ha]))
+        pb = lb + int(np.argmax(profile[lb:hb]))
+        if pb - pa < 2:
+            results.append(False)
+            continue
+        valley = profile[pa + 1:pb].min()
+        results.append(bool(min(profile[pa], profile[pb]) - valley >= PROMINENCE * span))
+    return results
+
+
+def run_centers(values):
+    on = np.concatenate([[False], values, [False]]).astype(int)
+    starts = np.nonzero(np.diff(on) == 1)[0]
+    stops = np.nonzero(np.diff(on) == -1)[0]
+    return (starts + stops - 1) / 2.0 / max(len(values) - 1, 1)
 
 
 def measure(chunk):
@@ -85,7 +125,7 @@ def measure(chunk):
     dls_smooth = ndimage.gaussian_filter(dls_block.astype(np.float32), 0.7)
     esrf_smooth = ndimage.gaussian_filter(raw.astype(np.float32), 0.7)
 
-    truth, dls_seen, esrf_seen = [], [], []
+    truth, dls_seen, esrf_seen, hits, pairs, esrf_pairs = [], [], [], [], [], []
     for a in offsets:
         for b in offsets:
             line = center + a * u + b * v
@@ -109,7 +149,17 @@ def measure(chunk):
             dls_line = ndimage.map_coordinates(dls_smooth, dense.T, order=1, mode="nearest")
             truth.append(sheets)
             esrf_seen.append(count_peaks(esrf_line, int(round(MIN_SHEET_SPACING_UM / (ESRF_UM * 0.5)))))
-            dls_seen.append(count_peaks(dls_line, int(round(MIN_SHEET_SPACING_UM / DLS_UM))))
+            dls_peaks = peak_positions(dls_line, int(round(MIN_SHEET_SPACING_UM / DLS_UM)))
+            dls_seen.append(len(dls_peaks))
+            mask = (label_line > 0) if unlabeled is None else ((label_line > 0) & (label_line != unlabeled))
+            centers = run_centers(mask)
+            pairs += pair_separations(dls_line, centers, length_um)
+            esrf_pairs += pair_separations(esrf_line, centers, length_um)
+            if len(dls_peaks):
+                gaps = np.abs(centers[:, None] - dls_peaks[None, :]).min(axis=1) * length_um
+                hits.append(float(np.mean(gaps <= HIT_TOLERANCE_UM)))
+            else:
+                hits.append(0.0)
     if len(truth) < 5:
         return None
     truth, dls_seen, esrf_seen = map(np.array, (truth, dls_seen, esrf_seen))
@@ -128,6 +178,10 @@ def measure(chunk):
         "hi_sheets": float(np.mean(esrf_seen)),
         "label_sheets": float(np.mean(truth)),
         "dls_vs_hi": float(np.mean(np.minimum(dls_seen, np.maximum(esrf_seen, 1)) / np.maximum(esrf_seen, 1))),
+        "dls_hit_rate": float(np.mean(hits)),
+        "pairs": len(pairs),
+        "dls_pair_separation": float(np.mean(pairs)) if pairs else float("nan"),
+        "esrf_pair_separation": float(np.mean(esrf_pairs)) if esrf_pairs else float("nan"),
         **{f"dls_{k}": val for k, val in dls_quality.items()},
     }
 
@@ -142,7 +196,7 @@ def main():
     parser.add_argument("--scroll", default="paris4", choices=sorted(sources.SCROLLS))
     args = parser.parse_args()
     keys = json.loads(args.chunks.read_text())
-    chunks = [tuple(int(v) for v in k.split(".")) for k in keys]
+    chunks = [tuple(int(v) for v in k.split(".")) for k in keys if len(k.split(".")) == 3 and all(v.isdigit() for v in k.split("."))]
     order = np.random.default_rng(args.seed).permutation(len(chunks))
     rows = json.loads(args.out.read_text())["rows"] if args.out.exists() else []
     seen = {tuple(r["chunk"]) for r in rows}

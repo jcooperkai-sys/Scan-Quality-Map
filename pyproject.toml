@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scan-quality-map"
+version = "0.1.0"
+description = "Maps where Herculaneum scroll CT scans can still separate papyrus layers, and where haze hides them."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy", "requests", "pillow", "numcodecs", "tifffile", "matplotlib", "zarr>=3"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+sqm = "sqm.cli:main"
+
+[tool.setuptools]
+packages = ["sqm"]
+
+[tool.setuptools.package-data]
+sqm = ["model.json"]
