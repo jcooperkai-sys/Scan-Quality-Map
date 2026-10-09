@@ -148,6 +148,10 @@ Coordinates are level 0 voxels of the listed volume, as x, y, z (the order VC3D 
 | PHerc0257 | 9.362 um, 113 keV | 0.23 | 5040, 5808, 13488 | 0.79 | 4272, 4272, 12720 | 0.78 | 4656, 2736, 12720 | 0.72 |
 | PHerc0125 | 9.362 um, 113 keV | 0.21 | 5040, 2736, 18864 | 0.79 | 6576, 5040, 18096 | 0.75 | 5808, 3504, 17712 | 0.68 |
 
+### Case note: PHerc. 0826
+
+In August 2026, Lutfiya Miller and Chris Müller ran the published First Letters workflow on PHerc. 0826, slices 10,000 to 11,000, and reported no ink in that window (github.com/millerandmuller/first-light-pherc0826). In the atlas map of PHerc. 0826, that window has a median quality of 0.63, at the 73rd percentile of the scroll and next to its clearest band (z 9216 to 9984, median 0.70). The scan resolves the layers there about as well as anywhere in this scroll, so scan quality was probably not what limited that attempt.
+
 ## Limits
 
 - SQM measures whether the scan resolves the layers. Inside the 2.4 um Paris 4 scan it does not predict where surface prediction models disagree with hand labels: held out AUC 0.53 for the recto model and 0.54 for the m7 model, which is chance level.
