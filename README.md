@@ -2,7 +2,7 @@
 
 SQM shows where a Herculaneum scroll CT scan can still separate the papyrus layers, and where haze hides them. It scores small blocks of a scan from 0 (hazy) to 1 (clear) and writes the result as an OME-Zarr map, as an extra channel on a tifxyz segment, or as an image you can lay over a segment render.
 
-It is built for scans in the 8 to 9.4 um range. Many eligible scrolls only have scans at that resolution, and the First Letters prize for PHerc. 343 (October 2026) was won on an 8.64 um scan.
+It is built for scans in the 8 to 9.4 um range. All 22 scrolls still eligible for a First Letters prize have a scan at 8.64 or 9.362 um, 20 of them have nothing finer, and the First Letters prize for PHerc. 343 (October 2026) was won on an 8.64 um scan.
 
 ## What it answers
 
