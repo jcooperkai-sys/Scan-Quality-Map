@@ -81,12 +81,46 @@ Every number below is produced by the scripts in this repository (see Reproduce)
 
 Both scans resolve almost all of the labelled sheets (medians near 100%), because annotators tend to label where the papyrus is clear. That leaves little haze to find in these tests, so they are weaker than the Paris 4 test.
 
+## Atlas of the First Letters scrolls
+
+Every scroll still eligible for a First Letters prize has an 8.64 um or 9.362 um scan, and 20 of the 22 have nothing finer. `sqm atlas` mapped all 22 on a coarse grid (one block every 6.6 mm, about 12,500 blocks in total). The table ranks scrolls within each scan protocol and gives the height band where each scroll's scan is clearest. Height profiles for every scroll: `docs/atlas_profiles.png`. Raw numbers: `docs/atlas.json`.
+
+Compare scrolls only within the same scan protocol. Across protocols, scores also reflect scan settings.
+
+| Scan protocol | Scroll | Blocks | Median quality | Clear (>= 0.6) | Hazy (< 0.4) | Clearest band (z) | Its median |
+|---|---|---|---|---|---|---|---|
+| 8.64 um, 116 keV | PHerc0175A | 565 | 0.51 | 37% | 38% | 7680 | 0.64 |
+| 8.64 um, 116 keV | PHerc0343 | 712 | 0.35 | 24% | 55% | 12288 | 0.55 |
+| 8.64 um, 116 keV | PHerc0306B | 633 | 0.31 | 16% | 62% | 9216 | 0.44 |
+| 8.64 um, 116 keV | PHerc0483B | 495 | 0.30 | 13% | 63% | 9984 | 0.48 |
+| 8.64 um, 116 keV | PHerc0800 | 1352 | 0.28 | 14% | 64% | 3072 | 0.52 |
+| 8.64 um, 116 keV | PHerc0175B | 993 | 0.28 | 16% | 63% | 14592 | 0.56 |
+| 8.64 um, 116 keV | PHerc0483A | 541 | 0.18 | 10% | 75% | 13056 | 0.36 |
+| 8.64 um, 116 keV | PHerc1218 | 522 | 0.17 | 13% | 73% | 7680 | 0.48 |
+| 8.64 um, 116 keV | PHerc0490A | 631 | 0.16 | 10% | 75% | 5376 | 0.35 |
+| 8.64 um, 116 keV | PHerc0490B | 428 | 0.11 | 6% | 85% | 2304 | 0.25 |
+| 8.64 um, 116 keV | PHerc0268 | 1491 | 0.09 | 5% | 86% | 14592 | 0.31 |
+| 9.362 um, 113 keV | PHerc0358 | 484 | 0.59 | 49% | 33% | 9216 | 0.74 |
+| 9.362 um, 113 keV | PHerc0813 | 568 | 0.56 | 46% | 37% | 12288 | 0.69 |
+| 9.362 um, 113 keV | PHerc0826 | 431 | 0.47 | 33% | 43% | 9216 | 0.70 |
+| 9.362 um, 113 keV | PHerc0191 | 764 | 0.43 | 33% | 46% | 15360 | 0.63 |
+| 9.362 um, 113 keV | PHerc0211 | 521 | 0.40 | 30% | 50% | 9216 | 0.66 |
+| 9.362 um, 113 keV | PHerc1203 | 533 | 0.37 | 21% | 53% | 12288 | 0.55 |
+| 9.362 um, 113 keV | PHerc1545 | 475 | 0.35 | 27% | 55% | 15360 | 0.56 |
+| 9.362 um, 113 keV | PHerc0846B | 382 | 0.25 | 17% | 64% | 11520 | 0.48 |
+| 9.362 um, 113 keV | PHerc0846A | 396 | 0.18 | 15% | 69% | 3072 | 0.60 |
+| 9.362 um, 113 keV | PHerc0257 | 522 | 0.15 | 10% | 77% | 13056 | 0.29 |
+| 9.362 um, 113 keV | PHerc0125 | 676 | 0.13 | 8% | 83% | 1536 | 0.25 |
+
+Among the 8.64 um scrolls, PHerc. 0343, where the first letters were read in October 2026, ranks second of eleven.
+
 ## Limits
 
 - SQM measures whether the scan resolves the layers. Inside the 2.4 um Paris 4 scan it does not predict where surface prediction models disagree with hand labels: held out AUC 0.53 for the recto model and 0.54 for the m7 model, which is chance level.
 - The model was fitted on one scan (Paris 4 at 7.91 um). Scores on very different scanners or energies should be read as a ranking within that scan.
 - On the PHerc. 343 First Letters segment, patches with letters score a median of 0.69 against 0.64 for the rest of the segment, and the segment's blocks in the band map score a median of 0.63 against 0.51 for the whole band. This is one example, chosen after the fact, and is shown as an illustration only.
-- Block size sets the resolution of the map, about 0.8 mm per block.
+- Block size sets the resolution of the map, about 0.8 mm per block. The atlas uses a coarser grid (6.6 mm) to cover whole scrolls.
+- Scores depend partly on scan settings, so compare scrolls only within the same scan protocol.
 
 ## Reproduce
 

@@ -58,4 +58,5 @@ sqm("regions", "--segment", OUT / "segment_pherc343_letters", "--patch", "16",
 sqm("map", "--volume", PHERC343, "--voxel-um", "8.64", "--level", "0", "--block", "96", "--step", "384",
     "--region", "9472:11008,0:8595,0:8595", "--workers", WORKERS, "--out", OUT / "map_pherc343_band")
 sqm("regions", "--map", OUT / "map_pherc343_band" / "blocks.json", "--mesh", f"{LETTERS}/outputs/concat_w047-w048_R5B2_z9500-11000.tifxyz")
+sqm("atlas", "--out", OUT / "atlas", "--workers", WORKERS)
 print(f"done: results in {OUT}")

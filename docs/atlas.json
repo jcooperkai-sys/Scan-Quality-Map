@@ -1,0 +1,2675 @@
+[
+  {
+    "scroll": "PHerc0125",
+    "volume_id": "20250821151825",
+    "voxel_um": 9.362,
+    "protocol": "9.362 um, 113 keV",
+    "blocks": 676,
+    "median_quality": 0.12652317462668816,
+    "share_clear": 0.07692307692307693,
+    "share_hazy": 0.8328402366863905,
+    "best_band_z": 1536,
+    "best_band_median": 0.25276622295883083,
+    "profile": [
+      {
+        "z": 768,
+        "blocks": 12,
+        "median_quality": 1.1839129812994387e-05
+      },
+      {
+        "z": 1536,
+        "blocks": 5,
+        "median_quality": 0.25276622295883083
+      },
+      {
+        "z": 2304,
+        "blocks": 28,
+        "median_quality": 0.09030588445282015
+      },
+      {
+        "z": 3072,
+        "blocks": 35,
+        "median_quality": 0.16837495889513665
+      },
+      {
+        "z": 3840,
+        "blocks": 33,
+        "median_quality": 0.18453324870137958
+      },
+      {
+        "z": 4608,
+        "blocks": 33,
+        "median_quality": 0.1315320002464977
+      },
+      {
+        "z": 5376,
+        "blocks": 32,
+        "median_quality": 0.18065605270380958
+      },
+      {
+        "z": 6144,
+        "blocks": 29,
+        "median_quality": 0.15482174995483958
+      },
+      {
+        "z": 6912,
+        "blocks": 29,
+        "median_quality": 0.10103671309389671
+      },
+      {
+        "z": 7680,
+        "blocks": 28,
+        "median_quality": 0.04437670675640519
+      },
+      {
+        "z": 8448,
+        "blocks": 28,
+        "median_quality": 0.10865763698416964
+      },
+      {
+        "z": 9216,
+        "blocks": 27,
+        "median_quality": 0.09688355472363903
+      },
+      {
+        "z": 9984,
+        "blocks": 25,
+        "median_quality": 0.0680884194830338
+      },
+      {
+        "z": 10752,
+        "blocks": 23,
+        "median_quality": 0.04527934307948875
+      },
+      {
+        "z": 11520,
+        "blocks": 23,
+        "median_quality": 0.10543689050317616
+      },
+      {
+        "z": 12288,
+        "blocks": 25,
+        "median_quality": 0.08491649443550764
+      },
+      {
+        "z": 13056,
+        "blocks": 27,
+        "median_quality": 0.09298496010623403
+      },
+      {
+        "z": 13824,
+        "blocks": 26,
+        "median_quality": 0.12948871345984317
+      },
+      {
+        "z": 14592,
+        "blocks": 28,
+        "median_quality": 0.1685785343720154
+      },
+      {
+        "z": 15360,
+        "blocks": 24,
+        "median_quality": 0.12815169446753602
+      },
+      {
+        "z": 16128,
+        "blocks": 25,
+        "median_quality": 0.24405200198742028
+      },
+      {
+        "z": 16896,
+        "blocks": 24,
+        "median_quality": 0.12788610480829432
+      },
+      {
+        "z": 17664,
+        "blocks": 24,
+        "median_quality": 0.11536555593463757
+      },
+      {
+        "z": 18432,
+        "blocks": 22,
+        "median_quality": 0.24684543537622278
+      },
+      {
+        "z": 19200,
+        "blocks": 26,
+        "median_quality": 0.1455974702384126
+      },
+      {
+        "z": 19968,
+        "blocks": 30,
+        "median_quality": 0.21665690137679752
+      },
+      {
+        "z": 20736,
+        "blocks": 5,
+        "median_quality": 0.15520085594472338
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0175A",
+    "volume_id": "20250521115057",
+    "voxel_um": 8.64,
+    "protocol": "8.64 um, 116 keV",
+    "blocks": 565,
+    "median_quality": 0.505628616966481,
+    "share_clear": 0.36991150442477877,
+    "share_hazy": 0.3769911504424779,
+    "best_band_z": 7680,
+    "best_band_median": 0.6390348847941526,
+    "profile": [
+      {
+        "z": 0,
+        "blocks": 6,
+        "median_quality": 0.1116756456463977
+      },
+      {
+        "z": 768,
+        "blocks": 1,
+        "median_quality": 0.32540823409375746
+      },
+      {
+        "z": 1536,
+        "blocks": 17,
+        "median_quality": 0.2850403969742567
+      },
+      {
+        "z": 2304,
+        "blocks": 39,
+        "median_quality": 0.25602425919313215
+      },
+      {
+        "z": 3072,
+        "blocks": 40,
+        "median_quality": 0.3241276654095142
+      },
+      {
+        "z": 3840,
+        "blocks": 39,
+        "median_quality": 0.5008776304923649
+      },
+      {
+        "z": 4608,
+        "blocks": 43,
+        "median_quality": 0.53851732583601
+      },
+      {
+        "z": 5376,
+        "blocks": 43,
+        "median_quality": 0.5528029623618586
+      },
+      {
+        "z": 6144,
+        "blocks": 44,
+        "median_quality": 0.5663753591843261
+      },
+      {
+        "z": 6912,
+        "blocks": 45,
+        "median_quality": 0.6023104658079893
+      },
+      {
+        "z": 7680,
+        "blocks": 45,
+        "median_quality": 0.6390348847941526
+      },
+      {
+        "z": 8448,
+        "blocks": 46,
+        "median_quality": 0.5938820874290985
+      },
+      {
+        "z": 9216,
+        "blocks": 51,
+        "median_quality": 0.5799782655902441
+      },
+      {
+        "z": 9984,
+        "blocks": 50,
+        "median_quality": 0.4521491361137199
+      },
+      {
+        "z": 10752,
+        "blocks": 44,
+        "median_quality": 0.40063978166822656
+      },
+      {
+        "z": 11520,
+        "blocks": 9,
+        "median_quality": 0.3097083061756434
+      },
+      {
+        "z": 12288,
+        "blocks": 3,
+        "median_quality": 0.3588909542080585
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0175B",
+    "volume_id": "20250521125822",
+    "voxel_um": 8.64,
+    "protocol": "8.64 um, 116 keV",
+    "blocks": 993,
+    "median_quality": 0.27595943781449034,
+    "share_clear": 0.16012084592145015,
+    "share_hazy": 0.6344410876132931,
+    "best_band_z": 14592,
+    "best_band_median": 0.5644427962464871,
+    "profile": [
+      {
+        "z": 0,
+        "blocks": 4,
+        "median_quality": 0.07496021061907135
+      },
+      {
+        "z": 768,
+        "blocks": 2,
+        "median_quality": 0.16943452607511592
+      },
+      {
+        "z": 1536,
+        "blocks": 44,
+        "median_quality": 0.17411726425271482
+      },
+      {
+        "z": 2304,
+        "blocks": 70,
+        "median_quality": 0.14147143585287753
+      },
+      {
+        "z": 3072,
+        "blocks": 70,
+        "median_quality": 0.21709908605301353
+      },
+      {
+        "z": 3840,
+        "blocks": 70,
+        "median_quality": 0.28555065499397514
+      },
+      {
+        "z": 4608,
+        "blocks": 65,
+        "median_quality": 0.39799257731195786
+      },
+      {
+        "z": 5376,
+        "blocks": 63,
+        "median_quality": 0.3051789772055135
+      },
+      {
+        "z": 6144,
+        "blocks": 62,
+        "median_quality": 0.3617637908467559
+      },
+      {
+        "z": 6912,
+        "blocks": 60,
+        "median_quality": 0.28181035107544417
+      },
+      {
+        "z": 7680,
+        "blocks": 60,
+        "median_quality": 0.2830410355094743
+      },
+      {
+        "z": 8448,
+        "blocks": 62,
+        "median_quality": 0.2555758788723851
+      },
+      {
+        "z": 9216,
+        "blocks": 62,
+        "median_quality": 0.22469266659664652
+      },
+      {
+        "z": 9984,
+        "blocks": 56,
+        "median_quality": 0.35865454399883356
+      },
+      {
+        "z": 10752,
+        "blocks": 62,
+        "median_quality": 0.3173381883962182
+      },
+      {
+        "z": 11520,
+        "blocks": 55,
+        "median_quality": 0.35011678617116543
+      },
+      {
+        "z": 12288,
+        "blocks": 50,
+        "median_quality": 0.30929885003595947
+      },
+      {
+        "z": 13056,
+        "blocks": 41,
+        "median_quality": 0.2661550212529301
+      },
+      {
+        "z": 13824,
+        "blocks": 25,
+        "median_quality": 0.27595943781449034
+      },
+      {
+        "z": 14592,
+        "blocks": 6,
+        "median_quality": 0.5644427962464871
+      },
+      {
+        "z": 15360,
+        "blocks": 4,
+        "median_quality": 0.6033636776790637
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0191",
+    "volume_id": "20250821151635",
+    "voxel_um": 9.362,
+    "protocol": "9.362 um, 113 keV",
+    "blocks": 764,
+    "median_quality": 0.430858525233207,
+    "share_clear": 0.32722513089005234,
+    "share_hazy": 0.4620418848167539,
+    "best_band_z": 15360,
+    "best_band_median": 0.634500181289106,
+    "profile": [
+      {
+        "z": 768,
+        "blocks": 12,
+        "median_quality": 1.1839129812994387e-05
+      },
+      {
+        "z": 1536,
+        "blocks": 7,
+        "median_quality": 1.1839129812994387e-05
+      },
+      {
+        "z": 2304,
+        "blocks": 12,
+        "median_quality": 0.4706855957441519
+      },
+      {
+        "z": 3072,
+        "blocks": 26,
+        "median_quality": 0.40054551646069947
+      },
+      {
+        "z": 3840,
+        "blocks": 30,
+        "median_quality": 0.5289967573511021
+      },
+      {
+        "z": 4608,
+        "blocks": 35,
+        "median_quality": 0.5434181947063395
+      },
+      {
+        "z": 5376,
+        "blocks": 36,
+        "median_quality": 0.44657129637389104
+      },
+      {
+        "z": 6144,
+        "blocks": 36,
+        "median_quality": 0.4810930949063464
+      },
+      {
+        "z": 6912,
+        "blocks": 40,
+        "median_quality": 0.36580546586467855
+      },
+      {
+        "z": 7680,
+        "blocks": 38,
+        "median_quality": 0.5718170096854482
+      },
+      {
+        "z": 8448,
+        "blocks": 38,
+        "median_quality": 0.346472793365622
+      },
+      {
+        "z": 9216,
+        "blocks": 36,
+        "median_quality": 0.389596999615754
+      },
+      {
+        "z": 9984,
+        "blocks": 32,
+        "median_quality": 0.3977642803163462
+      },
+      {
+        "z": 10752,
+        "blocks": 36,
+        "median_quality": 0.40276922322963793
+      },
+      {
+        "z": 11520,
+        "blocks": 35,
+        "median_quality": 0.542773928332223
+      },
+      {
+        "z": 12288,
+        "blocks": 31,
+        "median_quality": 0.46322497955524156
+      },
+      {
+        "z": 13056,
+        "blocks": 34,
+        "median_quality": 0.49997445307137467
+      },
+      {
+        "z": 13824,
+        "blocks": 35,
+        "median_quality": 0.31766868724240216
+      },
+      {
+        "z": 14592,
+        "blocks": 37,
+        "median_quality": 0.4147195328642516
+      },
+      {
+        "z": 15360,
+        "blocks": 40,
+        "median_quality": 0.634500181289106
+      },
+      {
+        "z": 16128,
+        "blocks": 39,
+        "median_quality": 0.3800539815561808
+      },
+      {
+        "z": 16896,
+        "blocks": 40,
+        "median_quality": 0.4869894856089636
+      },
+      {
+        "z": 17664,
+        "blocks": 36,
+        "median_quality": 0.29281159698730086
+      },
+      {
+        "z": 18432,
+        "blocks": 23,
+        "median_quality": 0.4906464521805157
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0211",
+    "volume_id": "20250821151803",
+    "voxel_um": 9.362,
+    "protocol": "9.362 um, 113 keV",
+    "blocks": 521,
+    "median_quality": 0.4023849403548757,
+    "share_clear": 0.29942418426103645,
+    "share_hazy": 0.4952015355086372,
+    "best_band_z": 9216,
+    "best_band_median": 0.6555805183423844,
+    "profile": [
+      {
+        "z": 768,
+        "blocks": 11,
+        "median_quality": 1.1839129812994387e-05
+      },
+      {
+        "z": 1536,
+        "blocks": 6,
+        "median_quality": 0.3248006762483089
+      },
+      {
+        "z": 2304,
+        "blocks": 24,
+        "median_quality": 0.25778079810174115
+      },
+      {
+        "z": 3072,
+        "blocks": 19,
+        "median_quality": 0.45304743171429473
+      },
+      {
+        "z": 3840,
+        "blocks": 23,
+        "median_quality": 0.2838080467294641
+      },
+      {
+        "z": 4608,
+        "blocks": 18,
+        "median_quality": 0.2381278778067387
+      },
+      {
+        "z": 5376,
+        "blocks": 18,
+        "median_quality": 0.5627022349236437
+      },
+      {
+        "z": 6144,
+        "blocks": 17,
+        "median_quality": 0.22759721267531793
+      },
+      {
+        "z": 6912,
+        "blocks": 16,
+        "median_quality": 0.5049252906204018
+      },
+      {
+        "z": 7680,
+        "blocks": 16,
+        "median_quality": 0.5904307067279471
+      },
+      {
+        "z": 8448,
+        "blocks": 18,
+        "median_quality": 0.41683552479479113
+      },
+      {
+        "z": 9216,
+        "blocks": 18,
+        "median_quality": 0.6555805183423844
+      },
+      {
+        "z": 9984,
+        "blocks": 17,
+        "median_quality": 0.5611720466442051
+      },
+      {
+        "z": 10752,
+        "blocks": 16,
+        "median_quality": 0.6215136132412988
+      },
+      {
+        "z": 11520,
+        "blocks": 22,
+        "median_quality": 0.3461191814639687
+      },
+      {
+        "z": 12288,
+        "blocks": 27,
+        "median_quality": 0.475387075456672
+      },
+      {
+        "z": 13056,
+        "blocks": 32,
+        "median_quality": 0.5018384911440444
+      },
+      {
+        "z": 13824,
+        "blocks": 37,
+        "median_quality": 0.48744328435317047
+      },
+      {
+        "z": 14592,
+        "blocks": 34,
+        "median_quality": 0.39760936249643725
+      },
+      {
+        "z": 15360,
+        "blocks": 34,
+        "median_quality": 0.4521700957110062
+      },
+      {
+        "z": 16128,
+        "blocks": 34,
+        "median_quality": 0.40819939170746744
+      },
+      {
+        "z": 16896,
+        "blocks": 27,
+        "median_quality": 0.34458636113663177
+      },
+      {
+        "z": 17664,
+        "blocks": 20,
+        "median_quality": 0.29542906405245517
+      },
+      {
+        "z": 18432,
+        "blocks": 16,
+        "median_quality": 0.38751940353912256
+      },
+      {
+        "z": 19200,
+        "blocks": 1,
+        "median_quality": 0.0368829483133882
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0257",
+    "volume_id": "20250821151750",
+    "voxel_um": 9.362,
+    "protocol": "9.362 um, 113 keV",
+    "blocks": 522,
+    "median_quality": 0.15085574250727704,
+    "share_clear": 0.09961685823754789,
+    "share_hazy": 0.7720306513409961,
+    "best_band_z": 13056,
+    "best_band_median": 0.29233733048506505,
+    "profile": [
+      {
+        "z": 768,
+        "blocks": 7,
+        "median_quality": 1.1839129812994387e-05
+      },
+      {
+        "z": 1536,
+        "blocks": 7,
+        "median_quality": 1.1839129812994387e-05
+      },
+      {
+        "z": 2304,
+        "blocks": 17,
+        "median_quality": 0.04152697005614752
+      },
+      {
+        "z": 3072,
+        "blocks": 29,
+        "median_quality": 0.055009175705135416
+      },
+      {
+        "z": 3840,
+        "blocks": 24,
+        "median_quality": 0.2074030661261031
+      },
+      {
+        "z": 4608,
+        "blocks": 26,
+        "median_quality": 0.28714151056878695
+      },
+      {
+        "z": 5376,
+        "blocks": 26,
+        "median_quality": 0.2391125153690743
+      },
+      {
+        "z": 6144,
+        "blocks": 27,
+        "median_quality": 0.12114946318326658
+      },
+      {
+        "z": 6912,
+        "blocks": 26,
+        "median_quality": 0.1413186743528804
+      },
+      {
+        "z": 7680,
+        "blocks": 26,
+        "median_quality": 0.13451411223688858
+      },
+      {
+        "z": 8448,
+        "blocks": 25,
+        "median_quality": 0.14310563268613277
+      },
+      {
+        "z": 9216,
+        "blocks": 28,
+        "median_quality": 0.27312754675626827
+      },
+      {
+        "z": 9984,
+        "blocks": 24,
+        "median_quality": 0.27165372621765654
+      },
+      {
+        "z": 10752,
+        "blocks": 21,
+        "median_quality": 0.26384641398308156
+      },
+      {
+        "z": 11520,
+        "blocks": 22,
+        "median_quality": 0.1222889668935317
+      },
+      {
+        "z": 12288,
+        "blocks": 25,
+        "median_quality": 0.2035082699636777
+      },
+      {
+        "z": 13056,
+        "blocks": 24,
+        "median_quality": 0.29233733048506505
+      },
+      {
+        "z": 13824,
+        "blocks": 24,
+        "median_quality": 0.14438424740772288
+      },
+      {
+        "z": 14592,
+        "blocks": 23,
+        "median_quality": 0.167873991782915
+      },
+      {
+        "z": 15360,
+        "blocks": 29,
+        "median_quality": 0.15042637548691914
+      },
+      {
+        "z": 16128,
+        "blocks": 27,
+        "median_quality": 0.14965336356066186
+      },
+      {
+        "z": 16896,
+        "blocks": 22,
+        "median_quality": 0.0677812445213993
+      },
+      {
+        "z": 17664,
+        "blocks": 11,
+        "median_quality": 0.1187792029704107
+      },
+      {
+        "z": 18432,
+        "blocks": 2,
+        "median_quality": 0.1694708698690911
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0268",
+    "volume_id": "20251110183117",
+    "voxel_um": 8.64,
+    "protocol": "8.64 um, 116 keV",
+    "blocks": 1491,
+    "median_quality": 0.08834555556857328,
+    "share_clear": 0.05097250167672703,
+    "share_hazy": 0.8611670020120724,
+    "best_band_z": 14592,
+    "best_band_median": 0.31066574041723566,
+    "profile": [
+      {
+        "z": 768,
+        "blocks": 1,
+        "median_quality": 0.8339397507951672
+      },
+      {
+        "z": 1536,
+        "blocks": 25,
+        "median_quality": 0.049640119418233764
+      },
+      {
+        "z": 2304,
+        "blocks": 52,
+        "median_quality": 0.05894441280289739
+      },
+      {
+        "z": 3072,
+        "blocks": 89,
+        "median_quality": 0.09586905701060848
+      },
+      {
+        "z": 3840,
+        "blocks": 110,
+        "median_quality": 0.06594647165355721
+      },
+      {
+        "z": 4608,
+        "blocks": 119,
+        "median_quality": 0.08796719402053677
+      },
+      {
+        "z": 5376,
+        "blocks": 110,
+        "median_quality": 0.05627620359628012
+      },
+      {
+        "z": 6144,
+        "blocks": 104,
+        "median_quality": 0.10593699430046419
+      },
+      {
+        "z": 6912,
+        "blocks": 102,
+        "median_quality": 0.06451605979435895
+      },
+      {
+        "z": 7680,
+        "blocks": 107,
+        "median_quality": 0.05867850586385515
+      },
+      {
+        "z": 8448,
+        "blocks": 112,
+        "median_quality": 0.08694753258338989
+      },
+      {
+        "z": 9216,
+        "blocks": 109,
+        "median_quality": 0.09218334362630247
+      },
+      {
+        "z": 9984,
+        "blocks": 110,
+        "median_quality": 0.10635649993086613
+      },
+      {
+        "z": 10752,
+        "blocks": 116,
+        "median_quality": 0.08067129215099561
+      },
+      {
+        "z": 11520,
+        "blocks": 99,
+        "median_quality": 0.09244127325199297
+      },
+      {
+        "z": 12288,
+        "blocks": 69,
+        "median_quality": 0.15231736916336905
+      },
+      {
+        "z": 13056,
+        "blocks": 38,
+        "median_quality": 0.19214935701355312
+      },
+      {
+        "z": 13824,
+        "blocks": 6,
+        "median_quality": 0.14692219294315073
+      },
+      {
+        "z": 14592,
+        "blocks": 13,
+        "median_quality": 0.31066574041723566
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0306B",
+    "volume_id": "20250521133212",
+    "voxel_um": 8.64,
+    "protocol": "8.64 um, 116 keV",
+    "blocks": 633,
+    "median_quality": 0.3092168071338537,
+    "share_clear": 0.15955766192733017,
+    "share_hazy": 0.6192733017377567,
+    "best_band_z": 9216,
+    "best_band_median": 0.43538666091117817,
+    "profile": [
+      {
+        "z": 0,
+        "blocks": 2,
+        "median_quality": 0.45470521145105064
+      },
+      {
+        "z": 768,
+        "blocks": 4,
+        "median_quality": 0.35571257025140324
+      },
+      {
+        "z": 1536,
+        "blocks": 14,
+        "median_quality": 0.3117802814218077
+      },
+      {
+        "z": 2304,
+        "blocks": 24,
+        "median_quality": 0.4017681144526026
+      },
+      {
+        "z": 3072,
+        "blocks": 40,
+        "median_quality": 0.4163076068272241
+      },
+      {
+        "z": 3840,
+        "blocks": 49,
+        "median_quality": 0.35539754232665194
+      },
+      {
+        "z": 4608,
+        "blocks": 50,
+        "median_quality": 0.36550702458477335
+      },
+      {
+        "z": 5376,
+        "blocks": 50,
+        "median_quality": 0.2993142561159743
+      },
+      {
+        "z": 6144,
+        "blocks": 47,
+        "median_quality": 0.15050953725917138
+      },
+      {
+        "z": 6912,
+        "blocks": 41,
+        "median_quality": 0.35397870170349166
+      },
+      {
+        "z": 7680,
+        "blocks": 38,
+        "median_quality": 0.3258026398139717
+      },
+      {
+        "z": 8448,
+        "blocks": 36,
+        "median_quality": 0.40243517596787387
+      },
+      {
+        "z": 9216,
+        "blocks": 36,
+        "median_quality": 0.43538666091117817
+      },
+      {
+        "z": 9984,
+        "blocks": 38,
+        "median_quality": 0.3143516809595171
+      },
+      {
+        "z": 10752,
+        "blocks": 38,
+        "median_quality": 0.32697279788656375
+      },
+      {
+        "z": 11520,
+        "blocks": 33,
+        "median_quality": 0.20290943232802117
+      },
+      {
+        "z": 12288,
+        "blocks": 36,
+        "median_quality": 0.15689820410244892
+      },
+      {
+        "z": 13056,
+        "blocks": 28,
+        "median_quality": 0.1837199833952204
+      },
+      {
+        "z": 13824,
+        "blocks": 21,
+        "median_quality": 0.1818068635408706
+      },
+      {
+        "z": 14592,
+        "blocks": 6,
+        "median_quality": 0.19644207360846855
+      },
+      {
+        "z": 15360,
+        "blocks": 2,
+        "median_quality": 0.21927115464650557
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0343",
+    "volume_id": "20250521140437",
+    "voxel_um": 8.64,
+    "protocol": "8.64 um, 116 keV",
+    "blocks": 712,
+    "median_quality": 0.3461682342048272,
+    "share_clear": 0.23876404494382023,
+    "share_hazy": 0.5547752808988764,
+    "best_band_z": 12288,
+    "best_band_median": 0.5546270011261913,
+    "profile": [
+      {
+        "z": 0,
+        "blocks": 76,
+        "median_quality": 0.003001751530028262
+      },
+      {
+        "z": 768,
+        "blocks": 2,
+        "median_quality": 0.19705508163678775
+      },
+      {
+        "z": 1536,
+        "blocks": 5,
+        "median_quality": 0.27245908797998664
+      },
+      {
+        "z": 2304,
+        "blocks": 36,
+        "median_quality": 0.2319095950417618
+      },
+      {
+        "z": 3072,
+        "blocks": 33,
+        "median_quality": 0.2532580977956851
+      },
+      {
+        "z": 3840,
+        "blocks": 34,
+        "median_quality": 0.2618402524950073
+      },
+      {
+        "z": 4608,
+        "blocks": 38,
+        "median_quality": 0.34260650465473275
+      },
+      {
+        "z": 5376,
+        "blocks": 29,
+        "median_quality": 0.22874455181764408
+      },
+      {
+        "z": 6144,
+        "blocks": 27,
+        "median_quality": 0.27927141330423455
+      },
+      {
+        "z": 6912,
+        "blocks": 31,
+        "median_quality": 0.29281221373487504
+      },
+      {
+        "z": 7680,
+        "blocks": 31,
+        "median_quality": 0.3047587641990033
+      },
+      {
+        "z": 8448,
+        "blocks": 34,
+        "median_quality": 0.5011947312775662
+      },
+      {
+        "z": 9216,
+        "blocks": 33,
+        "median_quality": 0.45927376743689646
+      },
+      {
+        "z": 9984,
+        "blocks": 36,
+        "median_quality": 0.4734516415868648
+      },
+      {
+        "z": 10752,
+        "blocks": 34,
+        "median_quality": 0.457697547341831
+      },
+      {
+        "z": 11520,
+        "blocks": 31,
+        "median_quality": 0.43261694465143474
+      },
+      {
+        "z": 12288,
+        "blocks": 33,
+        "median_quality": 0.5546270011261913
+      },
+      {
+        "z": 13056,
+        "blocks": 33,
+        "median_quality": 0.4900945293590304
+      },
+      {
+        "z": 13824,
+        "blocks": 36,
+        "median_quality": 0.4045868129313276
+      },
+      {
+        "z": 14592,
+        "blocks": 38,
+        "median_quality": 0.3614366589088368
+      },
+      {
+        "z": 15360,
+        "blocks": 38,
+        "median_quality": 0.4460381317233498
+      },
+      {
+        "z": 16128,
+        "blocks": 20,
+        "median_quality": 0.5082345845208363
+      },
+      {
+        "z": 16896,
+        "blocks": 2,
+        "median_quality": 0.36204649074916334
+      },
+      {
+        "z": 17664,
+        "blocks": 2,
+        "median_quality": 0.057083883022625084
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0358",
+    "volume_id": "20250821151737",
+    "voxel_um": 9.362,
+    "protocol": "9.362 um, 113 keV",
+    "blocks": 484,
+    "median_quality": 0.5902626578414882,
+    "share_clear": 0.48760330578512395,
+    "share_hazy": 0.3305785123966942,
+    "best_band_z": 9216,
+    "best_band_median": 0.7356846355015015,
+    "profile": [
+      {
+        "z": 768,
+        "blocks": 1,
+        "median_quality": 0.25160286365351137
+      },
+      {
+        "z": 1536,
+        "blocks": 16,
+        "median_quality": 0.6401206388207148
+      },
+      {
+        "z": 2304,
+        "blocks": 34,
+        "median_quality": 0.44424052679049
+      },
+      {
+        "z": 3072,
+        "blocks": 32,
+        "median_quality": 0.6018771489003178
+      },
+      {
+        "z": 3840,
+        "blocks": 27,
+        "median_quality": 0.6980995370794079
+      },
+      {
+        "z": 4608,
+        "blocks": 27,
+        "median_quality": 0.5745913686937916
+      },
+      {
+        "z": 5376,
+        "blocks": 31,
+        "median_quality": 0.6809384023854387
+      },
+      {
+        "z": 6144,
+        "blocks": 31,
+        "median_quality": 0.40291075263519877
+      },
+      {
+        "z": 6912,
+        "blocks": 31,
+        "median_quality": 0.3571180854731154
+      },
+      {
+        "z": 7680,
+        "blocks": 30,
+        "median_quality": 0.5256563721837078
+      },
+      {
+        "z": 8448,
+        "blocks": 30,
+        "median_quality": 0.6312991282558666
+      },
+      {
+        "z": 9216,
+        "blocks": 30,
+        "median_quality": 0.7356846355015015
+      },
+      {
+        "z": 9984,
+        "blocks": 33,
+        "median_quality": 0.6725574691134867
+      },
+      {
+        "z": 10752,
+        "blocks": 36,
+        "median_quality": 0.52385857531618
+      },
+      {
+        "z": 11520,
+        "blocks": 30,
+        "median_quality": 0.45750717523148987
+      },
+      {
+        "z": 12288,
+        "blocks": 28,
+        "median_quality": 0.6942791477495377
+      },
+      {
+        "z": 13056,
+        "blocks": 19,
+        "median_quality": 0.6747552615600196
+      },
+      {
+        "z": 13824,
+        "blocks": 13,
+        "median_quality": 0.49518062663027723
+      },
+      {
+        "z": 14592,
+        "blocks": 5,
+        "median_quality": 0.06192035955390352
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0483A",
+    "volume_id": "20250521140913",
+    "voxel_um": 8.64,
+    "protocol": "8.64 um, 116 keV",
+    "blocks": 541,
+    "median_quality": 0.18223868800152607,
+    "share_clear": 0.10166358595194085,
+    "share_hazy": 0.7504621072088724,
+    "best_band_z": 13056,
+    "best_band_median": 0.35926531858622235,
+    "profile": [
+      {
+        "z": 0,
+        "blocks": 1,
+        "median_quality": 0.6149523396379436
+      },
+      {
+        "z": 768,
+        "blocks": 6,
+        "median_quality": 0.09312570592455907
+      },
+      {
+        "z": 1536,
+        "blocks": 25,
+        "median_quality": 0.19532324281484345
+      },
+      {
+        "z": 2304,
+        "blocks": 35,
+        "median_quality": 0.18739654910443185
+      },
+      {
+        "z": 3072,
+        "blocks": 32,
+        "median_quality": 0.2313692673810298
+      },
+      {
+        "z": 3840,
+        "blocks": 31,
+        "median_quality": 0.12438620719343528
+      },
+      {
+        "z": 4608,
+        "blocks": 30,
+        "median_quality": 0.1504434094556401
+      },
+      {
+        "z": 5376,
+        "blocks": 33,
+        "median_quality": 0.15622504435463644
+      },
+      {
+        "z": 6144,
+        "blocks": 28,
+        "median_quality": 0.08103267412325547
+      },
+      {
+        "z": 6912,
+        "blocks": 24,
+        "median_quality": 0.15198388654092326
+      },
+      {
+        "z": 7680,
+        "blocks": 24,
+        "median_quality": 0.1220819955382535
+      },
+      {
+        "z": 8448,
+        "blocks": 28,
+        "median_quality": 0.08901601913896465
+      },
+      {
+        "z": 9216,
+        "blocks": 30,
+        "median_quality": 0.15604632574606023
+      },
+      {
+        "z": 9984,
+        "blocks": 34,
+        "median_quality": 0.17432241921763433
+      },
+      {
+        "z": 10752,
+        "blocks": 40,
+        "median_quality": 0.19942013384084867
+      },
+      {
+        "z": 11520,
+        "blocks": 42,
+        "median_quality": 0.19129511788633602
+      },
+      {
+        "z": 12288,
+        "blocks": 39,
+        "median_quality": 0.33758840573008514
+      },
+      {
+        "z": 13056,
+        "blocks": 34,
+        "median_quality": 0.35926531858622235
+      },
+      {
+        "z": 13824,
+        "blocks": 19,
+        "median_quality": 0.2200078009674794
+      },
+      {
+        "z": 14592,
+        "blocks": 6,
+        "median_quality": 0.27692798280133607
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0483B",
+    "volume_id": "20251124083638",
+    "voxel_um": 8.64,
+    "protocol": "8.64 um, 116 keV",
+    "blocks": 495,
+    "median_quality": 0.30467594872027437,
+    "share_clear": 0.13333333333333333,
+    "share_hazy": 0.6282828282828283,
+    "best_band_z": 9984,
+    "best_band_median": 0.4821846890783647,
+    "profile": [
+      {
+        "z": 1536,
+        "blocks": 8,
+        "median_quality": 0.11820936885793781
+      },
+      {
+        "z": 2304,
+        "blocks": 30,
+        "median_quality": 0.2876465669296587
+      },
+      {
+        "z": 3072,
+        "blocks": 33,
+        "median_quality": 0.236506311574802
+      },
+      {
+        "z": 3840,
+        "blocks": 35,
+        "median_quality": 0.3524687824759026
+      },
+      {
+        "z": 4608,
+        "blocks": 38,
+        "median_quality": 0.22521551115927424
+      },
+      {
+        "z": 5376,
+        "blocks": 41,
+        "median_quality": 0.3168818139019638
+      },
+      {
+        "z": 6144,
+        "blocks": 48,
+        "median_quality": 0.2433318330337736
+      },
+      {
+        "z": 6912,
+        "blocks": 43,
+        "median_quality": 0.31331409692172285
+      },
+      {
+        "z": 7680,
+        "blocks": 48,
+        "median_quality": 0.35998162053669946
+      },
+      {
+        "z": 8448,
+        "blocks": 58,
+        "median_quality": 0.18976168904350788
+      },
+      {
+        "z": 9216,
+        "blocks": 48,
+        "median_quality": 0.3271882029604067
+      },
+      {
+        "z": 9984,
+        "blocks": 37,
+        "median_quality": 0.4821846890783647
+      },
+      {
+        "z": 10752,
+        "blocks": 22,
+        "median_quality": 0.42600474248809195
+      },
+      {
+        "z": 11520,
+        "blocks": 6,
+        "median_quality": 0.3754290907345528
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0490A",
+    "volume_id": "20250521151210",
+    "voxel_um": 8.64,
+    "protocol": "8.64 um, 116 keV",
+    "blocks": 631,
+    "median_quality": 0.1612611222779956,
+    "share_clear": 0.09508716323296355,
+    "share_hazy": 0.7464342313787639,
+    "best_band_z": 5376,
+    "best_band_median": 0.3535976343893277,
+    "profile": [
+      {
+        "z": 0,
+        "blocks": 80,
+        "median_quality": 0.003104584823465784
+      },
+      {
+        "z": 768,
+        "blocks": 3,
+        "median_quality": 0.008924505497746024
+      },
+      {
+        "z": 1536,
+        "blocks": 6,
+        "median_quality": 0.22816649180719803
+      },
+      {
+        "z": 2304,
+        "blocks": 35,
+        "median_quality": 0.053630621888560596
+      },
+      {
+        "z": 3072,
+        "blocks": 53,
+        "median_quality": 0.11678002282617177
+      },
+      {
+        "z": 3840,
+        "blocks": 50,
+        "median_quality": 0.14855063890859982
+      },
+      {
+        "z": 4608,
+        "blocks": 46,
+        "median_quality": 0.17952745554809985
+      },
+      {
+        "z": 5376,
+        "blocks": 44,
+        "median_quality": 0.3535976343893277
+      },
+      {
+        "z": 6144,
+        "blocks": 47,
+        "median_quality": 0.25937515262350724
+      },
+      {
+        "z": 6912,
+        "blocks": 52,
+        "median_quality": 0.27035066198613533
+      },
+      {
+        "z": 7680,
+        "blocks": 55,
+        "median_quality": 0.29424094899860437
+      },
+      {
+        "z": 8448,
+        "blocks": 57,
+        "median_quality": 0.21300710933621314
+      },
+      {
+        "z": 9216,
+        "blocks": 59,
+        "median_quality": 0.3264181475702181
+      },
+      {
+        "z": 9984,
+        "blocks": 39,
+        "median_quality": 0.23914088036729492
+      },
+      {
+        "z": 10752,
+        "blocks": 3,
+        "median_quality": 0.18894498236629118
+      },
+      {
+        "z": 11520,
+        "blocks": 2,
+        "median_quality": 0.11176946002779262
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0490B",
+    "volume_id": "20250521151215",
+    "voxel_um": 8.64,
+    "protocol": "8.64 um, 116 keV",
+    "blocks": 428,
+    "median_quality": 0.1122209523544348,
+    "share_clear": 0.056074766355140186,
+    "share_hazy": 0.8457943925233645,
+    "best_band_z": 2304,
+    "best_band_median": 0.2506097368115878,
+    "profile": [
+      {
+        "z": 0,
+        "blocks": 62,
+        "median_quality": 0.0025411828102308593
+      },
+      {
+        "z": 1536,
+        "blocks": 4,
+        "median_quality": 0.1390994500477386
+      },
+      {
+        "z": 2304,
+        "blocks": 20,
+        "median_quality": 0.2506097368115878
+      },
+      {
+        "z": 3072,
+        "blocks": 37,
+        "median_quality": 0.13330760767601252
+      },
+      {
+        "z": 3840,
+        "blocks": 44,
+        "median_quality": 0.13054922450590403
+      },
+      {
+        "z": 4608,
+        "blocks": 48,
+        "median_quality": 0.13113987173109326
+      },
+      {
+        "z": 5376,
+        "blocks": 51,
+        "median_quality": 0.12829344216584088
+      },
+      {
+        "z": 6144,
+        "blocks": 47,
+        "median_quality": 0.1569451905429385
+      },
+      {
+        "z": 6912,
+        "blocks": 44,
+        "median_quality": 0.1320728928574732
+      },
+      {
+        "z": 7680,
+        "blocks": 37,
+        "median_quality": 0.24259342072916426
+      },
+      {
+        "z": 8448,
+        "blocks": 26,
+        "median_quality": 0.20566231224754805
+      },
+      {
+        "z": 9216,
+        "blocks": 6,
+        "median_quality": 0.15955549259814553
+      },
+      {
+        "z": 9984,
+        "blocks": 2,
+        "median_quality": 0.4501326529414632
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0800",
+    "volume_id": "20250521135224",
+    "voxel_um": 8.64,
+    "protocol": "8.64 um, 116 keV",
+    "blocks": 1352,
+    "median_quality": 0.2825525672596426,
+    "share_clear": 0.14423076923076922,
+    "share_hazy": 0.6427514792899408,
+    "best_band_z": 3072,
+    "best_band_median": 0.520812264154216,
+    "profile": [
+      {
+        "z": 0,
+        "blocks": 87,
+        "median_quality": 0.0024998445012891467
+      },
+      {
+        "z": 768,
+        "blocks": 1,
+        "median_quality": 0.26304078078447135
+      },
+      {
+        "z": 1536,
+        "blocks": 5,
+        "median_quality": 0.06551249684341334
+      },
+      {
+        "z": 2304,
+        "blocks": 22,
+        "median_quality": 0.4138027900214357
+      },
+      {
+        "z": 3072,
+        "blocks": 42,
+        "median_quality": 0.520812264154216
+      },
+      {
+        "z": 3840,
+        "blocks": 59,
+        "median_quality": 0.3844952772164654
+      },
+      {
+        "z": 4608,
+        "blocks": 68,
+        "median_quality": 0.274593495937847
+      },
+      {
+        "z": 5376,
+        "blocks": 55,
+        "median_quality": 0.40170329464716353
+      },
+      {
+        "z": 6144,
+        "blocks": 56,
+        "median_quality": 0.35948975837554004
+      },
+      {
+        "z": 6912,
+        "blocks": 54,
+        "median_quality": 0.30981961876546193
+      },
+      {
+        "z": 7680,
+        "blocks": 50,
+        "median_quality": 0.2351056979041426
+      },
+      {
+        "z": 8448,
+        "blocks": 50,
+        "median_quality": 0.34032046729854865
+      },
+      {
+        "z": 9216,
+        "blocks": 48,
+        "median_quality": 0.29442021297794063
+      },
+      {
+        "z": 9984,
+        "blocks": 41,
+        "median_quality": 0.25035428830982365
+      },
+      {
+        "z": 10752,
+        "blocks": 39,
+        "median_quality": 0.2681731813624448
+      },
+      {
+        "z": 11520,
+        "blocks": 39,
+        "median_quality": 0.34005316434768346
+      },
+      {
+        "z": 12288,
+        "blocks": 39,
+        "median_quality": 0.278630618593689
+      },
+      {
+        "z": 13056,
+        "blocks": 36,
+        "median_quality": 0.2521360658799155
+      },
+      {
+        "z": 13824,
+        "blocks": 39,
+        "median_quality": 0.2775917569556291
+      },
+      {
+        "z": 14592,
+        "blocks": 38,
+        "median_quality": 0.22334579222812145
+      },
+      {
+        "z": 15360,
+        "blocks": 41,
+        "median_quality": 0.19572732330067896
+      },
+      {
+        "z": 16128,
+        "blocks": 44,
+        "median_quality": 0.19525322007912238
+      },
+      {
+        "z": 16896,
+        "blocks": 49,
+        "median_quality": 0.38010026111740125
+      },
+      {
+        "z": 17664,
+        "blocks": 48,
+        "median_quality": 0.42144627411822005
+      },
+      {
+        "z": 18432,
+        "blocks": 51,
+        "median_quality": 0.47449835171711335
+      },
+      {
+        "z": 19200,
+        "blocks": 53,
+        "median_quality": 0.48495379721770704
+      },
+      {
+        "z": 19968,
+        "blocks": 63,
+        "median_quality": 0.3903218943390593
+      },
+      {
+        "z": 20736,
+        "blocks": 61,
+        "median_quality": 0.24954074855233635
+      },
+      {
+        "z": 21504,
+        "blocks": 44,
+        "median_quality": 0.20478450524396952
+      },
+      {
+        "z": 22272,
+        "blocks": 24,
+        "median_quality": 0.1297986755487024
+      },
+      {
+        "z": 23040,
+        "blocks": 4,
+        "median_quality": 0.24942307915248177
+      },
+      {
+        "z": 23808,
+        "blocks": 2,
+        "median_quality": 0.1367794217411717
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0813",
+    "volume_id": "20250821151723",
+    "voxel_um": 9.362,
+    "protocol": "9.362 um, 113 keV",
+    "blocks": 568,
+    "median_quality": 0.558529228258578,
+    "share_clear": 0.4612676056338028,
+    "share_hazy": 0.3732394366197183,
+    "best_band_z": 12288,
+    "best_band_median": 0.6937094201688586,
+    "profile": [
+      {
+        "z": 1536,
+        "blocks": 9,
+        "median_quality": 1.1839129812994387e-05
+      },
+      {
+        "z": 2304,
+        "blocks": 21,
+        "median_quality": 0.35239912250161576
+      },
+      {
+        "z": 3072,
+        "blocks": 30,
+        "median_quality": 0.3522815340557817
+      },
+      {
+        "z": 3840,
+        "blocks": 36,
+        "median_quality": 0.5484430459137037
+      },
+      {
+        "z": 4608,
+        "blocks": 39,
+        "median_quality": 0.6029489608586429
+      },
+      {
+        "z": 5376,
+        "blocks": 32,
+        "median_quality": 0.6289427434117494
+      },
+      {
+        "z": 6144,
+        "blocks": 32,
+        "median_quality": 0.5967955724865623
+      },
+      {
+        "z": 6912,
+        "blocks": 30,
+        "median_quality": 0.5547165828820171
+      },
+      {
+        "z": 7680,
+        "blocks": 28,
+        "median_quality": 0.3405843522859434
+      },
+      {
+        "z": 8448,
+        "blocks": 28,
+        "median_quality": 0.6056155039814857
+      },
+      {
+        "z": 9216,
+        "blocks": 25,
+        "median_quality": 0.6275297679209857
+      },
+      {
+        "z": 9984,
+        "blocks": 28,
+        "median_quality": 0.46163884249998144
+      },
+      {
+        "z": 10752,
+        "blocks": 31,
+        "median_quality": 0.6020950574874457
+      },
+      {
+        "z": 11520,
+        "blocks": 31,
+        "median_quality": 0.6220896546653881
+      },
+      {
+        "z": 12288,
+        "blocks": 31,
+        "median_quality": 0.6937094201688586
+      },
+      {
+        "z": 13056,
+        "blocks": 29,
+        "median_quality": 0.6494476641251
+      },
+      {
+        "z": 13824,
+        "blocks": 29,
+        "median_quality": 0.5994854992237885
+      },
+      {
+        "z": 14592,
+        "blocks": 32,
+        "median_quality": 0.6436630651443187
+      },
+      {
+        "z": 15360,
+        "blocks": 27,
+        "median_quality": 0.397658876191581
+      },
+      {
+        "z": 16128,
+        "blocks": 18,
+        "median_quality": 0.41377454049604867
+      },
+      {
+        "z": 16896,
+        "blocks": 2,
+        "median_quality": 0.13064369920761848
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0826",
+    "volume_id": "20250821151701",
+    "voxel_um": 9.362,
+    "protocol": "9.362 um, 113 keV",
+    "blocks": 431,
+    "median_quality": 0.4739668854324652,
+    "share_clear": 0.33410672853828305,
+    "share_hazy": 0.43155452436194897,
+    "best_band_z": 9216,
+    "best_band_median": 0.7000605406059162,
+    "profile": [
+      {
+        "z": 0,
+        "blocks": 42,
+        "median_quality": 0.0036498108544628844
+      },
+      {
+        "z": 1536,
+        "blocks": 7,
+        "median_quality": 0.27247984501755884
+      },
+      {
+        "z": 2304,
+        "blocks": 21,
+        "median_quality": 0.3383457139967165
+      },
+      {
+        "z": 3072,
+        "blocks": 22,
+        "median_quality": 0.4319057280346105
+      },
+      {
+        "z": 3840,
+        "blocks": 21,
+        "median_quality": 0.360404134454746
+      },
+      {
+        "z": 4608,
+        "blocks": 23,
+        "median_quality": 0.5141751869657958
+      },
+      {
+        "z": 5376,
+        "blocks": 22,
+        "median_quality": 0.594813484783266
+      },
+      {
+        "z": 6144,
+        "blocks": 23,
+        "median_quality": 0.4897194002482965
+      },
+      {
+        "z": 6912,
+        "blocks": 22,
+        "median_quality": 0.47532975261824684
+      },
+      {
+        "z": 7680,
+        "blocks": 22,
+        "median_quality": 0.631790881480116
+      },
+      {
+        "z": 8448,
+        "blocks": 24,
+        "median_quality": 0.675449925797204
+      },
+      {
+        "z": 9216,
+        "blocks": 24,
+        "median_quality": 0.7000605406059162
+      },
+      {
+        "z": 9984,
+        "blocks": 23,
+        "median_quality": 0.6188218255483409
+      },
+      {
+        "z": 10752,
+        "blocks": 22,
+        "median_quality": 0.6471763823997961
+      },
+      {
+        "z": 11520,
+        "blocks": 17,
+        "median_quality": 0.4440011365176146
+      },
+      {
+        "z": 12288,
+        "blocks": 15,
+        "median_quality": 0.4727467212474017
+      },
+      {
+        "z": 13056,
+        "blocks": 14,
+        "median_quality": 0.3870885819745763
+      },
+      {
+        "z": 13824,
+        "blocks": 18,
+        "median_quality": 0.4323727843967342
+      },
+      {
+        "z": 14592,
+        "blocks": 15,
+        "median_quality": 0.43819252222279265
+      },
+      {
+        "z": 15360,
+        "blocks": 18,
+        "median_quality": 0.31756535931707974
+      },
+      {
+        "z": 16128,
+        "blocks": 16,
+        "median_quality": 0.49410486429391964
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0846A",
+    "volume_id": "20250728152254",
+    "voxel_um": 9.362,
+    "protocol": "9.362 um, 113 keV",
+    "blocks": 396,
+    "median_quality": 0.17532850167704994,
+    "share_clear": 0.14898989898989898,
+    "share_hazy": 0.6868686868686869,
+    "best_band_z": 3072,
+    "best_band_median": 0.5998604862263359,
+    "profile": [
+      {
+        "z": 0,
+        "blocks": 63,
+        "median_quality": 0.060110231305172325
+      },
+      {
+        "z": 768,
+        "blocks": 3,
+        "median_quality": 0.008564126211860802
+      },
+      {
+        "z": 1536,
+        "blocks": 3,
+        "median_quality": 0.06781609558165785
+      },
+      {
+        "z": 2304,
+        "blocks": 23,
+        "median_quality": 0.40015120456617115
+      },
+      {
+        "z": 3072,
+        "blocks": 32,
+        "median_quality": 0.5998604862263359
+      },
+      {
+        "z": 3840,
+        "blocks": 30,
+        "median_quality": 0.47560955195439664
+      },
+      {
+        "z": 4608,
+        "blocks": 29,
+        "median_quality": 0.46153060959675446
+      },
+      {
+        "z": 5376,
+        "blocks": 25,
+        "median_quality": 0.5219406394625749
+      },
+      {
+        "z": 6144,
+        "blocks": 23,
+        "median_quality": 0.3489823841563317
+      },
+      {
+        "z": 6912,
+        "blocks": 17,
+        "median_quality": 0.17501330415707317
+      },
+      {
+        "z": 7680,
+        "blocks": 18,
+        "median_quality": 0.1011518997716335
+      },
+      {
+        "z": 8448,
+        "blocks": 18,
+        "median_quality": 0.04209950770398384
+      },
+      {
+        "z": 9216,
+        "blocks": 17,
+        "median_quality": 0.05731658295020003
+      },
+      {
+        "z": 9984,
+        "blocks": 21,
+        "median_quality": 0.05206924890720304
+      },
+      {
+        "z": 10752,
+        "blocks": 22,
+        "median_quality": 0.12114873281051407
+      },
+      {
+        "z": 11520,
+        "blocks": 20,
+        "median_quality": 0.09463070843761254
+      },
+      {
+        "z": 12288,
+        "blocks": 19,
+        "median_quality": 0.10816562405766254
+      },
+      {
+        "z": 13056,
+        "blocks": 12,
+        "median_quality": 0.051340615007828536
+      },
+      {
+        "z": 13824,
+        "blocks": 1,
+        "median_quality": 0.09034802743666104
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0846B",
+    "volume_id": "20250804142305",
+    "voxel_um": 9.362,
+    "protocol": "9.362 um, 113 keV",
+    "blocks": 382,
+    "median_quality": 0.2518999439569767,
+    "share_clear": 0.17015706806282724,
+    "share_hazy": 0.6361256544502618,
+    "best_band_z": 11520,
+    "best_band_median": 0.4789264060597018,
+    "profile": [
+      {
+        "z": 1536,
+        "blocks": 10,
+        "median_quality": 0.04242616174279357
+      },
+      {
+        "z": 2304,
+        "blocks": 14,
+        "median_quality": 0.03154908193232642
+      },
+      {
+        "z": 3072,
+        "blocks": 15,
+        "median_quality": 0.1798445769747296
+      },
+      {
+        "z": 3840,
+        "blocks": 17,
+        "median_quality": 0.19792891464707674
+      },
+      {
+        "z": 4608,
+        "blocks": 15,
+        "median_quality": 0.16622899967208316
+      },
+      {
+        "z": 5376,
+        "blocks": 14,
+        "median_quality": 0.1999608851874197
+      },
+      {
+        "z": 6144,
+        "blocks": 15,
+        "median_quality": 0.14007778950314853
+      },
+      {
+        "z": 6912,
+        "blocks": 15,
+        "median_quality": 0.08965031725330377
+      },
+      {
+        "z": 7680,
+        "blocks": 21,
+        "median_quality": 0.3085590215639002
+      },
+      {
+        "z": 8448,
+        "blocks": 25,
+        "median_quality": 0.1842360166347465
+      },
+      {
+        "z": 9216,
+        "blocks": 33,
+        "median_quality": 0.3864145643032578
+      },
+      {
+        "z": 9984,
+        "blocks": 35,
+        "median_quality": 0.20046552441249674
+      },
+      {
+        "z": 10752,
+        "blocks": 45,
+        "median_quality": 0.2969813845975705
+      },
+      {
+        "z": 11520,
+        "blocks": 46,
+        "median_quality": 0.4789264060597018
+      },
+      {
+        "z": 12288,
+        "blocks": 47,
+        "median_quality": 0.4407248595353645
+      },
+      {
+        "z": 13056,
+        "blocks": 15,
+        "median_quality": 0.23330434353082602
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc1203",
+    "volume_id": "20250820131727",
+    "voxel_um": 9.362,
+    "protocol": "9.362 um, 113 keV",
+    "blocks": 533,
+    "median_quality": 0.36673736659672523,
+    "share_clear": 0.21388367729831145,
+    "share_hazy": 0.5290806754221389,
+    "best_band_z": 12288,
+    "best_band_median": 0.5481564764009521,
+    "profile": [
+      {
+        "z": 768,
+        "blocks": 4,
+        "median_quality": 1.1839129812994387e-05
+      },
+      {
+        "z": 1536,
+        "blocks": 6,
+        "median_quality": 0.2808653823076407
+      },
+      {
+        "z": 2304,
+        "blocks": 28,
+        "median_quality": 0.33706129488233394
+      },
+      {
+        "z": 3072,
+        "blocks": 31,
+        "median_quality": 0.35475426553137906
+      },
+      {
+        "z": 3840,
+        "blocks": 28,
+        "median_quality": 0.32703275335939186
+      },
+      {
+        "z": 4608,
+        "blocks": 25,
+        "median_quality": 0.4171843253458362
+      },
+      {
+        "z": 5376,
+        "blocks": 22,
+        "median_quality": 0.34297234826586975
+      },
+      {
+        "z": 6144,
+        "blocks": 19,
+        "median_quality": 0.26346635352881753
+      },
+      {
+        "z": 6912,
+        "blocks": 18,
+        "median_quality": 0.3578464603205462
+      },
+      {
+        "z": 7680,
+        "blocks": 21,
+        "median_quality": 0.3474604911771401
+      },
+      {
+        "z": 8448,
+        "blocks": 22,
+        "median_quality": 0.4136970667051728
+      },
+      {
+        "z": 9216,
+        "blocks": 22,
+        "median_quality": 0.40988559930869095
+      },
+      {
+        "z": 9984,
+        "blocks": 21,
+        "median_quality": 0.3088670761625783
+      },
+      {
+        "z": 10752,
+        "blocks": 19,
+        "median_quality": 0.4513972286120939
+      },
+      {
+        "z": 11520,
+        "blocks": 19,
+        "median_quality": 0.5008667089210044
+      },
+      {
+        "z": 12288,
+        "blocks": 22,
+        "median_quality": 0.5481564764009521
+      },
+      {
+        "z": 13056,
+        "blocks": 23,
+        "median_quality": 0.4575688889391197
+      },
+      {
+        "z": 13824,
+        "blocks": 27,
+        "median_quality": 0.4914580642017959
+      },
+      {
+        "z": 14592,
+        "blocks": 31,
+        "median_quality": 0.36920067725858835
+      },
+      {
+        "z": 15360,
+        "blocks": 31,
+        "median_quality": 0.3108808975923903
+      },
+      {
+        "z": 16128,
+        "blocks": 33,
+        "median_quality": 0.3756844201518079
+      },
+      {
+        "z": 16896,
+        "blocks": 32,
+        "median_quality": 0.41751647179132134
+      },
+      {
+        "z": 17664,
+        "blocks": 20,
+        "median_quality": 0.11096836613032536
+      },
+      {
+        "z": 18432,
+        "blocks": 9,
+        "median_quality": 0.053018446830323404
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc1218",
+    "volume_id": "20250521120456",
+    "voxel_um": 8.64,
+    "protocol": "8.64 um, 116 keV",
+    "blocks": 522,
+    "median_quality": 0.17425798116837435,
+    "share_clear": 0.13218390804597702,
+    "share_hazy": 0.7260536398467433,
+    "best_band_z": 7680,
+    "best_band_median": 0.47909125221995874,
+    "profile": [
+      {
+        "z": 0,
+        "blocks": 54,
+        "median_quality": 0.0018777635711581498
+      },
+      {
+        "z": 1536,
+        "blocks": 8,
+        "median_quality": 0.34868403367443646
+      },
+      {
+        "z": 2304,
+        "blocks": 15,
+        "median_quality": 0.4518806178318856
+      },
+      {
+        "z": 3072,
+        "blocks": 20,
+        "median_quality": 0.33343845259431076
+      },
+      {
+        "z": 3840,
+        "blocks": 15,
+        "median_quality": 0.18269125990668408
+      },
+      {
+        "z": 4608,
+        "blocks": 19,
+        "median_quality": 0.21682849974985807
+      },
+      {
+        "z": 5376,
+        "blocks": 22,
+        "median_quality": 0.46015150793169346
+      },
+      {
+        "z": 6144,
+        "blocks": 23,
+        "median_quality": 0.15406209907658533
+      },
+      {
+        "z": 6912,
+        "blocks": 21,
+        "median_quality": 0.33569706451788883
+      },
+      {
+        "z": 7680,
+        "blocks": 23,
+        "median_quality": 0.47909125221995874
+      },
+      {
+        "z": 8448,
+        "blocks": 21,
+        "median_quality": 0.23394673625537843
+      },
+      {
+        "z": 9216,
+        "blocks": 19,
+        "median_quality": 0.12758001177168185
+      },
+      {
+        "z": 9984,
+        "blocks": 17,
+        "median_quality": 0.27364635243506835
+      },
+      {
+        "z": 10752,
+        "blocks": 14,
+        "median_quality": 0.3494135887010619
+      },
+      {
+        "z": 11520,
+        "blocks": 12,
+        "median_quality": 0.2095415117371945
+      },
+      {
+        "z": 12288,
+        "blocks": 12,
+        "median_quality": 0.23606636875283993
+      },
+      {
+        "z": 13056,
+        "blocks": 14,
+        "median_quality": 0.17617905104386383
+      },
+      {
+        "z": 13824,
+        "blocks": 13,
+        "median_quality": 0.11657923798956839
+      },
+      {
+        "z": 14592,
+        "blocks": 13,
+        "median_quality": 0.14303252409692835
+      },
+      {
+        "z": 15360,
+        "blocks": 16,
+        "median_quality": 0.2220576564347969
+      },
+      {
+        "z": 16128,
+        "blocks": 18,
+        "median_quality": 0.10670964898432823
+      },
+      {
+        "z": 16896,
+        "blocks": 12,
+        "median_quality": 0.13590335706266463
+      },
+      {
+        "z": 17664,
+        "blocks": 11,
+        "median_quality": 0.04937301378372344
+      },
+      {
+        "z": 18432,
+        "blocks": 17,
+        "median_quality": 0.06356267236593671
+      },
+      {
+        "z": 19200,
+        "blocks": 22,
+        "median_quality": 0.21546119436425298
+      },
+      {
+        "z": 19968,
+        "blocks": 22,
+        "median_quality": 0.2870433574053084
+      },
+      {
+        "z": 20736,
+        "blocks": 26,
+        "median_quality": 0.18700452848964955
+      },
+      {
+        "z": 21504,
+        "blocks": 21,
+        "median_quality": 0.09046469601490004
+      },
+      {
+        "z": 23040,
+        "blocks": 2,
+        "median_quality": 0.05856261123329137
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc1545",
+    "volume_id": "20250821151648",
+    "voxel_um": 9.362,
+    "protocol": "9.362 um, 113 keV",
+    "blocks": 475,
+    "median_quality": 0.3515672767932996,
+    "share_clear": 0.2694736842105263,
+    "share_hazy": 0.5473684210526316,
+    "best_band_z": 15360,
+    "best_band_median": 0.5641656317204907,
+    "profile": [
+      {
+        "z": 768,
+        "blocks": 7,
+        "median_quality": 1.1839129812994387e-05
+      },
+      {
+        "z": 1536,
+        "blocks": 5,
+        "median_quality": 0.2869035391816545
+      },
+      {
+        "z": 2304,
+        "blocks": 30,
+        "median_quality": 0.5594777255776624
+      },
+      {
+        "z": 3072,
+        "blocks": 27,
+        "median_quality": 0.5308147610961177
+      },
+      {
+        "z": 3840,
+        "blocks": 27,
+        "median_quality": 0.30200672626779923
+      },
+      {
+        "z": 4608,
+        "blocks": 26,
+        "median_quality": 0.44112036889298106
+      },
+      {
+        "z": 5376,
+        "blocks": 31,
+        "median_quality": 0.4529728455190756
+      },
+      {
+        "z": 6144,
+        "blocks": 28,
+        "median_quality": 0.5139382281726116
+      },
+      {
+        "z": 6912,
+        "blocks": 25,
+        "median_quality": 0.475620841037693
+      },
+      {
+        "z": 7680,
+        "blocks": 19,
+        "median_quality": 0.256045443161102
+      },
+      {
+        "z": 8448,
+        "blocks": 18,
+        "median_quality": 0.46662474376334984
+      },
+      {
+        "z": 9216,
+        "blocks": 15,
+        "median_quality": 0.2418597256393649
+      },
+      {
+        "z": 9984,
+        "blocks": 13,
+        "median_quality": 0.3142267271898285
+      },
+      {
+        "z": 10752,
+        "blocks": 14,
+        "median_quality": 0.16370377959648036
+      },
+      {
+        "z": 11520,
+        "blocks": 14,
+        "median_quality": 0.10053391467349508
+      },
+      {
+        "z": 12288,
+        "blocks": 16,
+        "median_quality": 0.1745015115474906
+      },
+      {
+        "z": 13056,
+        "blocks": 17,
+        "median_quality": 0.37536926168192974
+      },
+      {
+        "z": 13824,
+        "blocks": 17,
+        "median_quality": 0.4202277070025652
+      },
+      {
+        "z": 14592,
+        "blocks": 20,
+        "median_quality": 0.39435216319676214
+      },
+      {
+        "z": 15360,
+        "blocks": 19,
+        "median_quality": 0.5641656317204907
+      },
+      {
+        "z": 16128,
+        "blocks": 19,
+        "median_quality": 0.21730894436651915
+      },
+      {
+        "z": 16896,
+        "blocks": 17,
+        "median_quality": 0.2396503149090441
+      },
+      {
+        "z": 17664,
+        "blocks": 15,
+        "median_quality": 0.2563790417521172
+      },
+      {
+        "z": 18432,
+        "blocks": 12,
+        "median_quality": 0.04478937013145118
+      },
+      {
+        "z": 19200,
+        "blocks": 12,
+        "median_quality": 0.2618734097828638
+      },
+      {
+        "z": 19968,
+        "blocks": 10,
+        "median_quality": 0.07199928077635087
+      },
+      {
+        "z": 20736,
+        "blocks": 2,
+        "median_quality": 0.3699873808574145
+      }
+    ]
+  }
+]
