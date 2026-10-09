@@ -39,6 +39,17 @@ def render(quality, valid, path):
     Image.fromarray((rgba[..., :3] * 255).astype(np.uint8)).save(path)
 
 
+def overlay(quality, valid, meta, path):
+    from PIL import Image
+    import matplotlib
+    matplotlib.use("Agg")
+    factor = int(round(1 / float(meta.get("scale", [0.05, 0.05])[0])))
+    rgba = matplotlib.colormaps["RdYlGn"](np.nan_to_num(quality, nan=0.0))
+    rgba[..., 3] = np.where(np.isfinite(quality) & valid, 0.45, 0.0)
+    image = Image.fromarray((rgba * 255).astype(np.uint8), mode="RGBA")
+    image.resize((quality.shape[1] * factor, quality.shape[0] * factor), Image.NEAREST).save(path)
+
+
 def main():
     parser = argparse.ArgumentParser(prog="sqm.segment", description="Score a tifxyz segment by local scan quality.")
     parser.add_argument("--mesh", required=True, help="tifxyz folder (local path or URL)")
@@ -50,6 +61,7 @@ def main():
     parser.add_argument("--patch", type=int, default=32, help="mesh vertices per patch side")
     parser.add_argument("--model", type=Path, default=None)
     parser.add_argument("--workers", type=int, default=4)
+    parser.add_argument("--overlay", action="store_true", help="also write quality_overlay.png at the size of the segment renders")
     args = parser.parse_args()
 
     points, valid, meta = tifxyz.load(args.mesh)
@@ -78,6 +90,8 @@ def main():
     quality[~valid] = np.nan
     tifxyz.write_channel(args.out, "quality", quality, meta, points)
     render(quality, valid, args.out / "quality.png")
+    if args.overlay:
+        overlay(quality, valid, meta, args.out / "quality_overlay.png")
     (args.out / "quality_patches.json").write_text(json.dumps(details))
     scored = np.isfinite(quality) & valid
     print(f"done: {scored.mean():.0%} of the surface scored, median quality {np.nanmedian(quality):.2f}", flush=True)

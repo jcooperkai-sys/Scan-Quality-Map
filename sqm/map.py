@@ -72,6 +72,7 @@ def main():
     parser.add_argument("--level", type=int, default=1)
     parser.add_argument("--block", type=int, default=128)
     parser.add_argument("--stride", type=int, default=1, help="score every Nth block along each axis")
+    parser.add_argument("--step", type=int, default=0, help="grid step in voxels of the chosen level (overrides stride)")
     parser.add_argument("--region", default="", help="z0:z1,y0:y1,x0:x1 in voxels of the chosen level")
     parser.add_argument("--model", type=Path, default=None)
     parser.add_argument("--workers", type=int, default=4)
@@ -79,7 +80,7 @@ def main():
 
     volume = Level(args.volume, args.level)
     region = parse_region(args.region, volume.shape)
-    step = args.block * args.stride
+    step = args.step or args.block * args.stride
     axes = [range(start, stop - args.block + 1, step) for start, stop in region]
     origins = [(z, y, x) for z in axes[0] for y in axes[1] for x in axes[2]]
     grid = np.full([len(a) for a in axes], np.nan, dtype=np.float32)

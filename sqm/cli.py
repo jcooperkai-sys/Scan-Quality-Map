@@ -10,6 +10,7 @@ COMMANDS = {
     "fit": ("sqm.checkpoint2", "fit and evaluate the quality model on measured blocks"),
     "external": ("sqm.external", "apply the frozen model to a scroll it never saw"),
     "failures": ("sqm.failures", "compare surface predictions with hand labels per block"),
+    "regions": ("sqm.regions", "compare segment quality inside marked boxes with the rest"),
 }
 
 
