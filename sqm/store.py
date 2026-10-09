@@ -1,6 +1,7 @@
 import json
 import os
 import threading
+import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -24,10 +25,20 @@ def fetch(url):
     path = _cache_path(url)
     if path.exists():
         return path.read_bytes()
-    response = _session.get(url, timeout=120)
-    if response.status_code in (403, 404):
-        return None
-    response.raise_for_status()
+    for attempt in range(6):
+        try:
+            response = _session.get(url, timeout=120)
+            if response.status_code in (403, 404):
+                return None
+            if response.status_code < 500:
+                response.raise_for_status()
+                break
+        except (requests.ConnectionError, requests.Timeout):
+            if attempt == 5:
+                raise
+        time.sleep(2 ** attempt)
+    else:
+        response.raise_for_status()
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.parent / f"{path.name}.{os.getpid()}.{threading.get_ident()}.part"
     tmp.write_bytes(response.content)

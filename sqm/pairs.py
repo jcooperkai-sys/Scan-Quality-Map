@@ -101,11 +101,19 @@ def main():
     esrf = Level(PARIS4_ESRF, args.esrf_level)
     sigma = 0.5 * (7.91 / (2.4 * 2**args.esrf_level))
     half = args.size // 2
-    kept, shown, records = 0, [], []
+    manifest = args.out / "pairs.json"
+    header = {"dls": PARIS4_DLS, "esrf": PARIS4_ESRF, "esrf_level": args.esrf_level,
+              "prefilter_sigma": sigma, "seed": args.seed, "size": args.size}
+    records = json.loads(manifest.read_text())["pairs"] if manifest.exists() else []
+    done_origins = {tuple(r["dls_origin_xyz"]) for r in records}
+    shown = [tuple(np.load(args.out / f"{r['name']}.npz")[k] for k in ("dls", "esrf")) for r in records[:12]]
+    kept = len(records)
     for center, radius, r_bin, h_bin in picks:
         if kept >= args.count:
             break
         origin = np.round(center).astype(int) - half
+        if tuple(origin.tolist()) in done_origins:
+            continue
         cube, _ = dls.read(origin[::-1], origin[::-1] + args.size)
         if cube.shape != (args.size,) * 3 or (cube > 0).mean() < args.min_coverage:
             continue
@@ -118,12 +126,13 @@ def main():
                   "radial_bin": int(r_bin), "height_bin": int(h_bin),
                   "dls_coverage": float((cube > 0).mean()), "esrf_coverage": float((clean > 0).mean())}
         records.append(record)
-        shown.append((cube, clean))
+        manifest.write_text(json.dumps({**header, "pairs": records}, indent=2))
+        if len(shown) < 12:
+            shown.append((cube, clean))
         kept += 1
         print(f"{name} r={radius:.0f} bin=({r_bin},{h_bin}) cache={trim_cache() / 1024**3:.2f} GB", flush=True)
 
-    (args.out / "pairs.json").write_text(json.dumps({"dls": PARIS4_DLS, "esrf": PARIS4_ESRF, "esrf_level": args.esrf_level,
-                                                      "prefilter_sigma": sigma, "seed": args.seed, "pairs": records}, indent=2))
+    manifest.write_text(json.dumps({**header, "pairs": records}, indent=2))
     montage(shown, args.out / "montage.png")
     print(f"kept {kept} pairs", flush=True)
 
