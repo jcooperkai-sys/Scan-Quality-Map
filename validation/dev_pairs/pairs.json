@@ -1,0 +1,93 @@
+{
+  "dls": "https://data.aws.ash2txt.org/samples/PHercParis4/volumes/20230205180739-7.910um-54keV-masked.zarr",
+  "esrf": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHercParis4/volumes/20260411134726-2.400um-0.2m-78keV-masked.zarr",
+  "esrf_level": 1,
+  "prefilter_sigma": 0.8239583333333333,
+  "seed": 7,
+  "pairs": [
+    {
+      "name": "pair_000",
+      "dls_origin_xyz": [
+        4384,
+        2816,
+        32
+      ],
+      "size": 96,
+      "radius_dls_voxels": 531.9877998710144,
+      "radial_bin": 0,
+      "height_bin": 0,
+      "dls_coverage": 0.9855990939670138,
+      "esrf_coverage": 1.0
+    },
+    {
+      "name": "pair_001",
+      "dls_origin_xyz": [
+        2784,
+        1984,
+        992
+      ],
+      "size": 96,
+      "radius_dls_voxels": 1229.5720975990248,
+      "radial_bin": 0,
+      "height_bin": 0,
+      "dls_coverage": 0.9958258734809028,
+      "esrf_coverage": 1.0
+    },
+    {
+      "name": "pair_002",
+      "dls_origin_xyz": [
+        2848,
+        3104,
+        5280
+      ],
+      "size": 96,
+      "radius_dls_voxels": 1107.7543483233549,
+      "radial_bin": 0,
+      "height_bin": 1,
+      "dls_coverage": 0.9366183810763888,
+      "esrf_coverage": 1.0
+    },
+    {
+      "name": "pair_003",
+      "dls_origin_xyz": [
+        4448,
+        2752,
+        3200
+      ],
+      "size": 96,
+      "radius_dls_voxels": 953.290576621366,
+      "radial_bin": 0,
+      "height_bin": 1,
+      "dls_coverage": 0.9886180736400463,
+      "esrf_coverage": 1.0
+    },
+    {
+      "name": "pair_004",
+      "dls_origin_xyz": [
+        3040,
+        3424,
+        7936
+      ],
+      "size": 96,
+      "radius_dls_voxels": 488.4498165690795,
+      "radial_bin": 0,
+      "height_bin": 2,
+      "dls_coverage": 0.9825258608217593,
+      "esrf_coverage": 1.0
+    },
+    {
+      "name": "pair_005",
+      "dls_origin_xyz": [
+        4992,
+        3072,
+        6464
+      ],
+      "size": 96,
+      "radius_dls_voxels": 1262.8525995082257,
+      "radial_bin": 0,
+      "height_bin": 2,
+      "dls_coverage": 0.9282418710214121,
+      "esrf_coverage": 1.0
+    }
+  ]
+}

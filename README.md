@@ -90,7 +90,7 @@ Both scans resolve almost all of the labelled sheets (medians near 100%), becaus
 
 ## Reproduce
 
-`scripts/reproduce.sh` runs every step in order and writes all results and figures to one folder. The heavy parts stream data and run on CPU. Tests: `pip install .[test]` then `pytest tests`.
+`python scripts/reproduce.py` runs every step in order and writes all results and figures to one folder. The heavy parts stream data and run on CPU. Tests: `pip install .[test]` then `pytest tests`.
 
 ## Formats
 
