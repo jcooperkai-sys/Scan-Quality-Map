@@ -1,7 +1,9 @@
 import numpy as np
 from scipy import ndimage
+from scipy.signal import find_peaks
 
-FEATURES = ("coherence", "rhythm", "contrast", "sharpness")
+FEATURES = ("coherence", "rhythm", "contrast", "sharpness", "spacing", "spread", "raw_range", "raw_edges", "raw_level",
+            "valley_depth", "dark_fraction")
 
 
 def normalize(block):
@@ -38,14 +40,17 @@ def coherence_and_normal(volume, inside, voxel_um, stride):
     tensor, gradient = structure_tensor(volume, max(0.7, 8.0 / voxel_um), max(1.5, 40.0 / voxel_um))
     sample = tuple(slice(None, None, stride) for _ in range(3))
     local = tensor[sample][inside[sample]]
-    values = np.linalg.eigvalsh(local)
+    values, vectors = np.linalg.eigh(local)
     largest, middle = values[:, 2], values[:, 1]
     weight = largest
     planarity = (largest - middle) / np.maximum(largest, 1e-12)
     coherence = float(np.sum(planarity * weight) / max(np.sum(weight), 1e-12))
     mean_tensor = local.mean(axis=0)
     normal = np.linalg.eigh(mean_tensor)[1][:, 2]
-    return coherence, normal, gradient
+    normals = vectors[:, :, 2]
+    orientation = (normals[:, :, None] * normals[:, None, :] * weight[:, None, None]).sum(axis=0) / max(weight.sum(), 1e-12)
+    spread = float(1 - np.linalg.eigvalsh(orientation)[-1])
+    return coherence, normal, gradient, spread
 
 
 def rhythm(volume, normal, voxel_um, period_um=(60.0, 400.0), lines=7):
@@ -62,7 +67,7 @@ def rhythm(volume, normal, voxel_um, period_um=(60.0, 400.0), lines=7):
     lag_lo = max(1, int(round(period_um[0] / voxel_um)))
     lag_hi = min(length // 2, int(round(period_um[1] / voxel_um)))
     if lag_hi <= lag_lo + 1:
-        return 0.0
+        return 0.0, 0.0
     peaks = []
     for a in offsets:
         for b in offsets:
@@ -75,8 +80,38 @@ def rhythm(volume, normal, voxel_um, period_um=(60.0, 400.0), lines=7):
             if energy <= 0:
                 continue
             corr = np.array([np.dot(profile[:-k], profile[k:]) for k in range(1, lag_hi + 1)]) / energy
-            peaks.append(corr[lag_lo - 1:lag_hi].max())
-    return float(np.mean(peaks)) if peaks else 0.0
+            window_corr = corr[lag_lo - 1:lag_hi]
+            peaks.append((window_corr.max(), (lag_lo + int(np.argmax(window_corr))) * voxel_um))
+    if not peaks:
+        return 0.0, 0.0
+    return float(np.mean([p[0] for p in peaks])), float(np.median([p[1] for p in peaks]))
+
+
+def valley_depth(raw, normal, voxel_um, min_spacing_um=30.0, lines=7):
+    size = np.array(raw.shape, dtype=float)
+    center = (size - 1) / 2
+    helper = np.array([1.0, 0, 0]) if abs(normal[0]) < 0.9 else np.array([0, 1.0, 0])
+    u = np.cross(normal, helper)
+    u /= np.linalg.norm(u)
+    v = np.cross(normal, u)
+    length = int(min(size) * 0.8)
+    steps = np.arange(length) - length / 2
+    offsets = np.linspace(-0.25, 0.25, lines) * min(size)
+    smooth = ndimage.gaussian_filter(raw.astype(np.float32), max(0.5, 4.0 / voxel_um))
+    distance = max(2, int(round(min_spacing_um / voxel_um)))
+    depths = []
+    for a in offsets:
+        for b in offsets:
+            start = center + a * u + b * v
+            points = start[:, None] + normal[:, None] * steps[None, :]
+            profile = ndimage.map_coordinates(smooth, points, order=1, mode="nearest")
+            peaks, _ = find_peaks(profile, distance=distance)
+            for left, right in zip(peaks[:-1], peaks[1:]):
+                low = profile[left:right + 1].min()
+                top = min(profile[left], profile[right])
+                if top > 0:
+                    depths.append((top - low) / top)
+    return float(np.median(depths)) if depths else 0.0
 
 
 def contrast(scaled):
@@ -109,10 +144,22 @@ def features(block, voxel_um, stride=2):
     if scaled is None:
         return None
     volume = fill_outside(scaled)
-    coherent, normal, gradient = coherence_and_normal(volume, inside, voxel_um, stride)
+    raw = block.astype(np.float32)
+    raw_values = raw[inside]
+    raw_low, raw_high = np.percentile(raw_values, [5, 95])
+    raw_gradient = ndimage.gaussian_gradient_magnitude(raw, max(0.7, 8.0 / voxel_um))
+    coherent, normal, gradient, spread = coherence_and_normal(volume, inside, voxel_um, stride)
+    periodicity, spacing = rhythm(volume, normal, voxel_um)
     return {
         "coherence": coherent,
-        "rhythm": rhythm(volume, normal, voxel_um),
+        "rhythm": periodicity,
+        "spacing": spacing,
+        "spread": spread,
         "contrast": contrast(scaled),
         "sharpness": sharpness(scaled, gradient, inside, voxel_um),
+        "raw_range": float(raw_high - raw_low),
+        "raw_edges": float(np.percentile(raw_gradient[inside], 90)),
+        "raw_level": float(np.median(raw_values)),
+        "valley_depth": valley_depth(raw, normal, voxel_um),
+        "dark_fraction": float((raw_values < 0.5 * np.median(raw_values)).mean()),
     }

@@ -30,7 +30,7 @@ def fetch(url):
             response = _session.get(url, timeout=120)
             if response.status_code in (403, 404):
                 return None
-            if response.status_code < 500:
+            if response.status_code < 500 and response.status_code != 429:
                 response.raise_for_status()
                 break
         except (requests.ConnectionError, requests.Timeout):

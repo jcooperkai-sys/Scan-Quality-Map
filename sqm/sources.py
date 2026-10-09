@@ -31,3 +31,10 @@ def transform(sample, from_volume, to_volume):
 def umbilicus(url):
     points = json.loads(fetch(url))["control_points"]
     return np.array([[p["x"], p["y"], p["z"]] for p in points], dtype=float)
+
+HF_DATASETS = "https://huggingface.co/buckets/scrollprize/datasets/resolve"
+PARIS4_GP_SURFACE_LABELS = f"{HF_DATASETS}/surfaces/2um_032726/s1_2.4um_gp.zarr"
+PARIS4_RECTO_PREDICTION = (f"{BUCKET}/PHercParis4/representations/predictions/surfaces/"
+                           "20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr")
+PARIS4_M7_PREDICTION = (f"{BUCKET}/PHercParis4/representations/predictions/surfaces/"
+                        "20260411134726-surface-20260413222639-surface-m7-L2-th0.2.zarr")
