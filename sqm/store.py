@@ -33,7 +33,7 @@ def fetch(url):
             if response.status_code < 500 and response.status_code != 429:
                 response.raise_for_status()
                 break
-        except (requests.ConnectionError, requests.Timeout):
+        except requests.RequestException:
             if attempt == 5:
                 raise
         time.sleep(2 ** attempt)
