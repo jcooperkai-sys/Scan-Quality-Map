@@ -31,14 +31,16 @@ sqm("answer-key", "--pairs", OUT / "pairs", "--exclude", REPO / "validation" / "
 sqm("resolvability", "--scroll", "paris4", "--chunks", OUT / "labels_paris4_l1.json", "--out", OUT / "resolve_paris4.json",
     "--count", "400", "--workers", WORKERS)
 sqm("fit", "--rows", OUT / "resolve_paris4.json", "--out", OUT / "fit", "--target", "dls_resolved", "--no-higher-is-worse",
-    "--prefix", "dls_", "--name", "resolvability", "--features", "coherence,contrast,dark_fraction", "--l2", "10")
+    "--prefix", "dls_", "--name", "resolvability", "--features", "coherence,contrast,dark_fraction", "--l2", "10",
+    "--write-model", OUT / "model.json")
 
 sqm("resolvability", "--scroll", "paris4", "--chunks", OUT / "labels_paris4_l1.json", "--out", OUT / "calibration_paris4.json",
     "--count", "150", "--workers", WORKERS)
 for scroll in ("1667", "0343p"):
     sqm("resolvability", "--scroll", scroll, "--chunks", OUT / f"labels_{scroll}_l1.json", "--out", OUT / f"resolve_{scroll}.json",
         "--count", "250", "--workers", WORKERS)
-    sqm("external", "--rows", OUT / f"resolve_{scroll}.json", "--calibration", OUT / "calibration_paris4.json", "--out", OUT / "external")
+    sqm("external", "--rows", OUT / f"resolve_{scroll}.json", "--calibration", OUT / "calibration_paris4.json", "--out", OUT / "external",
+        "--model", OUT / "model.json")
 
 sqm("failures", "--chunks", OUT / "labels_paris4_l1.json", "--out", OUT / "failures_paris4.json", "--count", "400", "--workers", WORKERS)
 for target in ("failure", "m7_failure"):

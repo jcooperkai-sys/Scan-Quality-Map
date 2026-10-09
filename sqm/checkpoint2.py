@@ -51,6 +51,7 @@ def main():
     parser.add_argument("--name", default="checkpoint2")
     parser.add_argument("--features", default=",".join(FEATURES))
     parser.add_argument("--l2", type=float, default=1.0)
+    parser.add_argument("--write-model", type=Path, default=None, help="save the fitted model in the format sqm uses")
     args = parser.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
     rows = json.loads(args.rows.read_text())["rows"]
@@ -101,6 +102,12 @@ def main():
     (args.out / f"{name}.json").write_text(json.dumps({**result, "standardize_mean": mean.tolist(),
                                                            "standardize_std": std.tolist()}, indent=2))
 
+    if args.write_model:
+        args.write_model.write_text(json.dumps({
+            "features": chosen, "mean": mean.tolist(), "std": std.tolist(), "weights": w.tolist(), "bias": float(b),
+            "trained_on": f"{args.rows.name}, tune half (lower z)", "target": args.target,
+            "held_out_auc": result["combined"]["auc_bad_report"], "held_out_auc_ci95": result["combined"]["auc_bad_report_ci95"],
+        }, indent=2))
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt

@@ -64,20 +64,20 @@ Every number below is produced by the scripts in this repository (see Reproduce)
 
 **Answer key: two scans of the same papyrus.** PHerc. Paris 4 was scanned at 7.91 um (Diamond Light Source, 2023) and at 2.4 um (ESRF, 2026). Using the official transform from the Vesuvius Challenge catalogue (median landmark residual 1.5 voxels), 40 spots were cut from the 7.91 um scan and the 2.4 um scan was resampled onto exactly the same voxels. On the 34 spots not used during development, the quality score rated the clearer 2026 scan higher at 34 of 34.
 
-**Hidden sheets in a 7.91 um scan.** At 400 blocks of the Paris 4 Grand Prize region, the real number of sheets was counted along 49 lines per block from the 2.4 um hand labels, and compared with how many separate sheets the 7.91 um scan shows along the same physical lines. The 2.4 um scan itself shows 99 to 100% of the labelled sheets. The 7.91 um scan shows a median of 90%, and 72% at the 10th percentile. The model was fitted on the lower half of the region by height and tested once on the upper half:
+**Hidden sheets in a 7.91 um scan.** At 400 blocks of the Paris 4 Grand Prize region, the real number of sheets was counted along 49 lines per block from the 2.4 um hand labels, and compared with how many separate sheets the 7.91 um scan shows along the same physical lines. The 2.4 um scan itself shows 99 to 100% of the labelled sheets. The 7.91 um scan shows a median of 93%, and 78% at the 10th percentile. The model was fitted on the lower half of the region by height and tested once on the upper half:
 
 | Held out test | Result |
 |---|---|
-| Finding the worst quarter of blocks (AUC) | 0.74 (95% CI 0.64 to 0.83) |
-| Sheets visible in the fifth of blocks SQM rates lowest | 81% |
-| Sheets visible in the fifth of blocks SQM rates highest | 93% |
+| Finding the worst quarter of blocks (AUC) | 0.73 (95% CI 0.63 to 0.82) |
+| Sheets visible in the fifth of blocks SQM rates lowest | 87% |
+| Sheets visible in the fifth of blocks SQM rates highest | 95% |
 
 **Scrolls the model never saw.** The frozen model was applied unchanged to two more scrolls with hand labels and a lower resolution scan. Their label sets mark only some sheets, so only blocks whose labels look complete were kept, using a rule fixed on Paris 4 beforehand.
 
 | Scroll | Low resolution scan | Blocks | AUC, worst quarter |
 |---|---|---|---|
-| PHerc. 1667 | 7.91 um | 138 | 0.65 (95% CI 0.54 to 0.75) |
-| PHerc. 0343P | 8.64 um | 153 | 0.64 (95% CI 0.54 to 0.74) |
+| PHerc. 1667 | 7.91 um | 144 | 0.62 (95% CI 0.51 to 0.72) |
+| PHerc. 0343P | 8.64 um | 153 | 0.63 (95% CI 0.53 to 0.74) |
 
 Both scans resolve almost all of the labelled sheets (medians near 100%), because annotators tend to label where the papyrus is clear. That leaves little haze to find in these tests, so they are weaker than the Paris 4 test.
 
@@ -85,7 +85,7 @@ Both scans resolve almost all of the labelled sheets (medians near 100%), becaus
 
 - SQM measures whether the scan resolves the layers. Inside the 2.4 um Paris 4 scan it does not predict where surface prediction models disagree with hand labels: held out AUC 0.53 for the recto model and 0.54 for the m7 model, which is chance level.
 - The model was fitted on one scan (Paris 4 at 7.91 um). Scores on very different scanners or energies should be read as a ranking within that scan.
-- On the PHerc. 343 First Letters segment, patches with letters score a median of 0.81 against 0.78 for the rest of the segment, and the segment's blocks in the band map score a median of 0.74 against 0.68 for the whole band. This is one example, chosen after the fact, and is shown as an illustration only.
+- On the PHerc. 343 First Letters segment, patches with letters score a median of 0.69 against 0.64 for the rest of the segment, and the segment's blocks in the band map score a median of 0.63 against 0.51 for the whole band. This is one example, chosen after the fact, and is shown as an illustration only.
 - Block size sets the resolution of the map, about 0.8 mm per block.
 
 ## Reproduce

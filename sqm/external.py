@@ -17,9 +17,10 @@ def main():
     parser.add_argument("--calibration", type=Path, required=True, help="rows from a scroll with complete labels")
     parser.add_argument("--min-lines", type=int, default=20)
     parser.add_argument("--seed", type=int, default=17)
+    parser.add_argument("--model", type=Path, default=None)
     args = parser.parse_args()
     data = json.loads(args.rows.read_text())
-    model = QualityModel()
+    model = QualityModel(args.model) if args.model else QualityModel()
     reference = [r for r in json.loads(args.calibration.read_text())["rows"] if r.get("label_sheets")]
     ratios = np.array([r["hi_sheets"] / r["label_sheets"] for r in reference])
     low, high = np.percentile(ratios, [10, 90])

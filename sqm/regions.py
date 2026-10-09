@@ -24,6 +24,7 @@ def rank_mesh_in_map(args):
               "median_quality_on_mesh": float(np.median(quality[touched])) if touched.any() else None,
               "median_quality_map": float(np.median(quality)),
               "mesh_percentile_in_map": float(np.mean([np.mean(quality <= q) for q in quality[touched]])) if touched.any() else None}
+    (args.map.parent / "mesh_rank.json").write_text(json.dumps(result, indent=2))
     print(json.dumps(result, indent=2))
 
 
