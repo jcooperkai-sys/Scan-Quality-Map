@@ -62,11 +62,15 @@ Blocks that look like the packing foam or support material around a scroll (cont
 
 ## Validation
 
-Every number below is produced by the scripts in this repository (see Reproduce). Data was split before any fitting, and each held out set was evaluated once.
+Every number below comes from the scripts in this repository (see Reproduce). I split the data before fitting anything and evaluated each held out set once.
 
-**Answer key: two scans of the same papyrus.** PHerc. Paris 4 was scanned at 7.91 um (Diamond Light Source, 2023) and at 2.4 um (ESRF, 2026). Using the official transform from the Vesuvius Challenge catalogue (median landmark residual 1.5 voxels), 40 spots were cut from the 7.91 um scan and the 2.4 um scan was resampled onto exactly the same voxels. On the 34 spots not used during development, the quality score rated the clearer 2026 scan higher at 34 of 34.
+### Two scans of the same papyrus
 
-**Hidden sheets in a 7.91 um scan.** At 400 blocks of the Paris 4 Grand Prize region, the real number of sheets was counted along 49 lines per block from the 2.4 um hand labels, and compared with how many separate sheets the 7.91 um scan shows along the same physical lines. The 2.4 um scan itself shows 99 to 100% of the labelled sheets. The 7.91 um scan shows a median of 93%, and 78% at the 10th percentile. The model was fitted on the lower half of the region by height and tested once on the upper half:
+PHerc. Paris 4 was scanned at 7.91 um (Diamond Light Source, 2023) and at 2.4 um (ESRF, 2026). With the official transform from the Vesuvius Challenge catalogue (median landmark residual 1.5 voxels), I cut 40 spots from the 7.91 um scan and resampled the 2.4 um scan onto exactly the same voxels. On the 34 spots not used during development, the quality score rated the clearer 2026 scan higher at 34 of 34.
+
+### Hidden sheets in a 7.91 um scan
+
+In 400 blocks of the Paris 4 Grand Prize region, I counted the real sheets along 49 lines per block from the 2.4 um hand labels and compared that with how many separate sheets the 7.91 um scan shows along the same physical lines. The 2.4 um scan itself shows 99 to 100% of the labelled sheets. The 7.91 um scan shows a median of 93%, and 78% at the 10th percentile. I fitted the model on the lower half of the region by height and tested it once on the upper half:
 
 | Held out test | Result |
 |---|---|
@@ -74,7 +78,9 @@ Every number below is produced by the scripts in this repository (see Reproduce)
 | Sheets visible in the fifth of blocks SQM rates lowest | 87% |
 | Sheets visible in the fifth of blocks SQM rates highest | 95% |
 
-**Scrolls the model never saw.** The frozen model was applied unchanged to two more scrolls with hand labels and a lower resolution scan. Their label sets mark only some sheets, so only blocks whose labels look complete were kept, using a rule fixed on Paris 4 beforehand.
+### Scrolls the model never saw
+
+I applied the frozen model unchanged to two more scrolls that have hand labels and a lower resolution scan. Their label sets mark only some sheets, so I kept only blocks whose labels look complete, using a rule fixed on Paris 4 beforehand.
 
 | Scroll | Low resolution scan | Blocks | AUC, worst quarter |
 |---|---|---|---|
@@ -85,7 +91,7 @@ Both scans resolve almost all of the labelled sheets (medians near 100%), becaus
 
 ## Atlas of the First Letters scrolls
 
-Every scroll still eligible for a First Letters prize has an 8.64 um or 9.362 um scan, and 20 of the 22 have nothing finer. `sqm atlas` mapped all 22 on a coarse grid (one block every 6.6 mm, about 12,500 blocks in total). The table ranks scrolls within each scan protocol and gives the height band where each scroll's scan is clearest. Height profiles for every scroll: `docs/atlas_profiles.png`. Raw numbers: `docs/atlas.json`.
+`sqm atlas` mapped all 22 scrolls still eligible for a First Letters prize on a coarse grid (one block every 6.6 mm, about 12,500 blocks in total). The table ranks scrolls within each scan protocol and gives the height band where each scroll's scan is clearest. Height profiles for every scroll: `docs/atlas_profiles.png`. Raw numbers: `docs/atlas.json`.
 
 Compare scrolls only within the same scan protocol. Across protocols, scores also reflect scan settings.
 
@@ -118,9 +124,8 @@ Among the 8.64 um scrolls, PHerc. 0343, where the first letters were read in Oct
 
 ### Where to start in each scroll
 
-`sqm targets` maps each scroll's clearest band on a finer grid (one block every 3.3 mm) and lists its clearest regions, at least 1536 voxels apart, away from the scroll's outer edge. Every listed region was checked by eye to be papyrus. Full list with five regions per scroll: `docs/targets.json`.
+`sqm targets` maps each scroll's clearest band on a finer grid (one block every 3.3 mm) and lists its clearest regions, at least 1536 voxels apart, away from the scroll's outer edge. I checked every first pick by eye to confirm it is papyrus. Full list with five regions per scroll: `docs/targets.json`.
 
-Clearest regions per scroll, from a 3.3 mm grid over each scroll's clearest band.
 Coordinates are level 0 voxels of the listed volume, as x, y, z (the order VC3D shows).
 
 | Scroll | Scan protocol | Band median | Region 1 (x, y, z) | Q | Region 2 (x, y, z) | Q | Region 3 (x, y, z) | Q |
@@ -155,10 +160,9 @@ In August 2026, Lutfiya Miller and Chris Müller ran the published First Letters
 ## Limits
 
 - SQM measures whether the scan resolves the layers. Inside the 2.4 um Paris 4 scan it does not predict where surface prediction models disagree with hand labels: held out AUC 0.53 for the recto model and 0.54 for the m7 model, which is chance level.
-- The model was fitted on one scan (Paris 4 at 7.91 um). Scores on very different scanners or energies should be read as a ranking within that scan.
-- On the PHerc. 343 First Letters segment, patches with letters score a median of 0.69 against 0.64 for the rest of the segment, and the segment's blocks in the band map score a median of 0.63 against 0.51 for the whole band. This is one example, chosen after the fact, and is shown as an illustration only.
+- I fitted the model on one scan (Paris 4 at 7.91 um). On very different scanners or energies, read the scores as a ranking within that scan.
+- On the PHerc. 343 First Letters segment, patches with letters score a median of 0.69 against 0.64 for the rest of the segment, and the segment's blocks in the band map score a median of 0.63 against 0.51 for the whole band. This is one example, picked after the fact, so treat it as an illustration.
 - Block size sets the resolution of the map, about 0.8 mm per block. The atlas uses a coarser grid (6.6 mm) to cover whole scrolls.
-- Scores depend partly on scan settings, so compare scrolls only within the same scan protocol.
 
 ## Reproduce
 
