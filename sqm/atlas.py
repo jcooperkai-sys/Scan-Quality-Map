@@ -7,6 +7,7 @@ from pathlib import Path
 
 import numpy as np
 
+from sqm.model import looks_like_support
 from sqm.sources import catalogue
 
 FIRST_LETTERS_ELIGIBLE = (
@@ -45,7 +46,8 @@ def scan_for(sample, meta):
 
 
 def summarize(sample, scan, out):
-    blocks = json.loads((out / "blocks.json").read_text())["blocks"]
+    every = json.loads((out / "blocks.json").read_text())["blocks"]
+    blocks = [b for b in every if not looks_like_support(b)]
     quality = np.array([b["quality"] for b in blocks])
     z = np.array([b["origin_zyx"][0] for b in blocks])
     bands = {}
@@ -56,7 +58,7 @@ def summarize(sample, scan, out):
     best = max(clear, key=lambda p: p["median_quality"]) if clear else None
     return {
         "scroll": sample, "volume_id": scan["volume_id"], "voxel_um": scan["voxel_um"], "protocol": scan.get("protocol", ""),
-        "blocks": int(len(blocks)),
+        "blocks": int(len(blocks)), "support_blocks_excluded": int(len(every) - len(blocks)),
         "median_quality": float(np.median(quality)) if len(blocks) else None,
         "share_clear": float(np.mean(quality >= 0.6)) if len(blocks) else None,
         "share_hazy": float(np.mean(quality < 0.4)) if len(blocks) else None,

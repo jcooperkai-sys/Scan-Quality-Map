@@ -4,12 +4,13 @@
     "volume_id": "20250821151825",
     "voxel_um": 9.362,
     "protocol": "9.362 um, 113 keV",
-    "blocks": 676,
-    "median_quality": 0.12652317462668816,
-    "share_clear": 0.07692307692307693,
-    "share_hazy": 0.8328402366863905,
-    "best_band_z": 1536,
-    "best_band_median": 0.25276622295883083,
+    "blocks": 643,
+    "support_blocks_excluded": 33,
+    "median_quality": 0.11631201237422271,
+    "share_clear": 0.04510108864696734,
+    "share_hazy": 0.864696734059098,
+    "best_band_z": 18432,
+    "best_band_median": 0.24684543537622278,
     "profile": [
       {
         "z": 768,
@@ -18,8 +19,8 @@
       },
       {
         "z": 1536,
-        "blocks": 5,
-        "median_quality": 0.25276622295883083
+        "blocks": 3,
+        "median_quality": 0.0623130236199585
       },
       {
         "z": 2304,
@@ -28,18 +29,18 @@
       },
       {
         "z": 3072,
-        "blocks": 35,
-        "median_quality": 0.16837495889513665
+        "blocks": 32,
+        "median_quality": 0.15143463599607532
       },
       {
         "z": 3840,
-        "blocks": 33,
-        "median_quality": 0.18453324870137958
+        "blocks": 31,
+        "median_quality": 0.11799719073365
       },
       {
         "z": 4608,
-        "blocks": 33,
-        "median_quality": 0.1315320002464977
+        "blocks": 30,
+        "median_quality": 0.12572117939545865
       },
       {
         "z": 5376,
@@ -53,8 +54,8 @@
       },
       {
         "z": 6912,
-        "blocks": 29,
-        "median_quality": 0.10103671309389671
+        "blocks": 27,
+        "median_quality": 0.08886535875273083
       },
       {
         "z": 7680,
@@ -63,23 +64,23 @@
       },
       {
         "z": 8448,
-        "blocks": 28,
-        "median_quality": 0.10865763698416964
+        "blocks": 27,
+        "median_quality": 0.10616039661525227
       },
       {
         "z": 9216,
-        "blocks": 27,
-        "median_quality": 0.09688355472363903
+        "blocks": 24,
+        "median_quality": 0.07481277198637751
       },
       {
         "z": 9984,
-        "blocks": 25,
-        "median_quality": 0.0680884194830338
+        "blocks": 24,
+        "median_quality": 0.059897269555142935
       },
       {
         "z": 10752,
-        "blocks": 23,
-        "median_quality": 0.04527934307948875
+        "blocks": 22,
+        "median_quality": 0.04025938943628535
       },
       {
         "z": 11520,
@@ -88,13 +89,13 @@
       },
       {
         "z": 12288,
-        "blocks": 25,
-        "median_quality": 0.08491649443550764
+        "blocks": 23,
+        "median_quality": 0.0709788688795293
       },
       {
         "z": 13056,
-        "blocks": 27,
-        "median_quality": 0.09298496010623403
+        "blocks": 25,
+        "median_quality": 0.09151082966387443
       },
       {
         "z": 13824,
@@ -103,48 +104,48 @@
       },
       {
         "z": 14592,
-        "blocks": 28,
-        "median_quality": 0.1685785343720154
+        "blocks": 27,
+        "median_quality": 0.16157212156149459
       },
       {
         "z": 15360,
-        "blocks": 24,
-        "median_quality": 0.12815169446753602
+        "blocks": 23,
+        "median_quality": 0.11429669450152359
       },
       {
         "z": 16128,
-        "blocks": 25,
-        "median_quality": 0.24405200198742028
+        "blocks": 24,
+        "median_quality": 0.24484673094276774
       },
       {
         "z": 16896,
-        "blocks": 24,
-        "median_quality": 0.12788610480829432
+        "blocks": 23,
+        "median_quality": 0.12660067811386305
       },
       {
         "z": 17664,
-        "blocks": 24,
-        "median_quality": 0.11536555593463757
+        "blocks": 22,
+        "median_quality": 0.09771545487035958
       },
       {
         "z": 18432,
-        "blocks": 22,
+        "blocks": 20,
         "median_quality": 0.24684543537622278
       },
       {
         "z": 19200,
-        "blocks": 26,
-        "median_quality": 0.1455974702384126
+        "blocks": 25,
+        "median_quality": 0.14115520111487903
       },
       {
         "z": 19968,
-        "blocks": 30,
-        "median_quality": 0.21665690137679752
+        "blocks": 29,
+        "median_quality": 0.2151415675269968
       },
       {
         "z": 20736,
-        "blocks": 5,
-        "median_quality": 0.15520085594472338
+        "blocks": 4,
+        "median_quality": 0.09863950292629073
       }
     ]
   },
@@ -153,17 +154,18 @@
     "volume_id": "20250521115057",
     "voxel_um": 8.64,
     "protocol": "8.64 um, 116 keV",
-    "blocks": 565,
-    "median_quality": 0.505628616966481,
-    "share_clear": 0.36991150442477877,
-    "share_hazy": 0.3769911504424779,
+    "blocks": 552,
+    "support_blocks_excluded": 13,
+    "median_quality": 0.49940108655682647,
+    "share_clear": 0.3605072463768116,
+    "share_hazy": 0.3822463768115942,
     "best_band_z": 7680,
-    "best_band_median": 0.6390348847941526,
+    "best_band_median": 0.6303236805554355,
     "profile": [
       {
         "z": 0,
-        "blocks": 6,
-        "median_quality": 0.1116756456463977
+        "blocks": 5,
+        "median_quality": 0.006957205185109976
       },
       {
         "z": 768,
@@ -172,13 +174,13 @@
       },
       {
         "z": 1536,
-        "blocks": 17,
-        "median_quality": 0.2850403969742567
+        "blocks": 16,
+        "median_quality": 0.2424990098992425
       },
       {
         "z": 2304,
-        "blocks": 39,
-        "median_quality": 0.25602425919313215
+        "blocks": 37,
+        "median_quality": 0.2471448966763773
       },
       {
         "z": 3072,
@@ -202,8 +204,8 @@
       },
       {
         "z": 6144,
-        "blocks": 44,
-        "median_quality": 0.5663753591843261
+        "blocks": 43,
+        "median_quality": 0.5590040543173836
       },
       {
         "z": 6912,
@@ -212,18 +214,18 @@
       },
       {
         "z": 7680,
-        "blocks": 45,
-        "median_quality": 0.6390348847941526
+        "blocks": 44,
+        "median_quality": 0.6303236805554355
       },
       {
         "z": 8448,
-        "blocks": 46,
-        "median_quality": 0.5938820874290985
+        "blocks": 45,
+        "median_quality": 0.5847282103854056
       },
       {
         "z": 9216,
-        "blocks": 51,
-        "median_quality": 0.5799782655902441
+        "blocks": 45,
+        "median_quality": 0.5102130765570446
       },
       {
         "z": 9984,
@@ -252,12 +254,13 @@
     "volume_id": "20250521125822",
     "voxel_um": 8.64,
     "protocol": "8.64 um, 116 keV",
-    "blocks": 993,
-    "median_quality": 0.27595943781449034,
-    "share_clear": 0.16012084592145015,
-    "share_hazy": 0.6344410876132931,
+    "blocks": 971,
+    "support_blocks_excluded": 22,
+    "median_quality": 0.2661550212529301,
+    "share_clear": 0.14727085478887744,
+    "share_hazy": 0.6457260556127703,
     "best_band_z": 14592,
-    "best_band_median": 0.5644427962464871,
+    "best_band_median": 0.5539223572157213,
     "profile": [
       {
         "z": 0,
@@ -281,63 +284,63 @@
       },
       {
         "z": 3072,
-        "blocks": 70,
-        "median_quality": 0.21709908605301353
+        "blocks": 69,
+        "median_quality": 0.2057741025203208
       },
       {
         "z": 3840,
-        "blocks": 70,
-        "median_quality": 0.28555065499397514
+        "blocks": 67,
+        "median_quality": 0.278605334547726
       },
       {
         "z": 4608,
-        "blocks": 65,
-        "median_quality": 0.39799257731195786
+        "blocks": 64,
+        "median_quality": 0.39764747877285467
       },
       {
         "z": 5376,
-        "blocks": 63,
-        "median_quality": 0.3051789772055135
+        "blocks": 62,
+        "median_quality": 0.29707787448564926
       },
       {
         "z": 6144,
-        "blocks": 62,
-        "median_quality": 0.3617637908467559
+        "blocks": 60,
+        "median_quality": 0.3556758186390482
       },
       {
         "z": 6912,
-        "blocks": 60,
-        "median_quality": 0.28181035107544417
+        "blocks": 58,
+        "median_quality": 0.27123310074233753
       },
       {
         "z": 7680,
-        "blocks": 60,
-        "median_quality": 0.2830410355094743
+        "blocks": 57,
+        "median_quality": 0.250134577053554
       },
       {
         "z": 8448,
-        "blocks": 62,
-        "median_quality": 0.2555758788723851
+        "blocks": 61,
+        "median_quality": 0.24059608984614625
       },
       {
         "z": 9216,
-        "blocks": 62,
-        "median_quality": 0.22469266659664652
+        "blocks": 61,
+        "median_quality": 0.2218246220851664
       },
       {
         "z": 9984,
-        "blocks": 56,
-        "median_quality": 0.35865454399883356
+        "blocks": 55,
+        "median_quality": 0.3524796489256656
       },
       {
         "z": 10752,
-        "blocks": 62,
-        "median_quality": 0.3173381883962182
+        "blocks": 60,
+        "median_quality": 0.3019898336407507
       },
       {
         "z": 11520,
-        "blocks": 55,
-        "median_quality": 0.35011678617116543
+        "blocks": 54,
+        "median_quality": 0.34769785209429716
       },
       {
         "z": 12288,
@@ -356,13 +359,13 @@
       },
       {
         "z": 14592,
-        "blocks": 6,
-        "median_quality": 0.5644427962464871
+        "blocks": 5,
+        "median_quality": 0.5539223572157213
       },
       {
         "z": 15360,
-        "blocks": 4,
-        "median_quality": 0.6033636776790637
+        "blocks": 2,
+        "median_quality": 0.1617318790819321
       }
     ]
   },
@@ -371,12 +374,13 @@
     "volume_id": "20250821151635",
     "voxel_um": 9.362,
     "protocol": "9.362 um, 113 keV",
-    "blocks": 764,
-    "median_quality": 0.430858525233207,
-    "share_clear": 0.32722513089005234,
-    "share_hazy": 0.4620418848167539,
-    "best_band_z": 15360,
-    "best_band_median": 0.634500181289106,
+    "blocks": 726,
+    "support_blocks_excluded": 38,
+    "median_quality": 0.41256085383652746,
+    "share_clear": 0.30165289256198347,
+    "share_hazy": 0.4834710743801653,
+    "best_band_z": 11520,
+    "best_band_median": 0.5378249805803498,
     "profile": [
       {
         "z": 768,
@@ -395,48 +399,48 @@
       },
       {
         "z": 3072,
-        "blocks": 26,
-        "median_quality": 0.40054551646069947
+        "blocks": 24,
+        "median_quality": 0.3888293287793456
       },
       {
         "z": 3840,
-        "blocks": 30,
-        "median_quality": 0.5289967573511021
+        "blocks": 29,
+        "median_quality": 0.5186840285129047
       },
       {
         "z": 4608,
-        "blocks": 35,
-        "median_quality": 0.5434181947063395
+        "blocks": 32,
+        "median_quality": 0.43326138784193974
       },
       {
         "z": 5376,
-        "blocks": 36,
-        "median_quality": 0.44657129637389104
+        "blocks": 35,
+        "median_quality": 0.4288641035946944
       },
       {
         "z": 6144,
-        "blocks": 36,
-        "median_quality": 0.4810930949063464
+        "blocks": 35,
+        "median_quality": 0.47610982241434446
       },
       {
         "z": 6912,
-        "blocks": 40,
-        "median_quality": 0.36580546586467855
+        "blocks": 38,
+        "median_quality": 0.3559872903760138
       },
       {
         "z": 7680,
-        "blocks": 38,
-        "median_quality": 0.5718170096854482
+        "blocks": 34,
+        "median_quality": 0.5309857854168496
       },
       {
         "z": 8448,
-        "blocks": 38,
-        "median_quality": 0.346472793365622
+        "blocks": 33,
+        "median_quality": 0.32043896934954735
       },
       {
         "z": 9216,
-        "blocks": 36,
-        "median_quality": 0.389596999615754
+        "blocks": 34,
+        "median_quality": 0.36529522968135386
       },
       {
         "z": 9984,
@@ -450,8 +454,8 @@
       },
       {
         "z": 11520,
-        "blocks": 35,
-        "median_quality": 0.542773928332223
+        "blocks": 34,
+        "median_quality": 0.5378249805803498
       },
       {
         "z": 12288,
@@ -460,33 +464,33 @@
       },
       {
         "z": 13056,
-        "blocks": 34,
-        "median_quality": 0.49997445307137467
+        "blocks": 30,
+        "median_quality": 0.4709834192824427
       },
       {
         "z": 13824,
-        "blocks": 35,
-        "median_quality": 0.31766868724240216
+        "blocks": 31,
+        "median_quality": 0.26492728158790607
       },
       {
         "z": 14592,
-        "blocks": 37,
-        "median_quality": 0.4147195328642516
+        "blocks": 35,
+        "median_quality": 0.4135552433810087
       },
       {
         "z": 15360,
-        "blocks": 40,
-        "median_quality": 0.634500181289106
+        "blocks": 36,
+        "median_quality": 0.5356896421949693
       },
       {
         "z": 16128,
-        "blocks": 39,
-        "median_quality": 0.3800539815561808
+        "blocks": 38,
+        "median_quality": 0.36935223049573157
       },
       {
         "z": 16896,
-        "blocks": 40,
-        "median_quality": 0.4869894856089636
+        "blocks": 39,
+        "median_quality": 0.49690830096131927
       },
       {
         "z": 17664,
@@ -505,27 +509,28 @@
     "volume_id": "20250821151803",
     "voxel_um": 9.362,
     "protocol": "9.362 um, 113 keV",
-    "blocks": 521,
-    "median_quality": 0.4023849403548757,
-    "share_clear": 0.29942418426103645,
-    "share_hazy": 0.4952015355086372,
+    "blocks": 484,
+    "support_blocks_excluded": 37,
+    "median_quality": 0.3795861421033526,
+    "share_clear": 0.2706611570247934,
+    "share_hazy": 0.5227272727272727,
     "best_band_z": 9216,
     "best_band_median": 0.6555805183423844,
     "profile": [
       {
         "z": 768,
-        "blocks": 11,
+        "blocks": 10,
         "median_quality": 1.1839129812994387e-05
       },
       {
         "z": 1536,
-        "blocks": 6,
-        "median_quality": 0.3248006762483089
+        "blocks": 4,
+        "median_quality": 0.22577186898472576
       },
       {
         "z": 2304,
-        "blocks": 24,
-        "median_quality": 0.25778079810174115
+        "blocks": 21,
+        "median_quality": 0.2304799295888473
       },
       {
         "z": 3072,
@@ -534,8 +539,8 @@
       },
       {
         "z": 3840,
-        "blocks": 23,
-        "median_quality": 0.2838080467294641
+        "blocks": 20,
+        "median_quality": 0.25921582256968073
       },
       {
         "z": 4608,
@@ -544,28 +549,28 @@
       },
       {
         "z": 5376,
-        "blocks": 18,
-        "median_quality": 0.5627022349236437
+        "blocks": 17,
+        "median_quality": 0.5594309123779206
       },
       {
         "z": 6144,
-        "blocks": 17,
-        "median_quality": 0.22759721267531793
+        "blocks": 15,
+        "median_quality": 0.22378105084625635
       },
       {
         "z": 6912,
-        "blocks": 16,
-        "median_quality": 0.5049252906204018
+        "blocks": 14,
+        "median_quality": 0.44460185545728537
       },
       {
         "z": 7680,
-        "blocks": 16,
-        "median_quality": 0.5904307067279471
+        "blocks": 13,
+        "median_quality": 0.4727871952903019
       },
       {
         "z": 8448,
-        "blocks": 18,
-        "median_quality": 0.41683552479479113
+        "blocks": 17,
+        "median_quality": 0.41512745532888595
       },
       {
         "z": 9216,
@@ -574,8 +579,8 @@
       },
       {
         "z": 9984,
-        "blocks": 17,
-        "median_quality": 0.5611720466442051
+        "blocks": 14,
+        "median_quality": 0.5119344076234267
       },
       {
         "z": 10752,
@@ -584,7 +589,7 @@
       },
       {
         "z": 11520,
-        "blocks": 22,
+        "blocks": 20,
         "median_quality": 0.3461191814639687
       },
       {
@@ -594,33 +599,33 @@
       },
       {
         "z": 13056,
-        "blocks": 32,
+        "blocks": 30,
         "median_quality": 0.5018384911440444
       },
       {
         "z": 13824,
-        "blocks": 37,
-        "median_quality": 0.48744328435317047
+        "blocks": 34,
+        "median_quality": 0.4647035375394206
       },
       {
         "z": 14592,
-        "blocks": 34,
-        "median_quality": 0.39760936249643725
+        "blocks": 32,
+        "median_quality": 0.3496137321635126
       },
       {
         "z": 15360,
-        "blocks": 34,
-        "median_quality": 0.4521700957110062
+        "blocks": 33,
+        "median_quality": 0.433530582739744
       },
       {
         "z": 16128,
-        "blocks": 34,
-        "median_quality": 0.40819939170746744
+        "blocks": 30,
+        "median_quality": 0.392842905732129
       },
       {
         "z": 16896,
-        "blocks": 27,
-        "median_quality": 0.34458636113663177
+        "blocks": 26,
+        "median_quality": 0.3440937866722176
       },
       {
         "z": 17664,
@@ -629,8 +634,8 @@
       },
       {
         "z": 18432,
-        "blocks": 16,
-        "median_quality": 0.38751940353912256
+        "blocks": 15,
+        "median_quality": 0.3671190395443712
       },
       {
         "z": 19200,
@@ -644,12 +649,13 @@
     "volume_id": "20250821151750",
     "voxel_um": 9.362,
     "protocol": "9.362 um, 113 keV",
-    "blocks": 522,
-    "median_quality": 0.15085574250727704,
-    "share_clear": 0.09961685823754789,
-    "share_hazy": 0.7720306513409961,
+    "blocks": 495,
+    "support_blocks_excluded": 27,
+    "median_quality": 0.1399320496578808,
+    "share_clear": 0.06666666666666667,
+    "share_hazy": 0.806060606060606,
     "best_band_z": 13056,
-    "best_band_median": 0.29233733048506505,
+    "best_band_median": 0.2788630181502027,
     "profile": [
       {
         "z": 768,
@@ -663,8 +669,8 @@
       },
       {
         "z": 2304,
-        "blocks": 17,
-        "median_quality": 0.04152697005614752
+        "blocks": 16,
+        "median_quality": 0.04018278461056998
       },
       {
         "z": 3072,
@@ -673,13 +679,13 @@
       },
       {
         "z": 3840,
-        "blocks": 24,
-        "median_quality": 0.2074030661261031
+        "blocks": 23,
+        "median_quality": 0.20362174851503997
       },
       {
         "z": 4608,
-        "blocks": 26,
-        "median_quality": 0.28714151056878695
+        "blocks": 25,
+        "median_quality": 0.2630980488335283
       },
       {
         "z": 5376,
@@ -693,13 +699,13 @@
       },
       {
         "z": 6912,
-        "blocks": 26,
-        "median_quality": 0.1413186743528804
+        "blocks": 24,
+        "median_quality": 0.09583559906682083
       },
       {
         "z": 7680,
-        "blocks": 26,
-        "median_quality": 0.13451411223688858
+        "blocks": 23,
+        "median_quality": 0.12424259857188653
       },
       {
         "z": 8448,
@@ -708,58 +714,58 @@
       },
       {
         "z": 9216,
-        "blocks": 28,
-        "median_quality": 0.27312754675626827
+        "blocks": 26,
+        "median_quality": 0.2607435607675626
       },
       {
         "z": 9984,
-        "blocks": 24,
-        "median_quality": 0.27165372621765654
+        "blocks": 22,
+        "median_quality": 0.26549902762675603
       },
       {
         "z": 10752,
-        "blocks": 21,
-        "median_quality": 0.26384641398308156
+        "blocks": 19,
+        "median_quality": 0.19551120674321235
       },
       {
         "z": 11520,
-        "blocks": 22,
-        "median_quality": 0.1222889668935317
+        "blocks": 21,
+        "median_quality": 0.09470422286088764
       },
       {
         "z": 12288,
-        "blocks": 25,
-        "median_quality": 0.2035082699636777
+        "blocks": 23,
+        "median_quality": 0.19034363784493602
       },
       {
         "z": 13056,
-        "blocks": 24,
-        "median_quality": 0.29233733048506505
+        "blocks": 23,
+        "median_quality": 0.2788630181502027
       },
       {
         "z": 13824,
-        "blocks": 24,
-        "median_quality": 0.14438424740772288
+        "blocks": 22,
+        "median_quality": 0.10920796149348624
       },
       {
         "z": 14592,
-        "blocks": 23,
-        "median_quality": 0.167873991782915
+        "blocks": 22,
+        "median_quality": 0.16919978775572447
       },
       {
         "z": 15360,
-        "blocks": 29,
+        "blocks": 27,
         "median_quality": 0.15042637548691914
       },
       {
         "z": 16128,
-        "blocks": 27,
-        "median_quality": 0.14965336356066186
+        "blocks": 25,
+        "median_quality": 0.14872334939275442
       },
       {
         "z": 16896,
-        "blocks": 22,
-        "median_quality": 0.0677812445213993
+        "blocks": 20,
+        "median_quality": 0.05603589511743825
       },
       {
         "z": 17664,
@@ -778,107 +784,103 @@
     "volume_id": "20251110183117",
     "voxel_um": 8.64,
     "protocol": "8.64 um, 116 keV",
-    "blocks": 1491,
-    "median_quality": 0.08834555556857328,
-    "share_clear": 0.05097250167672703,
-    "share_hazy": 0.8611670020120724,
-    "best_band_z": 14592,
-    "best_band_median": 0.31066574041723566,
+    "blocks": 1434,
+    "support_blocks_excluded": 57,
+    "median_quality": 0.08067129215099561,
+    "share_clear": 0.03486750348675035,
+    "share_hazy": 0.8849372384937239,
+    "best_band_z": 13056,
+    "best_band_median": 0.19214935701355312,
     "profile": [
       {
-        "z": 768,
-        "blocks": 1,
-        "median_quality": 0.8339397507951672
-      },
-      {
         "z": 1536,
-        "blocks": 25,
-        "median_quality": 0.049640119418233764
+        "blocks": 24,
+        "median_quality": 0.04346348420833744
       },
       {
         "z": 2304,
-        "blocks": 52,
-        "median_quality": 0.05894441280289739
+        "blocks": 50,
+        "median_quality": 0.053995407412054525
       },
       {
         "z": 3072,
-        "blocks": 89,
-        "median_quality": 0.09586905701060848
+        "blocks": 86,
+        "median_quality": 0.08402440811316625
       },
       {
         "z": 3840,
-        "blocks": 110,
-        "median_quality": 0.06594647165355721
+        "blocks": 108,
+        "median_quality": 0.06522097221983253
       },
       {
         "z": 4608,
-        "blocks": 119,
-        "median_quality": 0.08796719402053677
+        "blocks": 118,
+        "median_quality": 0.08568562515818375
       },
       {
         "z": 5376,
-        "blocks": 110,
-        "median_quality": 0.05627620359628012
+        "blocks": 108,
+        "median_quality": 0.052220584858487074
       },
       {
         "z": 6144,
-        "blocks": 104,
-        "median_quality": 0.10593699430046419
+        "blocks": 98,
+        "median_quality": 0.09618889158342543
       },
       {
         "z": 6912,
-        "blocks": 102,
-        "median_quality": 0.06451605979435895
+        "blocks": 99,
+        "median_quality": 0.06225212907971174
       },
       {
         "z": 7680,
-        "blocks": 107,
-        "median_quality": 0.05867850586385515
+        "blocks": 102,
+        "median_quality": 0.05230598016787906
       },
       {
         "z": 8448,
-        "blocks": 112,
-        "median_quality": 0.08694753258338989
+        "blocks": 106,
+        "median_quality": 0.06694362526363218
       },
       {
         "z": 9216,
-        "blocks": 109,
-        "median_quality": 0.09218334362630247
+        "blocks": 107,
+        "median_quality": 0.08859660003760488
       },
       {
         "z": 9984,
-        "blocks": 110,
-        "median_quality": 0.10635649993086613
+        "blocks": 106,
+        "median_quality": 0.09922459142824358
       },
       {
         "z": 10752,
-        "blocks": 116,
-        "median_quality": 0.08067129215099561
+        "blocks": 112,
+        "median_quality": 0.0786172316022053
       },
       {
         "z": 11520,
-        "blocks": 99,
-        "median_quality": 0.09244127325199297
+        "blocks": 95,
+        "median_quality": 0.08320514511742355
       },
       {
         "z": 12288,
-        "blocks": 69,
-        "median_quality": 0.15231736916336905
+        "blocks": 68,
+        "median_quality": 0.14857560242997328
       },
       {
         "z": 13056,
-        "blocks": 38,
+        "blocks": 34,
         "median_quality": 0.19214935701355312
       },
       {
         "z": 13824,
-        "blocks": 6,
-        "median_quality": 0.14692219294315073
+        "blocks": 5,
+        "median_quality": 0.11186907125627144
       },
       {
         "z": 14592,
-        "blocks": 13,
-        "median_quality": 0.31066574041723566
+        "blocks": 8,
+        "median_quality": 0.012479348912459685
       }
     ]
   },
@@ -887,37 +889,38 @@
     "volume_id": "20250521133212",
     "voxel_um": 8.64,
     "protocol": "8.64 um, 116 keV",
-    "blocks": 633,
-    "median_quality": 0.3092168071338537,
-    "share_clear": 0.15955766192733017,
-    "share_hazy": 0.6192733017377567,
+    "blocks": 615,
+    "support_blocks_excluded": 18,
+    "median_quality": 0.30044960618439237,
+    "share_clear": 0.14796747967479676,
+    "share_hazy": 0.6325203252032521,
     "best_band_z": 9216,
-    "best_band_median": 0.43538666091117817,
+    "best_band_median": 0.42255237132805523,
     "profile": [
       {
         "z": 0,
-        "blocks": 2,
-        "median_quality": 0.45470521145105064
+        "blocks": 1,
+        "median_quality": 0.007826551408975549
       },
       {
         "z": 768,
-        "blocks": 4,
-        "median_quality": 0.35571257025140324
+        "blocks": 3,
+        "median_quality": 0.3060783630802473
       },
       {
         "z": 1536,
-        "blocks": 14,
+        "blocks": 12,
         "median_quality": 0.3117802814218077
       },
       {
         "z": 2304,
-        "blocks": 24,
-        "median_quality": 0.4017681144526026
+        "blocks": 23,
+        "median_quality": 0.3643620201038285
       },
       {
         "z": 3072,
-        "blocks": 40,
-        "median_quality": 0.4163076068272241
+        "blocks": 37,
+        "median_quality": 0.38809241631241503
       },
       {
         "z": 3840,
@@ -926,13 +929,13 @@
       },
       {
         "z": 4608,
-        "blocks": 50,
+        "blocks": 48,
         "median_quality": 0.36550702458477335
       },
       {
         "z": 5376,
-        "blocks": 50,
-        "median_quality": 0.2993142561159743
+        "blocks": 49,
+        "median_quality": 0.294758974861066
       },
       {
         "z": 6144,
@@ -941,23 +944,23 @@
       },
       {
         "z": 6912,
-        "blocks": 41,
-        "median_quality": 0.35397870170349166
+        "blocks": 40,
+        "median_quality": 0.3315977544186727
       },
       {
         "z": 7680,
-        "blocks": 38,
+        "blocks": 36,
         "median_quality": 0.3258026398139717
       },
       {
         "z": 8448,
-        "blocks": 36,
-        "median_quality": 0.40243517596787387
+        "blocks": 35,
+        "median_quality": 0.39986696905622426
       },
       {
         "z": 9216,
-        "blocks": 36,
-        "median_quality": 0.43538666091117817
+        "blocks": 35,
+        "median_quality": 0.42255237132805523
       },
       {
         "z": 9984,
@@ -966,8 +969,8 @@
       },
       {
         "z": 10752,
-        "blocks": 38,
-        "median_quality": 0.32697279788656375
+        "blocks": 36,
+        "median_quality": 0.32379948912576384
       },
       {
         "z": 11520,
@@ -1006,10 +1009,11 @@
     "volume_id": "20250521140437",
     "voxel_um": 8.64,
     "protocol": "8.64 um, 116 keV",
-    "blocks": 712,
-    "median_quality": 0.3461682342048272,
-    "share_clear": 0.23876404494382023,
-    "share_hazy": 0.5547752808988764,
+    "blocks": 699,
+    "support_blocks_excluded": 13,
+    "median_quality": 0.34299582590877664,
+    "share_clear": 0.2374821173104435,
+    "share_hazy": 0.5579399141630901,
     "best_band_z": 12288,
     "best_band_median": 0.5546270011261913,
     "profile": [
@@ -1025,8 +1029,8 @@
       },
       {
         "z": 1536,
-        "blocks": 5,
-        "median_quality": 0.27245908797998664
+        "blocks": 4,
+        "median_quality": 0.2490050599869899
       },
       {
         "z": 2304,
@@ -1040,8 +1044,8 @@
       },
       {
         "z": 3840,
-        "blocks": 34,
-        "median_quality": 0.2618402524950073
+        "blocks": 32,
+        "median_quality": 0.24846234832373681
       },
       {
         "z": 4608,
@@ -1060,28 +1064,28 @@
       },
       {
         "z": 6912,
-        "blocks": 31,
-        "median_quality": 0.29281221373487504
+        "blocks": 30,
+        "median_quality": 0.2823734283497141
       },
       {
         "z": 7680,
-        "blocks": 31,
-        "median_quality": 0.3047587641990033
+        "blocks": 30,
+        "median_quality": 0.2907683253811704
       },
       {
         "z": 8448,
-        "blocks": 34,
-        "median_quality": 0.5011947312775662
+        "blocks": 30,
+        "median_quality": 0.5210327961934693
       },
       {
         "z": 9216,
-        "blocks": 33,
-        "median_quality": 0.45927376743689646
+        "blocks": 32,
+        "median_quality": 0.459004515437909
       },
       {
         "z": 9984,
-        "blocks": 36,
-        "median_quality": 0.4734516415868648
+        "blocks": 35,
+        "median_quality": 0.46211675388940204
       },
       {
         "z": 10752,
@@ -1110,13 +1114,13 @@
       },
       {
         "z": 14592,
-        "blocks": 38,
-        "median_quality": 0.3614366589088368
+        "blocks": 37,
+        "median_quality": 0.35427052563849454
       },
       {
         "z": 15360,
-        "blocks": 38,
-        "median_quality": 0.4460381317233498
+        "blocks": 37,
+        "median_quality": 0.42853788199506765
       },
       {
         "z": 16128,
@@ -1140,12 +1144,13 @@
     "volume_id": "20250821151737",
     "voxel_um": 9.362,
     "protocol": "9.362 um, 113 keV",
-    "blocks": 484,
-    "median_quality": 0.5902626578414882,
-    "share_clear": 0.48760330578512395,
-    "share_hazy": 0.3305785123966942,
+    "blocks": 460,
+    "support_blocks_excluded": 24,
+    "median_quality": 0.5745343565169687,
+    "share_clear": 0.4652173913043478,
+    "share_hazy": 0.34782608695652173,
     "best_band_z": 9216,
-    "best_band_median": 0.7356846355015015,
+    "best_band_median": 0.7284894273612769,
     "profile": [
       {
         "z": 768,
@@ -1154,13 +1159,13 @@
       },
       {
         "z": 1536,
-        "blocks": 16,
-        "median_quality": 0.6401206388207148
+        "blocks": 15,
+        "median_quality": 0.6620304936551388
       },
       {
         "z": 2304,
-        "blocks": 34,
-        "median_quality": 0.44424052679049
+        "blocks": 31,
+        "median_quality": 0.42481606685013756
       },
       {
         "z": 3072,
@@ -1169,53 +1174,53 @@
       },
       {
         "z": 3840,
-        "blocks": 27,
-        "median_quality": 0.6980995370794079
+        "blocks": 26,
+        "median_quality": 0.7224727620425028
       },
       {
         "z": 4608,
-        "blocks": 27,
-        "median_quality": 0.5745913686937916
+        "blocks": 24,
+        "median_quality": 0.5515458780207074
       },
       {
         "z": 5376,
-        "blocks": 31,
-        "median_quality": 0.6809384023854387
+        "blocks": 30,
+        "median_quality": 0.6682254981489453
       },
       {
         "z": 6144,
-        "blocks": 31,
-        "median_quality": 0.40291075263519877
+        "blocks": 28,
+        "median_quality": 0.3595490539974568
       },
       {
         "z": 6912,
-        "blocks": 31,
-        "median_quality": 0.3571180854731154
+        "blocks": 30,
+        "median_quality": 0.35004171800810935
       },
       {
         "z": 7680,
-        "blocks": 30,
-        "median_quality": 0.5256563721837078
+        "blocks": 29,
+        "median_quality": 0.5234084116701159
       },
       {
         "z": 8448,
-        "blocks": 30,
-        "median_quality": 0.6312991282558666
+        "blocks": 27,
+        "median_quality": 0.5906232927678889
       },
       {
         "z": 9216,
-        "blocks": 30,
-        "median_quality": 0.7356846355015015
+        "blocks": 29,
+        "median_quality": 0.7284894273612769
       },
       {
         "z": 9984,
-        "blocks": 33,
-        "median_quality": 0.6725574691134867
+        "blocks": 31,
+        "median_quality": 0.671825149382819
       },
       {
         "z": 10752,
-        "blocks": 36,
-        "median_quality": 0.52385857531618
+        "blocks": 35,
+        "median_quality": 0.5075594827243468
       },
       {
         "z": 11520,
@@ -1224,8 +1229,8 @@
       },
       {
         "z": 12288,
-        "blocks": 28,
-        "median_quality": 0.6942791477495377
+        "blocks": 27,
+        "median_quality": 0.6608381999458203
       },
       {
         "z": 13056,
@@ -1234,7 +1239,7 @@
       },
       {
         "z": 13824,
-        "blocks": 13,
+        "blocks": 11,
         "median_quality": 0.49518062663027723
       },
       {
@@ -1249,12 +1254,13 @@
     "volume_id": "20250521140913",
     "voxel_um": 8.64,
     "protocol": "8.64 um, 116 keV",
-    "blocks": 541,
-    "median_quality": 0.18223868800152607,
-    "share_clear": 0.10166358595194085,
-    "share_hazy": 0.7504621072088724,
+    "blocks": 530,
+    "support_blocks_excluded": 11,
+    "median_quality": 0.1775071437292855,
+    "share_clear": 0.09245283018867924,
+    "share_hazy": 0.7622641509433963,
     "best_band_z": 13056,
-    "best_band_median": 0.35926531858622235,
+    "best_band_median": 0.3533907996366515,
     "profile": [
       {
         "z": 0,
@@ -1273,18 +1279,18 @@
       },
       {
         "z": 2304,
-        "blocks": 35,
-        "median_quality": 0.18739654910443185
+        "blocks": 33,
+        "median_quality": 0.17556791964083698
       },
       {
         "z": 3072,
-        "blocks": 32,
-        "median_quality": 0.2313692673810298
+        "blocks": 31,
+        "median_quality": 0.22641157010602914
       },
       {
         "z": 3840,
-        "blocks": 31,
-        "median_quality": 0.12438620719343528
+        "blocks": 30,
+        "median_quality": 0.11890117781266663
       },
       {
         "z": 4608,
@@ -1293,8 +1299,8 @@
       },
       {
         "z": 5376,
-        "blocks": 33,
-        "median_quality": 0.15622504435463644
+        "blocks": 32,
+        "median_quality": 0.14910304086683895
       },
       {
         "z": 6144,
@@ -1308,8 +1314,8 @@
       },
       {
         "z": 7680,
-        "blocks": 24,
-        "median_quality": 0.1220819955382535
+        "blocks": 23,
+        "median_quality": 0.1208755332935972
       },
       {
         "z": 8448,
@@ -1318,13 +1324,13 @@
       },
       {
         "z": 9216,
-        "blocks": 30,
-        "median_quality": 0.15604632574606023
+        "blocks": 29,
+        "median_quality": 0.14635692381887302
       },
       {
         "z": 9984,
-        "blocks": 34,
-        "median_quality": 0.17432241921763433
+        "blocks": 33,
+        "median_quality": 0.16919847061753468
       },
       {
         "z": 10752,
@@ -1333,18 +1339,18 @@
       },
       {
         "z": 11520,
-        "blocks": 42,
-        "median_quality": 0.19129511788633602
+        "blocks": 41,
+        "median_quality": 0.19113261454803823
       },
       {
         "z": 12288,
-        "blocks": 39,
-        "median_quality": 0.33758840573008514
+        "blocks": 38,
+        "median_quality": 0.3315135947396858
       },
       {
         "z": 13056,
-        "blocks": 34,
-        "median_quality": 0.35926531858622235
+        "blocks": 33,
+        "median_quality": 0.3533907996366515
       },
       {
         "z": 13824,
@@ -1363,12 +1369,13 @@
     "volume_id": "20251124083638",
     "voxel_um": 8.64,
     "protocol": "8.64 um, 116 keV",
-    "blocks": 495,
-    "median_quality": 0.30467594872027437,
-    "share_clear": 0.13333333333333333,
-    "share_hazy": 0.6282828282828283,
+    "blocks": 482,
+    "support_blocks_excluded": 13,
+    "median_quality": 0.3014354607479707,
+    "share_clear": 0.12448132780082988,
+    "share_hazy": 0.6348547717842323,
     "best_band_z": 9984,
-    "best_band_median": 0.4821846890783647,
+    "best_band_median": 0.45434343528399246,
     "profile": [
       {
         "z": 1536,
@@ -1382,18 +1389,18 @@
       },
       {
         "z": 3072,
-        "blocks": 33,
-        "median_quality": 0.236506311574802
+        "blocks": 32,
+        "median_quality": 0.22545919782470392
       },
       {
         "z": 3840,
-        "blocks": 35,
-        "median_quality": 0.3524687824759026
+        "blocks": 34,
+        "median_quality": 0.3601536965321028
       },
       {
         "z": 4608,
-        "blocks": 38,
-        "median_quality": 0.22521551115927424
+        "blocks": 37,
+        "median_quality": 0.20823835481890557
       },
       {
         "z": 5376,
@@ -1402,7 +1409,7 @@
       },
       {
         "z": 6144,
-        "blocks": 48,
+        "blocks": 46,
         "median_quality": 0.2433318330337736
       },
       {
@@ -1412,33 +1419,33 @@
       },
       {
         "z": 7680,
-        "blocks": 48,
-        "median_quality": 0.35998162053669946
+        "blocks": 47,
+        "median_quality": 0.35677167031555096
       },
       {
         "z": 8448,
-        "blocks": 58,
-        "median_quality": 0.18976168904350788
+        "blocks": 57,
+        "median_quality": 0.188294788977104
       },
       {
         "z": 9216,
-        "blocks": 48,
+        "blocks": 46,
         "median_quality": 0.3271882029604067
       },
       {
         "z": 9984,
-        "blocks": 37,
-        "median_quality": 0.4821846890783647
+        "blocks": 35,
+        "median_quality": 0.45434343528399246
       },
       {
         "z": 10752,
-        "blocks": 22,
-        "median_quality": 0.42600474248809195
+        "blocks": 21,
+        "median_quality": 0.4291944952353866
       },
       {
         "z": 11520,
-        "blocks": 6,
-        "median_quality": 0.3754290907345528
+        "blocks": 5,
+        "median_quality": 0.3434407237722657
       }
     ]
   },
@@ -1447,17 +1454,18 @@
     "volume_id": "20250521151210",
     "voxel_um": 8.64,
     "protocol": "8.64 um, 116 keV",
-    "blocks": 631,
-    "median_quality": 0.1612611222779956,
-    "share_clear": 0.09508716323296355,
-    "share_hazy": 0.7464342313787639,
+    "blocks": 626,
+    "support_blocks_excluded": 5,
+    "median_quality": 0.15867469810072277,
+    "share_clear": 0.0926517571884984,
+    "share_hazy": 0.7523961661341853,
     "best_band_z": 5376,
-    "best_band_median": 0.3535976343893277,
+    "best_band_median": 0.3480538977930098,
     "profile": [
       {
         "z": 0,
-        "blocks": 80,
-        "median_quality": 0.003104584823465784
+        "blocks": 79,
+        "median_quality": 0.003071936549704656
       },
       {
         "z": 768,
@@ -1491,23 +1499,23 @@
       },
       {
         "z": 5376,
-        "blocks": 44,
-        "median_quality": 0.3535976343893277
+        "blocks": 43,
+        "median_quality": 0.3480538977930098
       },
       {
         "z": 6144,
-        "blocks": 47,
-        "median_quality": 0.25937515262350724
+        "blocks": 46,
+        "median_quality": 0.2378467214220777
       },
       {
         "z": 6912,
-        "blocks": 52,
-        "median_quality": 0.27035066198613533
+        "blocks": 51,
+        "median_quality": 0.2617218052114057
       },
       {
         "z": 7680,
-        "blocks": 55,
-        "median_quality": 0.29424094899860437
+        "blocks": 54,
+        "median_quality": 0.2929198909849086
       },
       {
         "z": 8448,
@@ -1541,17 +1549,18 @@
     "volume_id": "20250521151215",
     "voxel_um": 8.64,
     "protocol": "8.64 um, 116 keV",
-    "blocks": 428,
-    "median_quality": 0.1122209523544348,
-    "share_clear": 0.056074766355140186,
-    "share_hazy": 0.8457943925233645,
+    "blocks": 417,
+    "support_blocks_excluded": 11,
+    "median_quality": 0.10888650951578797,
+    "share_clear": 0.04316546762589928,
+    "share_hazy": 0.8585131894484412,
     "best_band_z": 2304,
-    "best_band_median": 0.2506097368115878,
+    "best_band_median": 0.2440004288501885,
     "profile": [
       {
         "z": 0,
-        "blocks": 62,
-        "median_quality": 0.0025411828102308593
+        "blocks": 61,
+        "median_quality": 0.002525305619024553
       },
       {
         "z": 1536,
@@ -1560,8 +1569,8 @@
       },
       {
         "z": 2304,
-        "blocks": 20,
-        "median_quality": 0.2506097368115878
+        "blocks": 19,
+        "median_quality": 0.2440004288501885
       },
       {
         "z": 3072,
@@ -1570,38 +1579,38 @@
       },
       {
         "z": 3840,
-        "blocks": 44,
-        "median_quality": 0.13054922450590403
+        "blocks": 43,
+        "median_quality": 0.13252299740876658
       },
       {
         "z": 4608,
-        "blocks": 48,
-        "median_quality": 0.13113987173109326
+        "blocks": 46,
+        "median_quality": 0.1182503552319648
       },
       {
         "z": 5376,
-        "blocks": 51,
-        "median_quality": 0.12829344216584088
+        "blocks": 50,
+        "median_quality": 0.1135930444450339
       },
       {
         "z": 6144,
-        "blocks": 47,
-        "median_quality": 0.1569451905429385
+        "blocks": 46,
+        "median_quality": 0.14408996752095354
       },
       {
         "z": 6912,
-        "blocks": 44,
-        "median_quality": 0.1320728928574732
+        "blocks": 43,
+        "median_quality": 0.13098708346082488
       },
       {
         "z": 7680,
-        "blocks": 37,
-        "median_quality": 0.24259342072916426
+        "blocks": 35,
+        "median_quality": 0.2333515585036868
       },
       {
         "z": 8448,
-        "blocks": 26,
-        "median_quality": 0.20566231224754805
+        "blocks": 25,
+        "median_quality": 0.20550674383479767
       },
       {
         "z": 9216,
@@ -1620,17 +1629,18 @@
     "volume_id": "20250521135224",
     "voxel_um": 8.64,
     "protocol": "8.64 um, 116 keV",
-    "blocks": 1352,
-    "median_quality": 0.2825525672596426,
-    "share_clear": 0.14423076923076922,
-    "share_hazy": 0.6427514792899408,
+    "blocks": 1331,
+    "support_blocks_excluded": 21,
+    "median_quality": 0.27802533486951575,
+    "share_clear": 0.13974455296769348,
+    "share_hazy": 0.6491359879789632,
     "best_band_z": 3072,
-    "best_band_median": 0.520812264154216,
+    "best_band_median": 0.4917939658697988,
     "profile": [
       {
         "z": 0,
-        "blocks": 87,
-        "median_quality": 0.0024998445012891467
+        "blocks": 84,
+        "median_quality": 0.0024682491975694964
       },
       {
         "z": 768,
@@ -1649,8 +1659,8 @@
       },
       {
         "z": 3072,
-        "blocks": 42,
-        "median_quality": 0.520812264154216
+        "blocks": 41,
+        "median_quality": 0.4917939658697988
       },
       {
         "z": 3840,
@@ -1659,8 +1669,8 @@
       },
       {
         "z": 4608,
-        "blocks": 68,
-        "median_quality": 0.274593495937847
+        "blocks": 65,
+        "median_quality": 0.26149672302148935
       },
       {
         "z": 5376,
@@ -1669,13 +1679,13 @@
       },
       {
         "z": 6144,
-        "blocks": 56,
-        "median_quality": 0.35948975837554004
+        "blocks": 55,
+        "median_quality": 0.3569669728490564
       },
       {
         "z": 6912,
-        "blocks": 54,
-        "median_quality": 0.30981961876546193
+        "blocks": 53,
+        "median_quality": 0.3080824743009577
       },
       {
         "z": 7680,
@@ -1684,8 +1694,8 @@
       },
       {
         "z": 8448,
-        "blocks": 50,
-        "median_quality": 0.34032046729854865
+        "blocks": 49,
+        "median_quality": 0.33003761073754506
       },
       {
         "z": 9216,
@@ -1704,8 +1714,8 @@
       },
       {
         "z": 11520,
-        "blocks": 39,
-        "median_quality": 0.34005316434768346
+        "blocks": 38,
+        "median_quality": 0.33320079554358634
       },
       {
         "z": 12288,
@@ -1714,8 +1724,8 @@
       },
       {
         "z": 13056,
-        "blocks": 36,
-        "median_quality": 0.2521360658799155
+        "blocks": 35,
+        "median_quality": 0.24186912410810507
       },
       {
         "z": 13824,
@@ -1724,13 +1734,13 @@
       },
       {
         "z": 14592,
-        "blocks": 38,
-        "median_quality": 0.22334579222812145
+        "blocks": 37,
+        "median_quality": 0.21769367592099337
       },
       {
         "z": 15360,
-        "blocks": 41,
-        "median_quality": 0.19572732330067896
+        "blocks": 40,
+        "median_quality": 0.18935777580627744
       },
       {
         "z": 16128,
@@ -1744,13 +1754,13 @@
       },
       {
         "z": 17664,
-        "blocks": 48,
-        "median_quality": 0.42144627411822005
+        "blocks": 47,
+        "median_quality": 0.41501093336833805
       },
       {
         "z": 18432,
-        "blocks": 51,
-        "median_quality": 0.47449835171711335
+        "blocks": 50,
+        "median_quality": 0.45890867692284554
       },
       {
         "z": 19200,
@@ -1759,8 +1769,8 @@
       },
       {
         "z": 19968,
-        "blocks": 63,
-        "median_quality": 0.3903218943390593
+        "blocks": 62,
+        "median_quality": 0.38805483578871564
       },
       {
         "z": 20736,
@@ -1774,18 +1784,18 @@
       },
       {
         "z": 22272,
-        "blocks": 24,
-        "median_quality": 0.1297986755487024
+        "blocks": 22,
+        "median_quality": 0.11186458570905389
       },
       {
         "z": 23040,
-        "blocks": 4,
-        "median_quality": 0.24942307915248177
+        "blocks": 3,
+        "median_quality": 0.06691012615282572
       },
       {
         "z": 23808,
-        "blocks": 2,
-        "median_quality": 0.1367794217411717
+        "blocks": 1,
+        "median_quality": 0.2027528980262423
       }
     ]
   },
@@ -1794,12 +1804,13 @@
     "volume_id": "20250821151723",
     "voxel_um": 9.362,
     "protocol": "9.362 um, 113 keV",
-    "blocks": 568,
-    "median_quality": 0.558529228258578,
-    "share_clear": 0.4612676056338028,
-    "share_hazy": 0.3732394366197183,
+    "blocks": 543,
+    "support_blocks_excluded": 25,
+    "median_quality": 0.5336970642335425,
+    "share_clear": 0.4419889502762431,
+    "share_hazy": 0.39042357274401474,
     "best_band_z": 12288,
-    "best_band_median": 0.6937094201688586,
+    "best_band_median": 0.6573191612507489,
     "profile": [
       {
         "z": 1536,
@@ -1808,23 +1819,23 @@
       },
       {
         "z": 2304,
-        "blocks": 21,
-        "median_quality": 0.35239912250161576
+        "blocks": 19,
+        "median_quality": 0.22286665108002718
       },
       {
         "z": 3072,
-        "blocks": 30,
-        "median_quality": 0.3522815340557817
+        "blocks": 29,
+        "median_quality": 0.3311531202674467
       },
       {
         "z": 3840,
-        "blocks": 36,
-        "median_quality": 0.5484430459137037
+        "blocks": 34,
+        "median_quality": 0.5371013197989476
       },
       {
         "z": 4608,
-        "blocks": 39,
-        "median_quality": 0.6029489608586429
+        "blocks": 38,
+        "median_quality": 0.5651859021212262
       },
       {
         "z": 5376,
@@ -1833,28 +1844,28 @@
       },
       {
         "z": 6144,
-        "blocks": 32,
-        "median_quality": 0.5967955724865623
+        "blocks": 29,
+        "median_quality": 0.4804002403819746
       },
       {
         "z": 6912,
-        "blocks": 30,
-        "median_quality": 0.5547165828820171
+        "blocks": 28,
+        "median_quality": 0.5336165874381333
       },
       {
         "z": 7680,
-        "blocks": 28,
-        "median_quality": 0.3405843522859434
+        "blocks": 26,
+        "median_quality": 0.2954599804424879
       },
       {
         "z": 8448,
-        "blocks": 28,
+        "blocks": 26,
         "median_quality": 0.6056155039814857
       },
       {
         "z": 9216,
-        "blocks": 25,
-        "median_quality": 0.6275297679209857
+        "blocks": 24,
+        "median_quality": 0.6236485684272073
       },
       {
         "z": 9984,
@@ -1868,13 +1879,13 @@
       },
       {
         "z": 11520,
-        "blocks": 31,
-        "median_quality": 0.6220896546653881
+        "blocks": 30,
+        "median_quality": 0.6151224463260652
       },
       {
         "z": 12288,
-        "blocks": 31,
-        "median_quality": 0.6937094201688586
+        "blocks": 29,
+        "median_quality": 0.6573191612507489
       },
       {
         "z": 13056,
@@ -1883,13 +1894,13 @@
       },
       {
         "z": 13824,
-        "blocks": 29,
+        "blocks": 27,
         "median_quality": 0.5994854992237885
       },
       {
         "z": 14592,
-        "blocks": 32,
-        "median_quality": 0.6436630651443187
+        "blocks": 29,
+        "median_quality": 0.6191309689259871
       },
       {
         "z": 15360,
@@ -1898,8 +1909,8 @@
       },
       {
         "z": 16128,
-        "blocks": 18,
-        "median_quality": 0.41377454049604867
+        "blocks": 17,
+        "median_quality": 0.38093966005917906
       },
       {
         "z": 16896,
@@ -1913,10 +1924,11 @@
     "volume_id": "20250821151701",
     "voxel_um": 9.362,
     "protocol": "9.362 um, 113 keV",
-    "blocks": 431,
-    "median_quality": 0.4739668854324652,
-    "share_clear": 0.33410672853828305,
-    "share_hazy": 0.43155452436194897,
+    "blocks": 402,
+    "support_blocks_excluded": 29,
+    "median_quality": 0.4379016107512531,
+    "share_clear": 0.2960199004975124,
+    "share_hazy": 0.4577114427860697,
     "best_band_z": 9216,
     "best_band_median": 0.7000605406059162,
     "profile": [
@@ -1927,28 +1939,28 @@
       },
       {
         "z": 1536,
-        "blocks": 7,
-        "median_quality": 0.27247984501755884
+        "blocks": 6,
+        "median_quality": 0.21495291601687921
       },
       {
         "z": 2304,
-        "blocks": 21,
-        "median_quality": 0.3383457139967165
+        "blocks": 20,
+        "median_quality": 0.33236165876372803
       },
       {
         "z": 3072,
-        "blocks": 22,
-        "median_quality": 0.4319057280346105
+        "blocks": 21,
+        "median_quality": 0.4262007567895075
       },
       {
         "z": 3840,
-        "blocks": 21,
-        "median_quality": 0.360404134454746
+        "blocks": 20,
+        "median_quality": 0.3720977063191696
       },
       {
         "z": 4608,
-        "blocks": 23,
-        "median_quality": 0.5141751869657958
+        "blocks": 21,
+        "median_quality": 0.48994949510082125
       },
       {
         "z": 5376,
@@ -1957,43 +1969,43 @@
       },
       {
         "z": 6144,
-        "blocks": 23,
-        "median_quality": 0.4897194002482965
+        "blocks": 21,
+        "median_quality": 0.4793126815741688
       },
       {
         "z": 6912,
-        "blocks": 22,
-        "median_quality": 0.47532975261824684
+        "blocks": 20,
+        "median_quality": 0.4721016135270382
       },
       {
         "z": 7680,
-        "blocks": 22,
-        "median_quality": 0.631790881480116
+        "blocks": 21,
+        "median_quality": 0.6283472925108216
       },
       {
         "z": 8448,
-        "blocks": 24,
-        "median_quality": 0.675449925797204
+        "blocks": 22,
+        "median_quality": 0.6611061276542408
       },
       {
         "z": 9216,
-        "blocks": 24,
+        "blocks": 22,
         "median_quality": 0.7000605406059162
       },
       {
         "z": 9984,
-        "blocks": 23,
-        "median_quality": 0.6188218255483409
+        "blocks": 22,
+        "median_quality": 0.6260096776390155
       },
       {
         "z": 10752,
-        "blocks": 22,
-        "median_quality": 0.6471763823997961
+        "blocks": 20,
+        "median_quality": 0.6173045557680483
       },
       {
         "z": 11520,
-        "blocks": 17,
-        "median_quality": 0.4440011365176146
+        "blocks": 16,
+        "median_quality": 0.3639270223899075
       },
       {
         "z": 12288,
@@ -2007,23 +2019,23 @@
       },
       {
         "z": 13824,
-        "blocks": 18,
-        "median_quality": 0.4323727843967342
+        "blocks": 16,
+        "median_quality": 0.4143744704597922
       },
       {
         "z": 14592,
-        "blocks": 15,
-        "median_quality": 0.43819252222279265
+        "blocks": 13,
+        "median_quality": 0.3879803225337236
       },
       {
         "z": 15360,
-        "blocks": 18,
-        "median_quality": 0.31756535931707974
+        "blocks": 15,
+        "median_quality": 0.2870758771430079
       },
       {
         "z": 16128,
-        "blocks": 16,
-        "median_quality": 0.49410486429391964
+        "blocks": 13,
+        "median_quality": 0.39879594851319383
       }
     ]
   },
@@ -2032,17 +2044,18 @@
     "volume_id": "20250728152254",
     "voxel_um": 9.362,
     "protocol": "9.362 um, 113 keV",
-    "blocks": 396,
-    "median_quality": 0.17532850167704994,
-    "share_clear": 0.14898989898989898,
-    "share_hazy": 0.6868686868686869,
+    "blocks": 393,
+    "support_blocks_excluded": 3,
+    "median_quality": 0.17501330415707317,
+    "share_clear": 0.15012722646310434,
+    "share_hazy": 0.6870229007633588,
     "best_band_z": 3072,
     "best_band_median": 0.5998604862263359,
     "profile": [
       {
         "z": 0,
-        "blocks": 63,
-        "median_quality": 0.060110231305172325
+        "blocks": 61,
+        "median_quality": 0.05840471036829287
       },
       {
         "z": 768,
@@ -2091,8 +2104,8 @@
       },
       {
         "z": 7680,
-        "blocks": 18,
-        "median_quality": 0.1011518997716335
+        "blocks": 17,
+        "median_quality": 0.06989115414438592
       },
       {
         "z": 8448,
@@ -2141,10 +2154,11 @@
     "volume_id": "20250804142305",
     "voxel_um": 9.362,
     "protocol": "9.362 um, 113 keV",
-    "blocks": 382,
-    "median_quality": 0.2518999439569767,
-    "share_clear": 0.17015706806282724,
-    "share_hazy": 0.6361256544502618,
+    "blocks": 381,
+    "support_blocks_excluded": 1,
+    "median_quality": 0.25250321149394506,
+    "share_clear": 0.17060367454068243,
+    "share_hazy": 0.6351706036745407,
     "best_band_z": 11520,
     "best_band_median": 0.4789264060597018,
     "profile": [
@@ -2180,8 +2194,8 @@
       },
       {
         "z": 6144,
-        "blocks": 15,
-        "median_quality": 0.14007778950314853
+        "blocks": 14,
+        "median_quality": 0.1388978804101253
       },
       {
         "z": 6912,
@@ -2235,12 +2249,13 @@
     "volume_id": "20250820131727",
     "voxel_um": 9.362,
     "protocol": "9.362 um, 113 keV",
-    "blocks": 533,
-    "median_quality": 0.36673736659672523,
-    "share_clear": 0.21388367729831145,
-    "share_hazy": 0.5290806754221389,
-    "best_band_z": 12288,
-    "best_band_median": 0.5481564764009521,
+    "blocks": 502,
+    "support_blocks_excluded": 31,
+    "median_quality": 0.3485974346164869,
+    "share_clear": 0.18725099601593626,
+    "share_hazy": 0.5557768924302788,
+    "best_band_z": 11520,
+    "best_band_median": 0.5008667089210044,
     "profile": [
       {
         "z": 768,
@@ -2254,13 +2269,13 @@
       },
       {
         "z": 2304,
-        "blocks": 28,
+        "blocks": 26,
         "median_quality": 0.33706129488233394
       },
       {
         "z": 3072,
-        "blocks": 31,
-        "median_quality": 0.35475426553137906
+        "blocks": 29,
+        "median_quality": 0.30642785387322063
       },
       {
         "z": 3840,
@@ -2269,18 +2284,18 @@
       },
       {
         "z": 4608,
-        "blocks": 25,
-        "median_quality": 0.4171843253458362
+        "blocks": 24,
+        "median_quality": 0.4155816527149287
       },
       {
         "z": 5376,
-        "blocks": 22,
-        "median_quality": 0.34297234826586975
+        "blocks": 21,
+        "median_quality": 0.3381581409873938
       },
       {
         "z": 6144,
-        "blocks": 19,
-        "median_quality": 0.26346635352881753
+        "blocks": 18,
+        "median_quality": 0.22448750831460457
       },
       {
         "z": 6912,
@@ -2289,18 +2304,18 @@
       },
       {
         "z": 7680,
-        "blocks": 21,
-        "median_quality": 0.3474604911771401
+        "blocks": 19,
+        "median_quality": 0.2636746582640254
       },
       {
         "z": 8448,
-        "blocks": 22,
-        "median_quality": 0.4136970667051728
+        "blocks": 19,
+        "median_quality": 0.35265592494612835
       },
       {
         "z": 9216,
-        "blocks": 22,
-        "median_quality": 0.40988559930869095
+        "blocks": 19,
+        "median_quality": 0.38665974793822655
       },
       {
         "z": 9984,
@@ -2309,8 +2324,8 @@
       },
       {
         "z": 10752,
-        "blocks": 19,
-        "median_quality": 0.4513972286120939
+        "blocks": 18,
+        "median_quality": 0.4391711827630245
       },
       {
         "z": 11520,
@@ -2319,38 +2334,38 @@
       },
       {
         "z": 12288,
-        "blocks": 22,
-        "median_quality": 0.5481564764009521
+        "blocks": 19,
+        "median_quality": 0.49880280846993885
       },
       {
         "z": 13056,
-        "blocks": 23,
-        "median_quality": 0.4575688889391197
+        "blocks": 22,
+        "median_quality": 0.44895035465936817
       },
       {
         "z": 13824,
-        "blocks": 27,
-        "median_quality": 0.4914580642017959
+        "blocks": 26,
+        "median_quality": 0.4907231455084598
       },
       {
         "z": 14592,
-        "blocks": 31,
-        "median_quality": 0.36920067725858835
+        "blocks": 28,
+        "median_quality": 0.33217068666847926
       },
       {
         "z": 15360,
-        "blocks": 31,
-        "median_quality": 0.3108808975923903
+        "blocks": 30,
+        "median_quality": 0.35464715459993423
       },
       {
         "z": 16128,
-        "blocks": 33,
-        "median_quality": 0.3756844201518079
+        "blocks": 30,
+        "median_quality": 0.3518720031497881
       },
       {
         "z": 16896,
-        "blocks": 32,
-        "median_quality": 0.41751647179132134
+        "blocks": 29,
+        "median_quality": 0.36480883702513806
       },
       {
         "z": 17664,
@@ -2369,12 +2384,13 @@
     "volume_id": "20250521120456",
     "voxel_um": 8.64,
     "protocol": "8.64 um, 116 keV",
-    "blocks": 522,
-    "median_quality": 0.17425798116837435,
-    "share_clear": 0.13218390804597702,
-    "share_hazy": 0.7260536398467433,
+    "blocks": 507,
+    "support_blocks_excluded": 15,
+    "median_quality": 0.16718582031778903,
+    "share_clear": 0.11439842209072978,
+    "share_hazy": 0.7435897435897436,
     "best_band_z": 7680,
-    "best_band_median": 0.47909125221995874,
+    "best_band_median": 0.4565273871901393,
     "profile": [
       {
         "z": 0,
@@ -2398,8 +2414,8 @@
       },
       {
         "z": 3840,
-        "blocks": 15,
-        "median_quality": 0.18269125990668408
+        "blocks": 14,
+        "median_quality": 0.16221437830945473
       },
       {
         "z": 4608,
@@ -2408,13 +2424,13 @@
       },
       {
         "z": 5376,
-        "blocks": 22,
-        "median_quality": 0.46015150793169346
+        "blocks": 21,
+        "median_quality": 0.45586986181553757
       },
       {
         "z": 6144,
-        "blocks": 23,
-        "median_quality": 0.15406209907658533
+        "blocks": 22,
+        "median_quality": 0.1447927991141701
       },
       {
         "z": 6912,
@@ -2423,8 +2439,8 @@
       },
       {
         "z": 7680,
-        "blocks": 23,
-        "median_quality": 0.47909125221995874
+        "blocks": 21,
+        "median_quality": 0.4565273871901393
       },
       {
         "z": 8448,
@@ -2458,13 +2474,13 @@
       },
       {
         "z": 13056,
-        "blocks": 14,
-        "median_quality": 0.17617905104386383
+        "blocks": 13,
+        "median_quality": 0.17812823820906856
       },
       {
         "z": 13824,
-        "blocks": 13,
-        "median_quality": 0.11657923798956839
+        "blocks": 12,
+        "median_quality": 0.1164965911676106
       },
       {
         "z": 14592,
@@ -2473,13 +2489,13 @@
       },
       {
         "z": 15360,
-        "blocks": 16,
-        "median_quality": 0.2220576564347969
+        "blocks": 14,
+        "median_quality": 0.11232218096163361
       },
       {
         "z": 16128,
-        "blocks": 18,
-        "median_quality": 0.10670964898432823
+        "blocks": 17,
+        "median_quality": 0.09486372931615443
       },
       {
         "z": 16896,
@@ -2498,8 +2514,8 @@
       },
       {
         "z": 19200,
-        "blocks": 22,
-        "median_quality": 0.21546119436425298
+        "blocks": 20,
+        "median_quality": 0.2051493032648628
       },
       {
         "z": 19968,
@@ -2508,13 +2524,13 @@
       },
       {
         "z": 20736,
-        "blocks": 26,
-        "median_quality": 0.18700452848964955
+        "blocks": 24,
+        "median_quality": 0.16732452337422626
       },
       {
         "z": 21504,
-        "blocks": 21,
-        "median_quality": 0.09046469601490004
+        "blocks": 20,
+        "median_quality": 0.08486093453579989
       },
       {
         "z": 23040,
@@ -2528,16 +2544,17 @@
     "volume_id": "20250821151648",
     "voxel_um": 9.362,
     "protocol": "9.362 um, 113 keV",
-    "blocks": 475,
-    "median_quality": 0.3515672767932996,
-    "share_clear": 0.2694736842105263,
-    "share_hazy": 0.5473684210526316,
+    "blocks": 445,
+    "support_blocks_excluded": 30,
+    "median_quality": 0.31234472462435314,
+    "share_clear": 0.2449438202247191,
+    "share_hazy": 0.5730337078651685,
     "best_band_z": 15360,
     "best_band_median": 0.5641656317204907,
     "profile": [
       {
         "z": 768,
-        "blocks": 7,
+        "blocks": 6,
         "median_quality": 1.1839129812994387e-05
       },
       {
@@ -2547,7 +2564,7 @@
       },
       {
         "z": 2304,
-        "blocks": 30,
+        "blocks": 28,
         "median_quality": 0.5594777255776624
       },
       {
@@ -2562,23 +2579,23 @@
       },
       {
         "z": 4608,
-        "blocks": 26,
-        "median_quality": 0.44112036889298106
+        "blocks": 25,
+        "median_quality": 0.4051897044079257
       },
       {
         "z": 5376,
-        "blocks": 31,
-        "median_quality": 0.4529728455190756
+        "blocks": 28,
+        "median_quality": 0.4757240100809598
       },
       {
         "z": 6144,
-        "blocks": 28,
-        "median_quality": 0.5139382281726116
+        "blocks": 26,
+        "median_quality": 0.4728925935010341
       },
       {
         "z": 6912,
-        "blocks": 25,
-        "median_quality": 0.475620841037693
+        "blocks": 24,
+        "median_quality": 0.46997458557426286
       },
       {
         "z": 7680,
@@ -2587,33 +2604,33 @@
       },
       {
         "z": 8448,
-        "blocks": 18,
-        "median_quality": 0.46662474376334984
+        "blocks": 16,
+        "median_quality": 0.42925198470258225
       },
       {
         "z": 9216,
-        "blocks": 15,
-        "median_quality": 0.2418597256393649
+        "blocks": 14,
+        "median_quality": 0.23713131975224327
       },
       {
         "z": 9984,
-        "blocks": 13,
-        "median_quality": 0.3142267271898285
+        "blocks": 9,
+        "median_quality": 0.23005205094695572
       },
       {
         "z": 10752,
-        "blocks": 14,
-        "median_quality": 0.16370377959648036
+        "blocks": 12,
+        "median_quality": 0.12862338833349865
       },
       {
         "z": 11520,
-        "blocks": 14,
-        "median_quality": 0.10053391467349508
+        "blocks": 11,
+        "median_quality": 0.07833964117949073
       },
       {
         "z": 12288,
-        "blocks": 16,
-        "median_quality": 0.1745015115474906
+        "blocks": 15,
+        "median_quality": 0.1741902396934893
       },
       {
         "z": 13056,
@@ -2622,13 +2639,13 @@
       },
       {
         "z": 13824,
-        "blocks": 17,
-        "median_quality": 0.4202277070025652
+        "blocks": 16,
+        "median_quality": 0.3758787778643836
       },
       {
         "z": 14592,
-        "blocks": 20,
-        "median_quality": 0.39435216319676214
+        "blocks": 18,
+        "median_quality": 0.34367756980831277
       },
       {
         "z": 15360,
@@ -2637,8 +2654,8 @@
       },
       {
         "z": 16128,
-        "blocks": 19,
-        "median_quality": 0.21730894436651915
+        "blocks": 18,
+        "median_quality": 0.21225778164126868
       },
       {
         "z": 16896,
@@ -2652,8 +2669,8 @@
       },
       {
         "z": 18432,
-        "blocks": 12,
-        "median_quality": 0.04478937013145118
+        "blocks": 11,
+        "median_quality": 0.04178176985565591
       },
       {
         "z": 19200,
@@ -2662,13 +2679,13 @@
       },
       {
         "z": 19968,
-        "blocks": 10,
-        "median_quality": 0.07199928077635087
+        "blocks": 9,
+        "median_quality": 0.05842908742982607
       },
       {
         "z": 20736,
-        "blocks": 2,
-        "median_quality": 0.3699873808574145
+        "blocks": 1,
+        "median_quality": 0.011357702600775404
       }
     ]
   }

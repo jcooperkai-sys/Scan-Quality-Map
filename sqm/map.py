@@ -5,7 +5,7 @@ from pathlib import Path
 
 import numpy as np
 
-from sqm.model import QualityModel
+from sqm.model import QualityModel, looks_like_support
 from sqm.store import Level, trim_cache
 
 _worker = {}
@@ -93,8 +93,10 @@ def main():
     with ProcessPoolExecutor(args.workers, initializer=_init, initargs=(args.volume, args.level, args.model)) as pool:
         for n, (origin, (q, values)) in enumerate(zip(origins, pool.map(_score, tasks, chunksize=4))):
             if q is not None:
-                grid[index[origin]] = q
-                details.append({"origin_zyx": list(origin), "quality": q, **values})
+                support = looks_like_support(values)
+                if not support:
+                    grid[index[origin]] = q
+                details.append({"origin_zyx": list(origin), "quality": q, "support": support, **values})
             if n % 100 == 0:
                 print(f"{n + 1}/{len(origins)}", flush=True)
                 trim_cache()

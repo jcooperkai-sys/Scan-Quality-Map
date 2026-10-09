@@ -39,3 +39,11 @@ def test_empty_block_is_skipped():
 def test_measured_spacing_matches_the_sheets():
     values = features(sheet_stack(spacing_vx=12.0, tilt=0.0), 7.91)
     assert abs(values["spacing"] - 12.0 * 7.91) < 2 * 7.91
+
+
+def test_support_gate_flags_foam_but_not_papyrus():
+    from sqm.model import looks_like_support
+    from tests.synthetic import foam
+    assert looks_like_support(features(foam(), 8.64))
+    assert not looks_like_support(features(sheet_stack(), 8.64))
+    assert not looks_like_support(features(hazy(sheet_stack()), 8.64))

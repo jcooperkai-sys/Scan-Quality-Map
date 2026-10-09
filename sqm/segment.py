@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 
 from sqm import tifxyz
-from sqm.model import QualityModel
+from sqm.model import QualityModel, looks_like_support
 from sqm.store import Level, trim_cache
 
 _worker = {}
@@ -83,8 +83,10 @@ def main():
     with ProcessPoolExecutor(args.workers, initializer=_init, initargs=(args.volume, args.level, args.model)) as pool:
         for i, ((r0, c0), (q, values)) in enumerate(zip(cells, pool.map(_score, tasks, chunksize=4))):
             if q is not None:
-                quality[r0:r0 + args.patch, c0:c0 + args.patch] = q
-                details.append({"row": r0, "col": c0, "quality": q, **values})
+                support = looks_like_support(values)
+                if not support:
+                    quality[r0:r0 + args.patch, c0:c0 + args.patch] = q
+                details.append({"row": r0, "col": c0, "quality": q, "support": support, **values})
             if i % 50 == 0:
                 print(f"{i + 1}/{len(tasks)}", flush=True)
                 trim_cache()

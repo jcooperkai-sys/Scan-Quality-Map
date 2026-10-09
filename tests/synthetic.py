@@ -17,3 +17,14 @@ def hazy(volume, blur_vx=3.0, veil=0.5):
     blurred = ndimage.gaussian_filter(data, blur_vx)
     mixed = (1 - veil) * blurred + veil * blurred.mean()
     return np.clip(mixed, 1, 255).astype(np.uint8)
+
+
+def foam(size=96, pores=900, radius_vx=2.5, seed=1):
+    rng = np.random.default_rng(seed)
+    z, y, x = np.indices((size, size, size), dtype=float)
+    volume = np.full((size, size, size), 190.0)
+    for c in rng.uniform(0, size, size=(pores, 3)):
+        d2 = (z - c[0]) ** 2 + (y - c[1]) ** 2 + (x - c[2]) ** 2
+        volume[d2 < radius_vx ** 2] = 45.0
+    volume = ndimage.gaussian_filter(volume, 0.6) + rng.normal(0, 4, volume.shape)
+    return np.clip(volume, 1, 255).astype(np.uint8)

@@ -1,0 +1,1630 @@
+[
+  {
+    "scroll": "PHerc0125",
+    "protocol": "9.362 um, 113 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0125/volumes/20250821151825-9.362um-1.2m-113keV-masked.zarr",
+    "band_blocks": 462,
+    "band_median": 0.21254769002349008,
+    "targets": [
+      {
+        "center_zyx": [
+          18864,
+          2736,
+          5040
+        ],
+        "center_xyz": [
+          5040,
+          2736,
+          18864
+        ],
+        "quality": 0.787130940595136
+      },
+      {
+        "center_zyx": [
+          18096,
+          5040,
+          6576
+        ],
+        "center_xyz": [
+          6576,
+          5040,
+          18096
+        ],
+        "quality": 0.753099517334391
+      },
+      {
+        "center_zyx": [
+          17712,
+          3504,
+          5808
+        ],
+        "center_xyz": [
+          5808,
+          3504,
+          17712
+        ],
+        "quality": 0.6816502030604205
+      },
+      {
+        "center_zyx": [
+          18096,
+          3888,
+          2736
+        ],
+        "center_xyz": [
+          2736,
+          3888,
+          18096
+        ],
+        "quality": 0.6606825789688114
+      },
+      {
+        "center_zyx": [
+          18864,
+          4272,
+          5040
+        ],
+        "center_xyz": [
+          5040,
+          4272,
+          18864
+        ],
+        "quality": 0.6379408672282624
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0175A",
+    "protocol": "8.64 um, 116 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0175A/volumes/20250521115057-8.640um-1.2m-116keV-masked.zarr",
+    "band_blocks": 882,
+    "band_median": 0.599575328417731,
+    "targets": [
+      {
+        "center_zyx": [
+          6960,
+          5808,
+          5424
+        ],
+        "center_xyz": [
+          5424,
+          5808,
+          6960
+        ],
+        "quality": 0.9302425859148243
+      },
+      {
+        "center_zyx": [
+          7728,
+          5808,
+          3120
+        ],
+        "center_xyz": [
+          3120,
+          5808,
+          7728
+        ],
+        "quality": 0.9257492601051759
+      },
+      {
+        "center_zyx": [
+          7728,
+          4656,
+          4272
+        ],
+        "center_xyz": [
+          4272,
+          4656,
+          7728
+        ],
+        "quality": 0.9254433858866801
+      },
+      {
+        "center_zyx": [
+          8496,
+          5808,
+          5808
+        ],
+        "center_xyz": [
+          5808,
+          5808,
+          8496
+        ],
+        "quality": 0.915444204739914
+      },
+      {
+        "center_zyx": [
+          7344,
+          5424,
+          7344
+        ],
+        "center_xyz": [
+          7344,
+          5424,
+          7344
+        ],
+        "quality": 0.8957740079490956
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0175B",
+    "protocol": "8.64 um, 116 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0175B/volumes/20250521125822-8.640um-1.2m-116keV-masked.zarr",
+    "band_blocks": 154,
+    "band_median": 0.3215962325336308,
+    "targets": [
+      {
+        "center_zyx": [
+          13872,
+          4656,
+          5040
+        ],
+        "center_xyz": [
+          5040,
+          4656,
+          13872
+        ],
+        "quality": 0.8439472124689563
+      },
+      {
+        "center_zyx": [
+          14256,
+          2352,
+          2352
+        ],
+        "center_xyz": [
+          2352,
+          2352,
+          14256
+        ],
+        "quality": 0.7950963715158073
+      },
+      {
+        "center_zyx": [
+          14256,
+          3888,
+          1968
+        ],
+        "center_xyz": [
+          1968,
+          3888,
+          14256
+        ],
+        "quality": 0.6967025522884562
+      },
+      {
+        "center_zyx": [
+          13872,
+          3888,
+          3504
+        ],
+        "center_xyz": [
+          3504,
+          3888,
+          13872
+        ],
+        "quality": 0.5581994833609544
+      },
+      {
+        "center_zyx": [
+          13872,
+          6192,
+          5808
+        ],
+        "center_xyz": [
+          5808,
+          6192,
+          13872
+        ],
+        "quality": 0.19434236881321243
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0191",
+    "protocol": "9.362 um, 113 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0191/volumes/20250821151635-9.362um-1.2m-113keV-masked.zarr",
+    "band_blocks": 676,
+    "band_median": 0.421923378981271,
+    "targets": [
+      {
+        "center_zyx": [
+          11952,
+          4656,
+          4656
+        ],
+        "center_xyz": [
+          4656,
+          4656,
+          11952
+        ],
+        "quality": 0.9125242986210526
+      },
+      {
+        "center_zyx": [
+          11184,
+          2736,
+          2736
+        ],
+        "center_xyz": [
+          2736,
+          2736,
+          11184
+        ],
+        "quality": 0.8662641348149922
+      },
+      {
+        "center_zyx": [
+          10800,
+          5424,
+          5424
+        ],
+        "center_xyz": [
+          5424,
+          5424,
+          10800
+        ],
+        "quality": 0.8614483550024031
+      },
+      {
+        "center_zyx": [
+          12336,
+          3120,
+          5424
+        ],
+        "center_xyz": [
+          5424,
+          3120,
+          12336
+        ],
+        "quality": 0.8539742852418514
+      },
+      {
+        "center_zyx": [
+          10800,
+          1968,
+          4656
+        ],
+        "center_xyz": [
+          4656,
+          1968,
+          10800
+        ],
+        "quality": 0.826414183391166
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0211",
+    "protocol": "9.362 um, 113 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0211/volumes/20250821151803-9.362um-1.2m-113keV-masked.zarr",
+    "band_blocks": 309,
+    "band_median": 0.42579518433905833,
+    "targets": [
+      {
+        "center_zyx": [
+          10032,
+          3504,
+          3888
+        ],
+        "center_xyz": [
+          3888,
+          3504,
+          10032
+        ],
+        "quality": 0.9310784379910232
+      },
+      {
+        "center_zyx": [
+          8496,
+          3888,
+          3504
+        ],
+        "center_xyz": [
+          3504,
+          3888,
+          8496
+        ],
+        "quality": 0.9035123432591172
+      },
+      {
+        "center_zyx": [
+          10032,
+          2736,
+          1968
+        ],
+        "center_xyz": [
+          1968,
+          2736,
+          10032
+        ],
+        "quality": 0.8641774865202113
+      },
+      {
+        "center_zyx": [
+          8496,
+          3888,
+          1968
+        ],
+        "center_xyz": [
+          1968,
+          3888,
+          8496
+        ],
+        "quality": 0.641851633191012
+      },
+      {
+        "center_zyx": [
+          8496,
+          4656,
+          5424
+        ],
+        "center_xyz": [
+          5424,
+          4656,
+          8496
+        ],
+        "quality": 0.41854359426069626
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0257",
+    "protocol": "9.362 um, 113 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0257/volumes/20250821151750-9.362um-1.2m-113keV-masked.zarr",
+    "band_blocks": 447,
+    "band_median": 0.22966171245708983,
+    "targets": [
+      {
+        "center_zyx": [
+          13488,
+          5808,
+          5040
+        ],
+        "center_xyz": [
+          5040,
+          5808,
+          13488
+        ],
+        "quality": 0.7886447337963911
+      },
+      {
+        "center_zyx": [
+          12720,
+          4272,
+          4272
+        ],
+        "center_xyz": [
+          4272,
+          4272,
+          12720
+        ],
+        "quality": 0.7800546378535396
+      },
+      {
+        "center_zyx": [
+          12720,
+          2736,
+          4656
+        ],
+        "center_xyz": [
+          4656,
+          2736,
+          12720
+        ],
+        "quality": 0.7246019196149796
+      },
+      {
+        "center_zyx": [
+          13488,
+          3504,
+          3120
+        ],
+        "center_xyz": [
+          3120,
+          3504,
+          13488
+        ],
+        "quality": 0.5949560963728441
+      },
+      {
+        "center_zyx": [
+          12720,
+          2352,
+          2352
+        ],
+        "center_xyz": [
+          2352,
+          2352,
+          12720
+        ],
+        "quality": 0.337252489098563
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0268",
+    "protocol": "8.64 um, 116 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0268/volumes/20251110183117-8.640um-1.2m-116keV-masked.zarr",
+    "band_blocks": 715,
+    "band_median": 0.14535995431431326,
+    "targets": [
+      {
+        "center_zyx": [
+          12720,
+          10032,
+          4272
+        ],
+        "center_xyz": [
+          4272,
+          10032,
+          12720
+        ],
+        "quality": 0.7918636158034598
+      },
+      {
+        "center_zyx": [
+          12336,
+          9264,
+          2352
+        ],
+        "center_xyz": [
+          2352,
+          9264,
+          12336
+        ],
+        "quality": 0.7289217316671099
+      },
+      {
+        "center_zyx": [
+          13104,
+          8496,
+          3504
+        ],
+        "center_xyz": [
+          3504,
+          8496,
+          13104
+        ],
+        "quality": 0.5920362209968605
+      },
+      {
+        "center_zyx": [
+          12336,
+          6576,
+          10032
+        ],
+        "center_xyz": [
+          10032,
+          6576,
+          12336
+        ],
+        "quality": 0.5567045732124684
+      },
+      {
+        "center_zyx": [
+          12336,
+          6576,
+          5424
+        ],
+        "center_xyz": [
+          5424,
+          6576,
+          12336
+        ],
+        "quality": 0.5515948276298434
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0306B",
+    "protocol": "8.64 um, 116 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0306B/volumes/20250521133212-8.640um-1.2m-116keV-masked.zarr",
+    "band_blocks": 735,
+    "band_median": 0.3531648341855618,
+    "targets": [
+      {
+        "center_zyx": [
+          9648,
+          4272,
+          4656
+        ],
+        "center_xyz": [
+          4656,
+          4272,
+          9648
+        ],
+        "quality": 0.90892555113819
+      },
+      {
+        "center_zyx": [
+          8496,
+          4656,
+          2352
+        ],
+        "center_xyz": [
+          2352,
+          4656,
+          8496
+        ],
+        "quality": 0.845231537418614
+      },
+      {
+        "center_zyx": [
+          9264,
+          3120,
+          3120
+        ],
+        "center_xyz": [
+          3120,
+          3120,
+          9264
+        ],
+        "quality": 0.789589292845437
+      },
+      {
+        "center_zyx": [
+          8880,
+          5040,
+          5808
+        ],
+        "center_xyz": [
+          5808,
+          5040,
+          8880
+        ],
+        "quality": 0.7084536275634808
+      },
+      {
+        "center_zyx": [
+          10032,
+          2736,
+          4656
+        ],
+        "center_xyz": [
+          4656,
+          2736,
+          10032
+        ],
+        "quality": 0.6814680146441219
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0343",
+    "protocol": "8.64 um, 116 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0343/volumes/20250521140437-8.640um-1.2m-116keV-masked.zarr",
+    "band_blocks": 624,
+    "band_median": 0.5412819430349164,
+    "targets": [
+      {
+        "center_zyx": [
+          11952,
+          3504,
+          5808
+        ],
+        "center_xyz": [
+          5808,
+          3504,
+          11952
+        ],
+        "quality": 0.9118344576388457
+      },
+      {
+        "center_zyx": [
+          13104,
+          3120,
+          3888
+        ],
+        "center_xyz": [
+          3888,
+          3120,
+          13104
+        ],
+        "quality": 0.8885099684202821
+      },
+      {
+        "center_zyx": [
+          12336,
+          4272,
+          1968
+        ],
+        "center_xyz": [
+          1968,
+          4272,
+          12336
+        ],
+        "quality": 0.8564332008495092
+      },
+      {
+        "center_zyx": [
+          13104,
+          5040,
+          5040
+        ],
+        "center_xyz": [
+          5040,
+          5040,
+          13104
+        ],
+        "quality": 0.8402000845241583
+      },
+      {
+        "center_zyx": [
+          11952,
+          5040,
+          6192
+        ],
+        "center_xyz": [
+          6192,
+          5040,
+          11952
+        ],
+        "quality": 0.8089176568856794
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0358",
+    "protocol": "9.362 um, 113 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0358/volumes/20250821151737-9.362um-1.2m-113keV-masked.zarr",
+    "band_blocks": 595,
+    "band_median": 0.6629865254131158,
+    "targets": [
+      {
+        "center_zyx": [
+          9648,
+          3504,
+          3504
+        ],
+        "center_xyz": [
+          3504,
+          3504,
+          9648
+        ],
+        "quality": 0.9548830937131894
+      },
+      {
+        "center_zyx": [
+          8496,
+          4272,
+          4272
+        ],
+        "center_xyz": [
+          4272,
+          4272,
+          8496
+        ],
+        "quality": 0.9502928946969669
+      },
+      {
+        "center_zyx": [
+          10032,
+          2352,
+          1584
+        ],
+        "center_xyz": [
+          1584,
+          2352,
+          10032
+        ],
+        "quality": 0.9256808644912825
+      },
+      {
+        "center_zyx": [
+          9648,
+          6192,
+          5040
+        ],
+        "center_xyz": [
+          5040,
+          6192,
+          9648
+        ],
+        "quality": 0.9230602483697661
+      },
+      {
+        "center_zyx": [
+          9648,
+          5040,
+          3120
+        ],
+        "center_xyz": [
+          3120,
+          5040,
+          9648
+        ],
+        "quality": 0.9150791189931068
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0483A",
+    "protocol": "8.64 um, 116 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0483A/volumes/20250521140913-8.640um-1.2m-116keV-masked.zarr",
+    "band_blocks": 630,
+    "band_median": 0.3179069675277588,
+    "targets": [
+      {
+        "center_zyx": [
+          13488,
+          5808,
+          3120
+        ],
+        "center_xyz": [
+          3120,
+          5808,
+          13488
+        ],
+        "quality": 0.852611616664352
+      },
+      {
+        "center_zyx": [
+          12720,
+          4656,
+          3888
+        ],
+        "center_xyz": [
+          3888,
+          4656,
+          12720
+        ],
+        "quality": 0.8486804338696464
+      },
+      {
+        "center_zyx": [
+          12720,
+          4272,
+          6576
+        ],
+        "center_xyz": [
+          6576,
+          4272,
+          12720
+        ],
+        "quality": 0.8278032361866537
+      },
+      {
+        "center_zyx": [
+          12336,
+          3504,
+          2352
+        ],
+        "center_xyz": [
+          2352,
+          3504,
+          12336
+        ],
+        "quality": 0.8232075519720059
+      },
+      {
+        "center_zyx": [
+          12336,
+          6960,
+          3120
+        ],
+        "center_xyz": [
+          3120,
+          6960,
+          12336
+        ],
+        "quality": 0.7963361104460218
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0483B",
+    "protocol": "8.64 um, 116 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0483B/volumes/20251124083638-8.640um-1.2m-116keV-masked.zarr",
+    "band_blocks": 695,
+    "band_median": 0.39261608093871914,
+    "targets": [
+      {
+        "center_zyx": [
+          10800,
+          4656,
+          4272
+        ],
+        "center_xyz": [
+          4272,
+          4656,
+          10800
+        ],
+        "quality": 0.8915673943740957
+      },
+      {
+        "center_zyx": [
+          10800,
+          3888,
+          5808
+        ],
+        "center_xyz": [
+          5808,
+          3888,
+          10800
+        ],
+        "quality": 0.8700089066178515
+      },
+      {
+        "center_zyx": [
+          9264,
+          5424,
+          1968
+        ],
+        "center_xyz": [
+          1968,
+          5424,
+          9264
+        ],
+        "quality": 0.8137037956595873
+      },
+      {
+        "center_zyx": [
+          9648,
+          2736,
+          3504
+        ],
+        "center_xyz": [
+          3504,
+          2736,
+          9648
+        ],
+        "quality": 0.8044003234653092
+      },
+      {
+        "center_zyx": [
+          9264,
+          3120,
+          6576
+        ],
+        "center_xyz": [
+          6576,
+          3120,
+          9264
+        ],
+        "quality": 0.8019522740403947
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0490A",
+    "protocol": "8.64 um, 116 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0490A/volumes/20250521151210-8.640um-1.2m-116keV-masked.zarr",
+    "band_blocks": 935,
+    "band_median": 0.3030532913722555,
+    "targets": [
+      {
+        "center_zyx": [
+          6192,
+          4272,
+          2352
+        ],
+        "center_xyz": [
+          2352,
+          4272,
+          6192
+        ],
+        "quality": 0.9372633995692509
+      },
+      {
+        "center_zyx": [
+          6192,
+          3120,
+          3504
+        ],
+        "center_xyz": [
+          3504,
+          3120,
+          6192
+        ],
+        "quality": 0.901776175876643
+      },
+      {
+        "center_zyx": [
+          5040,
+          3120,
+          5808
+        ],
+        "center_xyz": [
+          5808,
+          3120,
+          5040
+        ],
+        "quality": 0.8650543388815688
+      },
+      {
+        "center_zyx": [
+          5424,
+          4272,
+          4272
+        ],
+        "center_xyz": [
+          4272,
+          4272,
+          5424
+        ],
+        "quality": 0.8595851840147585
+      },
+      {
+        "center_zyx": [
+          5808,
+          4272,
+          6576
+        ],
+        "center_xyz": [
+          6576,
+          4272,
+          5808
+        ],
+        "quality": 0.8297266428095418
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0490B",
+    "protocol": "8.64 um, 116 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0490B/volumes/20250521151215-8.640um-1.2m-116keV-masked.zarr",
+    "band_blocks": 398,
+    "band_median": 0.20331160269387485,
+    "targets": [
+      {
+        "center_zyx": [
+          2352,
+          3504,
+          3888
+        ],
+        "center_xyz": [
+          3888,
+          3504,
+          2352
+        ],
+        "quality": 0.834546248871494
+      },
+      {
+        "center_zyx": [
+          2352,
+          2736,
+          6192
+        ],
+        "center_xyz": [
+          6192,
+          2736,
+          2352
+        ],
+        "quality": 0.6796441375711555
+      },
+      {
+        "center_zyx": [
+          1968,
+          5040,
+          5040
+        ],
+        "center_xyz": [
+          5040,
+          5040,
+          1968
+        ],
+        "quality": 0.6347185988654543
+      },
+      {
+        "center_zyx": [
+          3120,
+          6576,
+          3504
+        ],
+        "center_xyz": [
+          3504,
+          6576,
+          3120
+        ],
+        "quality": 0.5456132231437832
+      },
+      {
+        "center_zyx": [
+          3120,
+          4272,
+          6576
+        ],
+        "center_xyz": [
+          6576,
+          4272,
+          3120
+        ],
+        "quality": 0.5267278419298502
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0800",
+    "protocol": "8.64 um, 116 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr",
+    "band_blocks": 799,
+    "band_median": 0.4449483402529917,
+    "targets": [
+      {
+        "center_zyx": [
+          2736,
+          3120,
+          3504
+        ],
+        "center_xyz": [
+          3504,
+          3120,
+          2736
+        ],
+        "quality": 0.8869882632040014
+      },
+      {
+        "center_zyx": [
+          3504,
+          5808,
+          6960
+        ],
+        "center_xyz": [
+          6960,
+          5808,
+          3504
+        ],
+        "quality": 0.8821706249984691
+      },
+      {
+        "center_zyx": [
+          3888,
+          3888,
+          2736
+        ],
+        "center_xyz": [
+          2736,
+          3888,
+          3888
+        ],
+        "quality": 0.8778046911992591
+      },
+      {
+        "center_zyx": [
+          3504,
+          2352,
+          4656
+        ],
+        "center_xyz": [
+          4656,
+          2352,
+          3504
+        ],
+        "quality": 0.854091376798677
+      },
+      {
+        "center_zyx": [
+          3888,
+          3504,
+          6576
+        ],
+        "center_xyz": [
+          6576,
+          3504,
+          3888
+        ],
+        "quality": 0.8070026298309125
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0813",
+    "protocol": "9.362 um, 113 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0813/volumes/20250821151723-9.362um-1.2m-113keV-masked.zarr",
+    "band_blocks": 568,
+    "band_median": 0.6151768042863921,
+    "targets": [
+      {
+        "center_zyx": [
+          13104,
+          1968,
+          3504
+        ],
+        "center_xyz": [
+          3504,
+          1968,
+          13104
+        ],
+        "quality": 0.9474021750076745
+      },
+      {
+        "center_zyx": [
+          13104,
+          3504,
+          2736
+        ],
+        "center_xyz": [
+          2736,
+          3504,
+          13104
+        ],
+        "quality": 0.9376476947080429
+      },
+      {
+        "center_zyx": [
+          12336,
+          4656,
+          5424
+        ],
+        "center_xyz": [
+          5424,
+          4656,
+          12336
+        ],
+        "quality": 0.9204598946889565
+      },
+      {
+        "center_zyx": [
+          12720,
+          1968,
+          5040
+        ],
+        "center_xyz": [
+          5040,
+          1968,
+          12720
+        ],
+        "quality": 0.8994962889891549
+      },
+      {
+        "center_zyx": [
+          11568,
+          3888,
+          3888
+        ],
+        "center_xyz": [
+          3888,
+          3888,
+          11568
+        ],
+        "quality": 0.8947509220023194
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0826",
+    "protocol": "9.362 um, 113 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0826/volumes/20250821151701-9.362um-1.2m-113keV-masked.zarr",
+    "band_blocks": 440,
+    "band_median": 0.6537764603859113,
+    "targets": [
+      {
+        "center_zyx": [
+          8496,
+          4656,
+          5808
+        ],
+        "center_xyz": [
+          5808,
+          4656,
+          8496
+        ],
+        "quality": 0.9405467922061889
+      },
+      {
+        "center_zyx": [
+          10032,
+          4656,
+          1584
+        ],
+        "center_xyz": [
+          1584,
+          4656,
+          10032
+        ],
+        "quality": 0.9352581010443554
+      },
+      {
+        "center_zyx": [
+          9648,
+          5808,
+          4656
+        ],
+        "center_xyz": [
+          4656,
+          5808,
+          9648
+        ],
+        "quality": 0.932905235374171
+      },
+      {
+        "center_zyx": [
+          9648,
+          4272,
+          3888
+        ],
+        "center_xyz": [
+          3888,
+          4272,
+          9648
+        ],
+        "quality": 0.9017951920291916
+      },
+      {
+        "center_zyx": [
+          8496,
+          4656,
+          1200
+        ],
+        "center_xyz": [
+          1200,
+          4656,
+          8496
+        ],
+        "quality": 0.8863086980238877
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0846A",
+    "protocol": "9.362 um, 113 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0846A/volumes/20250728152254-9.362um-1.2m-113keV-masked.zarr",
+    "band_blocks": 584,
+    "band_median": 0.5078277235910047,
+    "targets": [
+      {
+        "center_zyx": [
+          3504,
+          3504,
+          5808
+        ],
+        "center_xyz": [
+          5808,
+          3504,
+          3504
+        ],
+        "quality": 0.9137694752816465
+      },
+      {
+        "center_zyx": [
+          3888,
+          2352,
+          2736
+        ],
+        "center_xyz": [
+          2736,
+          2352,
+          3888
+        ],
+        "quality": 0.8851083857434399
+      },
+      {
+        "center_zyx": [
+          3888,
+          2352,
+          4272
+        ],
+        "center_xyz": [
+          4272,
+          2352,
+          3888
+        ],
+        "quality": 0.8692432228360973
+      },
+      {
+        "center_zyx": [
+          2352,
+          4656,
+          5424
+        ],
+        "center_xyz": [
+          5424,
+          4656,
+          2352
+        ],
+        "quality": 0.8665687879517214
+      },
+      {
+        "center_zyx": [
+          3120,
+          4656,
+          2352
+        ],
+        "center_xyz": [
+          2352,
+          4656,
+          3120
+        ],
+        "quality": 0.8649219774984077
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc0846B",
+    "protocol": "9.362 um, 113 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0846B/volumes/20250804142305-9.362um-1.2m-113keV-masked.zarr",
+    "band_blocks": 885,
+    "band_median": 0.35921127043885615,
+    "targets": [
+      {
+        "center_zyx": [
+          11952,
+          3504,
+          5808
+        ],
+        "center_xyz": [
+          5808,
+          3504,
+          11952
+        ],
+        "quality": 0.8824462507607834
+      },
+      {
+        "center_zyx": [
+          11184,
+          4272,
+          3504
+        ],
+        "center_xyz": [
+          3504,
+          4272,
+          11184
+        ],
+        "quality": 0.8707171241847623
+      },
+      {
+        "center_zyx": [
+          12336,
+          3504,
+          1200
+        ],
+        "center_xyz": [
+          1200,
+          3504,
+          12336
+        ],
+        "quality": 0.8684996739580216
+      },
+      {
+        "center_zyx": [
+          11568,
+          5040,
+          6192
+        ],
+        "center_xyz": [
+          6192,
+          5040,
+          11568
+        ],
+        "quality": 0.8347825998131259
+      },
+      {
+        "center_zyx": [
+          11568,
+          5040,
+          1584
+        ],
+        "center_xyz": [
+          1584,
+          5040,
+          11568
+        ],
+        "quality": 0.8128283981009149
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc1203",
+    "protocol": "9.362 um, 113 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc1203/volumes/20250820131727-9.362um-1.2m-113keV-masked.zarr",
+    "band_blocks": 409,
+    "band_median": 0.49933594939783393,
+    "targets": [
+      {
+        "center_zyx": [
+          12720,
+          3120,
+          2736
+        ],
+        "center_xyz": [
+          2736,
+          3120,
+          12720
+        ],
+        "quality": 0.9214824807551684
+      },
+      {
+        "center_zyx": [
+          12336,
+          3888,
+          5040
+        ],
+        "center_xyz": [
+          5040,
+          3888,
+          12336
+        ],
+        "quality": 0.899368124341517
+      },
+      {
+        "center_zyx": [
+          12720,
+          2352,
+          4272
+        ],
+        "center_xyz": [
+          4272,
+          2352,
+          12720
+        ],
+        "quality": 0.8790913218323361
+      },
+      {
+        "center_zyx": [
+          11568,
+          4272,
+          2352
+        ],
+        "center_xyz": [
+          2352,
+          4272,
+          11568
+        ],
+        "quality": 0.813949280304892
+      },
+      {
+        "center_zyx": [
+          13104,
+          4656,
+          3120
+        ],
+        "center_xyz": [
+          3120,
+          4656,
+          13104
+        ],
+        "quality": 0.4575688889391197
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc1218",
+    "protocol": "8.64 um, 116 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc1218/volumes/20250521120456-8.640um-1.2m-116keV-masked.zarr",
+    "band_blocks": 404,
+    "band_median": 0.2279766269307458,
+    "targets": [
+      {
+        "center_zyx": [
+          7344,
+          3888,
+          3504
+        ],
+        "center_xyz": [
+          3504,
+          3888,
+          7344
+        ],
+        "quality": 0.9218845310279081
+      },
+      {
+        "center_zyx": [
+          8496,
+          3504,
+          2352
+        ],
+        "center_xyz": [
+          2352,
+          3504,
+          8496
+        ],
+        "quality": 0.8105369719824521
+      },
+      {
+        "center_zyx": [
+          7728,
+          3504,
+          5040
+        ],
+        "center_xyz": [
+          5040,
+          3504,
+          7728
+        ],
+        "quality": 0.7876652627159293
+      },
+      {
+        "center_zyx": [
+          6960,
+          4656,
+          5808
+        ],
+        "center_xyz": [
+          5808,
+          4656,
+          6960
+        ],
+        "quality": 0.7844317962984335
+      },
+      {
+        "center_zyx": [
+          8496,
+          5040,
+          4272
+        ],
+        "center_xyz": [
+          4272,
+          5040,
+          8496
+        ],
+        "quality": 0.5193592905246719
+      }
+    ]
+  },
+  {
+    "scroll": "PHerc1545",
+    "protocol": "9.362 um, 113 keV",
+    "volume": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc1545/volumes/20250821151648-9.362um-1.2m-113keV-masked.zarr",
+    "band_blocks": 346,
+    "band_median": 0.3226307522019803,
+    "targets": [
+      {
+        "center_zyx": [
+          15408,
+          4656,
+          3888
+        ],
+        "center_xyz": [
+          3888,
+          4656,
+          15408
+        ],
+        "quality": 0.8692750050113977
+      },
+      {
+        "center_zyx": [
+          16176,
+          3504,
+          1968
+        ],
+        "center_xyz": [
+          1968,
+          3504,
+          16176
+        ],
+        "quality": 0.8591909691809938
+      },
+      {
+        "center_zyx": [
+          14640,
+          5424,
+          5424
+        ],
+        "center_xyz": [
+          5424,
+          5424,
+          14640
+        ],
+        "quality": 0.8225947665883201
+      },
+      {
+        "center_zyx": [
+          14640,
+          3504,
+          2736
+        ],
+        "center_xyz": [
+          2736,
+          3504,
+          14640
+        ],
+        "quality": 0.8134786300481776
+      },
+      {
+        "center_zyx": [
+          15792,
+          4272,
+          6192
+        ],
+        "center_xyz": [
+          6192,
+          4272,
+          15792
+        ],
+        "quality": 0.7990370223290553
+      }
+    ]
+  }
+]

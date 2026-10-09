@@ -12,7 +12,7 @@ def rank_mesh_in_map(args):
     data = json.loads(args.map.read_text())
     scale = 2 ** data["level"]
     half = data["block"] / 2
-    blocks = data["blocks"]
+    blocks = [b for b in data["blocks"] if not b.get("support")]
     centers = np.array([[o[2] + half, o[1] + half, o[0] + half] for o in (b["origin_zyx"] for b in blocks)]) * scale
     quality = np.array([b["quality"] for b in blocks])
     points, valid, _ = tifxyz.load(args.mesh)
@@ -40,7 +40,7 @@ def main():
     if args.map:
         rank_mesh_in_map(args)
         return
-    patches = json.loads((args.segment / "quality_patches.json").read_text())
+    patches = [p for p in json.loads((args.segment / "quality_patches.json").read_text()) if not p.get("support")]
     if str(args.boxes).startswith("http"):
         from sqm.store import fetch
         boxes = json.loads(fetch(args.boxes))["letters"]

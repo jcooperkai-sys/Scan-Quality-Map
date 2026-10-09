@@ -6,6 +6,12 @@ import numpy as np
 from sqm.score import features
 
 DEFAULT_MODEL = Path(__file__).with_name("model.json")
+SUPPORT_CONTRAST_MIN = 0.86
+SUPPORT_VALLEY_MAX = 0.15
+
+
+def looks_like_support(values):
+    return values["contrast"] >= SUPPORT_CONTRAST_MIN and values["valley_depth"] <= SUPPORT_VALLEY_MAX
 
 
 class QualityModel:

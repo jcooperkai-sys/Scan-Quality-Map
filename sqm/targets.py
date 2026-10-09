@@ -6,6 +6,8 @@ from pathlib import Path
 
 import numpy as np
 
+from sqm.model import looks_like_support
+
 
 def main():
     parser = argparse.ArgumentParser(prog="sqm targets",
@@ -27,15 +29,27 @@ def main():
             continue
         atlas_map = json.loads((args.atlas / scroll / "blocks.json").read_text())
         out = args.out / scroll
-        if not (out / "blocks.json").exists():
+        covered = False
+        if (out / "blocks.json").exists():
+            existing = [b["origin_zyx"][0] for b in json.loads((out / "blocks.json").read_text())["blocks"]]
+            covered = bool(existing) and min(existing) <= z <= max(existing) + 96
+        if not covered:
             z0 = max(0, (z - args.half_height) // 128 * 128)
             z1 = z + args.half_height + 96
             print(f"{scroll}: mapping z {z0} to {z1}", flush=True)
             subprocess.run([sys.executable, "-m", "sqm.map", "--volume", atlas_map["volume"], "--voxel-um", str(item["voxel_um"]),
                             "--level", "0", "--block", "96", "--step", str(args.step), "--region", f"{z0}:{z1},:,:",
                             "--workers", args.workers, "--out", str(out)], check=True)
-        blocks = json.loads((out / "blocks.json").read_text())["blocks"]
-        ranked = sorted(blocks, key=lambda b: -b["quality"])
+        every = json.loads((out / "blocks.json").read_text())["blocks"]
+        blocks = [b for b in every if not looks_like_support(b)]
+        present = {tuple(b["origin_zyx"]) for b in every}
+        step = args.step
+
+        def interior(b):
+            z, y, x = b["origin_zyx"]
+            return all((z, y + dy, x + dx) in present for dy, dx in ((step, 0), (-step, 0), (0, step), (0, -step)))
+
+        ranked = sorted((b for b in blocks if interior(b)), key=lambda b: -b["quality"])
         chosen = []
         for b in ranked:
             center = np.array(b["origin_zyx"]) + 48

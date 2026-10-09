@@ -58,6 +58,8 @@ Each block (96 voxels across, about 0.8 mm at 8 um) is measured three ways. All 
 
 A logistic model combines them into one quality value. Its weights and standardisation are in `sqm/model.json`.
 
+Blocks that look like the packing foam or support material around a scroll (contrast of at least 0.86 together with valley depth of at most 0.15, where valley depth measures how deep the gaps between neighbouring layers are) are marked as not papyrus and left out of maps, atlas and targets. On the 934 papyrus blocks measured for validation, this rule flags at most 0.8% of any one set.
+
 ## Validation
 
 Every number below is produced by the scripts in this repository (see Reproduce). Data was split before any fitting, and each held out set was evaluated once.
@@ -89,30 +91,62 @@ Compare scrolls only within the same scan protocol. Across protocols, scores als
 
 | Scan protocol | Scroll | Blocks | Median quality | Clear (>= 0.6) | Hazy (< 0.4) | Clearest band (z) | Its median |
 |---|---|---|---|---|---|---|---|
-| 8.64 um, 116 keV | PHerc0175A | 565 | 0.51 | 37% | 38% | 7680 | 0.64 |
-| 8.64 um, 116 keV | PHerc0343 | 712 | 0.35 | 24% | 55% | 12288 | 0.55 |
-| 8.64 um, 116 keV | PHerc0306B | 633 | 0.31 | 16% | 62% | 9216 | 0.44 |
-| 8.64 um, 116 keV | PHerc0483B | 495 | 0.30 | 13% | 63% | 9984 | 0.48 |
-| 8.64 um, 116 keV | PHerc0800 | 1352 | 0.28 | 14% | 64% | 3072 | 0.52 |
-| 8.64 um, 116 keV | PHerc0175B | 993 | 0.28 | 16% | 63% | 14592 | 0.56 |
-| 8.64 um, 116 keV | PHerc0483A | 541 | 0.18 | 10% | 75% | 13056 | 0.36 |
-| 8.64 um, 116 keV | PHerc1218 | 522 | 0.17 | 13% | 73% | 7680 | 0.48 |
-| 8.64 um, 116 keV | PHerc0490A | 631 | 0.16 | 10% | 75% | 5376 | 0.35 |
-| 8.64 um, 116 keV | PHerc0490B | 428 | 0.11 | 6% | 85% | 2304 | 0.25 |
-| 8.64 um, 116 keV | PHerc0268 | 1491 | 0.09 | 5% | 86% | 14592 | 0.31 |
-| 9.362 um, 113 keV | PHerc0358 | 484 | 0.59 | 49% | 33% | 9216 | 0.74 |
-| 9.362 um, 113 keV | PHerc0813 | 568 | 0.56 | 46% | 37% | 12288 | 0.69 |
-| 9.362 um, 113 keV | PHerc0826 | 431 | 0.47 | 33% | 43% | 9216 | 0.70 |
-| 9.362 um, 113 keV | PHerc0191 | 764 | 0.43 | 33% | 46% | 15360 | 0.63 |
-| 9.362 um, 113 keV | PHerc0211 | 521 | 0.40 | 30% | 50% | 9216 | 0.66 |
-| 9.362 um, 113 keV | PHerc1203 | 533 | 0.37 | 21% | 53% | 12288 | 0.55 |
-| 9.362 um, 113 keV | PHerc1545 | 475 | 0.35 | 27% | 55% | 15360 | 0.56 |
-| 9.362 um, 113 keV | PHerc0846B | 382 | 0.25 | 17% | 64% | 11520 | 0.48 |
-| 9.362 um, 113 keV | PHerc0846A | 396 | 0.18 | 15% | 69% | 3072 | 0.60 |
-| 9.362 um, 113 keV | PHerc0257 | 522 | 0.15 | 10% | 77% | 13056 | 0.29 |
-| 9.362 um, 113 keV | PHerc0125 | 676 | 0.13 | 8% | 83% | 1536 | 0.25 |
+| 8.64 um, 116 keV | PHerc0175A | 552 | 0.50 | 36% | 38% | 7680 | 0.63 |
+| 8.64 um, 116 keV | PHerc0343 | 699 | 0.34 | 24% | 56% | 12288 | 0.55 |
+| 8.64 um, 116 keV | PHerc0483B | 482 | 0.30 | 12% | 63% | 9984 | 0.45 |
+| 8.64 um, 116 keV | PHerc0306B | 615 | 0.30 | 15% | 63% | 9216 | 0.42 |
+| 8.64 um, 116 keV | PHerc0800 | 1331 | 0.28 | 14% | 65% | 3072 | 0.49 |
+| 8.64 um, 116 keV | PHerc0175B | 971 | 0.27 | 15% | 65% | 14592 | 0.55 |
+| 8.64 um, 116 keV | PHerc0483A | 530 | 0.18 | 9% | 76% | 13056 | 0.35 |
+| 8.64 um, 116 keV | PHerc1218 | 507 | 0.17 | 11% | 74% | 7680 | 0.46 |
+| 8.64 um, 116 keV | PHerc0490A | 626 | 0.16 | 9% | 75% | 5376 | 0.35 |
+| 8.64 um, 116 keV | PHerc0490B | 417 | 0.11 | 4% | 86% | 2304 | 0.24 |
+| 8.64 um, 116 keV | PHerc0268 | 1434 | 0.08 | 3% | 88% | 13056 | 0.19 |
+| 9.362 um, 113 keV | PHerc0358 | 460 | 0.57 | 47% | 35% | 9216 | 0.73 |
+| 9.362 um, 113 keV | PHerc0813 | 543 | 0.53 | 44% | 39% | 12288 | 0.66 |
+| 9.362 um, 113 keV | PHerc0826 | 402 | 0.44 | 30% | 46% | 9216 | 0.70 |
+| 9.362 um, 113 keV | PHerc0191 | 726 | 0.41 | 30% | 48% | 11520 | 0.54 |
+| 9.362 um, 113 keV | PHerc0211 | 484 | 0.38 | 27% | 52% | 9216 | 0.66 |
+| 9.362 um, 113 keV | PHerc1203 | 502 | 0.35 | 19% | 56% | 11520 | 0.50 |
+| 9.362 um, 113 keV | PHerc1545 | 445 | 0.31 | 24% | 57% | 15360 | 0.56 |
+| 9.362 um, 113 keV | PHerc0846B | 381 | 0.25 | 17% | 64% | 11520 | 0.48 |
+| 9.362 um, 113 keV | PHerc0846A | 393 | 0.18 | 15% | 69% | 3072 | 0.60 |
+| 9.362 um, 113 keV | PHerc0257 | 495 | 0.14 | 7% | 81% | 13056 | 0.28 |
+| 9.362 um, 113 keV | PHerc0125 | 643 | 0.12 | 5% | 86% | 18432 | 0.25 |
 
 Among the 8.64 um scrolls, PHerc. 0343, where the first letters were read in October 2026, ranks second of eleven.
+
+### Where to start in each scroll
+
+`sqm targets` maps each scroll's clearest band on a finer grid (one block every 3.3 mm) and lists its clearest regions, at least 1536 voxels apart, away from the scroll's outer edge. Every listed region was checked by eye to be papyrus. Full list with five regions per scroll: `docs/targets.json`.
+
+Clearest regions per scroll, from a 3.3 mm grid over each scroll's clearest band.
+Coordinates are level 0 voxels of the listed volume, as x, y, z (the order VC3D shows).
+
+| Scroll | Scan protocol | Band median | Region 1 (x, y, z) | Q | Region 2 (x, y, z) | Q | Region 3 (x, y, z) | Q |
+|---|---|---|---|---|---|---|---|---|
+| PHerc0175A | 8.64 um, 116 keV | 0.60 | 5424, 5808, 6960 | 0.93 | 3120, 5808, 7728 | 0.93 | 4272, 4656, 7728 | 0.93 |
+| PHerc0343 | 8.64 um, 116 keV | 0.54 | 5808, 3504, 11952 | 0.91 | 3888, 3120, 13104 | 0.89 | 1968, 4272, 12336 | 0.86 |
+| PHerc0800 | 8.64 um, 116 keV | 0.44 | 3504, 3120, 2736 | 0.89 | 6960, 5808, 3504 | 0.88 | 2736, 3888, 3888 | 0.88 |
+| PHerc0483B | 8.64 um, 116 keV | 0.39 | 4272, 4656, 10800 | 0.89 | 5808, 3888, 10800 | 0.87 | 1968, 5424, 9264 | 0.81 |
+| PHerc0306B | 8.64 um, 116 keV | 0.35 | 4656, 4272, 9648 | 0.91 | 2352, 4656, 8496 | 0.85 | 3120, 3120, 9264 | 0.79 |
+| PHerc0175B | 8.64 um, 116 keV | 0.32 | 5040, 4656, 13872 | 0.84 | 2352, 2352, 14256 | 0.80 | 1968, 3888, 14256 | 0.70 |
+| PHerc0483A | 8.64 um, 116 keV | 0.32 | 3120, 5808, 13488 | 0.85 | 3888, 4656, 12720 | 0.85 | 6576, 4272, 12720 | 0.83 |
+| PHerc0490A | 8.64 um, 116 keV | 0.30 | 2352, 4272, 6192 | 0.94 | 3504, 3120, 6192 | 0.90 | 5808, 3120, 5040 | 0.87 |
+| PHerc1218 | 8.64 um, 116 keV | 0.23 | 3504, 3888, 7344 | 0.92 | 2352, 3504, 8496 | 0.81 | 5040, 3504, 7728 | 0.79 |
+| PHerc0490B | 8.64 um, 116 keV | 0.20 | 3888, 3504, 2352 | 0.83 | 6192, 2736, 2352 | 0.68 | 5040, 5040, 1968 | 0.63 |
+| PHerc0268 | 8.64 um, 116 keV | 0.15 | 4272, 10032, 12720 | 0.79 | 2352, 9264, 12336 | 0.73 | 3504, 8496, 13104 | 0.59 |
+| PHerc0358 | 9.362 um, 113 keV | 0.66 | 3504, 3504, 9648 | 0.95 | 4272, 4272, 8496 | 0.95 | 1584, 2352, 10032 | 0.93 |
+| PHerc0826 | 9.362 um, 113 keV | 0.65 | 5808, 4656, 8496 | 0.94 | 1584, 4656, 10032 | 0.94 | 4656, 5808, 9648 | 0.93 |
+| PHerc0813 | 9.362 um, 113 keV | 0.62 | 3504, 1968, 13104 | 0.95 | 2736, 3504, 13104 | 0.94 | 5424, 4656, 12336 | 0.92 |
+| PHerc0846A | 9.362 um, 113 keV | 0.51 | 5808, 3504, 3504 | 0.91 | 2736, 2352, 3888 | 0.89 | 4272, 2352, 3888 | 0.87 |
+| PHerc1203 | 9.362 um, 113 keV | 0.50 | 2736, 3120, 12720 | 0.92 | 5040, 3888, 12336 | 0.90 | 4272, 2352, 12720 | 0.88 |
+| PHerc0211 | 9.362 um, 113 keV | 0.43 | 3888, 3504, 10032 | 0.93 | 3504, 3888, 8496 | 0.90 | 1968, 2736, 10032 | 0.86 |
+| PHerc0191 | 9.362 um, 113 keV | 0.42 | 4656, 4656, 11952 | 0.91 | 2736, 2736, 11184 | 0.87 | 5424, 5424, 10800 | 0.86 |
+| PHerc0846B | 9.362 um, 113 keV | 0.36 | 5808, 3504, 11952 | 0.88 | 3504, 4272, 11184 | 0.87 | 1200, 3504, 12336 | 0.87 |
+| PHerc1545 | 9.362 um, 113 keV | 0.32 | 3888, 4656, 15408 | 0.87 | 1968, 3504, 16176 | 0.86 | 5424, 5424, 14640 | 0.82 |
+| PHerc0257 | 9.362 um, 113 keV | 0.23 | 5040, 5808, 13488 | 0.79 | 4272, 4272, 12720 | 0.78 | 4656, 2736, 12720 | 0.72 |
+| PHerc0125 | 9.362 um, 113 keV | 0.21 | 5040, 2736, 18864 | 0.79 | 6576, 5040, 18096 | 0.75 | 5808, 3504, 17712 | 0.68 |
 
 ## Limits
 
