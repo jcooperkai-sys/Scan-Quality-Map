@@ -27,16 +27,17 @@ def choose_centers(dls_coarse, scale, axis_dls, count, rng):
     radius = np.array([np.hypot(*(c[:2] - axis_at(axis_dls, c[2]))) for c in centers])
     radial_bins = np.quantile(radius, np.linspace(0, 1, 6))
     height_bins = np.quantile(centers[:, 2], np.linspace(0, 1, 5))
-    picks = []
+    queues = []
     for r in range(5):
         for h in range(4):
             members = np.nonzero(
                 (radius >= radial_bins[r]) & (radius <= radial_bins[r + 1])
                 & (centers[:, 2] >= height_bins[h]) & (centers[:, 2] <= height_bins[h + 1])
             )[0]
-            if members.size:
-                for i in rng.permutation(members)[: max(2, count * 3 // 20)]:
-                    picks.append((centers[i], radius[i], r, h))
+            queues.append([(centers[i], radius[i], r, h) for i in rng.permutation(members)[: count]])
+    picks = []
+    for round_index in range(count):
+        picks.extend(q[round_index] for q in queues if round_index < len(q))
     return picks, threshold
 
 
