@@ -60,3 +60,13 @@ def test_cache_trims_when_disk_is_nearly_full(tmp_path, monkeypatch):
     monkeypatch.setattr(shutil, "disk_usage", lambda path: shutil._ntuple_diskusage(10**9, 10**9, 0))
     store.trim_cache()
     assert len(list(chunks.iterdir())) == 2
+
+
+def test_cache_names_stay_short_and_distinct():
+    import sqm.store as store
+    long_a = "https://example.org/" + "a" * 300 + "/one.tif"
+    long_b = "https://example.org/" + "a" * 300 + "/two.tif"
+    short = "https://example.org/vol.zarr/0/1/2/3"
+    assert len(store._cache_path(long_a).name) <= 255
+    assert store._cache_path(long_a) != store._cache_path(long_b)
+    assert store._cache_path(short).name == "example.org_vol.zarr_0_1_2_3"

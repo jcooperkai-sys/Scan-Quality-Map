@@ -10,6 +10,7 @@ COMMANDS = {
     "fit": ("sqm.checkpoint2", "fit and evaluate the quality model on measured blocks"),
     "external": ("sqm.external", "apply the frozen model to a scroll it never saw"),
     "failures": ("sqm.failures", "compare surface predictions with hand labels per block"),
+    "ink": ("sqm.ink", "test whether the score predicts where ink detection fails on the 7.91 um Paris 4 scan"),
     "regions": ("sqm.regions", "compare segment quality inside marked boxes with the rest"),
     "atlas": ("sqm.atlas", "map scan quality across many scrolls on a coarse grid"),
     "targets": ("sqm.targets", "list the clearest regions of each scroll from its clearest band"),

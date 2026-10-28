@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 import threading
@@ -18,8 +19,13 @@ _session.mount("https://", requests.adapters.HTTPAdapter(pool_connections=16, po
 _lock = threading.Lock()
 
 
+MAX_CACHE_NAME = 180
+
+
 def _cache_path(url):
     key = url.split("://", 1)[1].replace("/", "_")
+    if len(key) > MAX_CACHE_NAME:
+        key = f"{key[:80]}_{hashlib.sha256(url.encode()).hexdigest()}"
     return CACHE_ROOT / "chunks" / key
 
 
