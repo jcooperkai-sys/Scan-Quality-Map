@@ -70,3 +70,22 @@ def test_cache_names_stay_short_and_distinct():
     assert len(store._cache_path(long_a).name) <= 255
     assert store._cache_path(long_a) != store._cache_path(long_b)
     assert store._cache_path(short).name == "example.org_vol.zarr_0_1_2_3"
+
+
+def test_fetch_retries_empty_and_short_bodies(tmp_path, monkeypatch):
+    import sqm.store as store
+
+    class Reply:
+        def __init__(self, body, length):
+            self.status_code, self.content = 200, body
+            self.headers = {"Content-Length": str(length)}
+
+        def raise_for_status(self):
+            pass
+
+    replies = iter([Reply(b"", 0), Reply(b"ab", 4), Reply(b"abcd", 4)])
+    monkeypatch.setattr(store, "CACHE_ROOT", tmp_path)
+    monkeypatch.setattr(store._session, "get", lambda url, timeout: next(replies))
+    monkeypatch.setattr(store.time, "sleep", lambda seconds: None)
+    assert store.fetch("https://example.org/vol.zarr/0/0/0/0") == b"abcd"
+    assert store.fetch("https://example.org/vol.zarr/0/0/0/0") == b"abcd"

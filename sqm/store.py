@@ -29,9 +29,18 @@ def _cache_path(url):
     return CACHE_ROOT / "chunks" / key
 
 
+def _complete(response):
+    if not response.content:
+        return False
+    expected = response.headers.get("Content-Length")
+    if expected is None or response.headers.get("Content-Encoding"):
+        return True
+    return int(expected) == len(response.content)
+
+
 def fetch(url):
     path = _cache_path(url)
-    if path.exists():
+    if path.exists() and path.stat().st_size > 0:
         return path.read_bytes()
     for attempt in range(6):
         try:
@@ -40,13 +49,15 @@ def fetch(url):
                 return None
             if response.status_code < 500 and response.status_code != 429:
                 response.raise_for_status()
-                break
+                if _complete(response):
+                    break
         except requests.RequestException:
             if attempt == 5:
                 raise
         time.sleep(2 ** attempt)
     else:
         response.raise_for_status()
+        raise OSError(f"incomplete download after 6 attempts: {url}")
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.parent / f"{path.name}.{os.getpid()}.{threading.get_ident()}.part"
     _writes[0] += 1
