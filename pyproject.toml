@@ -13,6 +13,7 @@ dependencies = ["numpy", "scipy", "requests", "pillow", "numcodecs", "tifffile",
 
 [project.optional-dependencies]
 test = ["pytest"]
+ink = ["torch", "timesformer-pytorch==0.4.1", "safetensors"]
 
 [project.scripts]
 sqm = "sqm.cli:main"

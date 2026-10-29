@@ -115,7 +115,7 @@ Where the score is wrong:
 - Agreement is low everywhere (median r 0.11): the 7.91 um scan is hard for ink detection, and the 2.4 um map is itself a model prediction, not ground truth.
 - The first ink model I tried, reader v3 (`domenicor046/reader-v3`), does not transfer to this scan and finds blobs even in the clearest crops. With it, the pooled Spearman is 0.06 (95% CI minus 0.07 to 0.21), although within crops it is still 0.15 (95% CI 0.05 to 0.24). How much SQM can tell you about ink depends on whether the ink model works on that scan at all.
 
-Reproduce on a GPU machine with VC3D: `scripts/paris4_ink.sh` (set `MODEL=reader3` for the reader v3 run).
+Reproduce on a GPU machine with VC3D: `pip install .[ink]`, then `scripts/paris4_ink.sh` (set `MODEL=reader3` for the reader v3 run, which needs villa `vesuvius` instead).
 
 ## Atlas of the First Letters scrolls
 
