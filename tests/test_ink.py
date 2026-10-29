@@ -50,6 +50,22 @@ def test_summary_detects_a_score_that_tracks_agreement():
     assert s["median_agreement_highest_fifth"] > s["median_agreement_lowest_fifth"]
 
 
+def test_within_crop_spearman_ignores_offsets_between_crops():
+    rng = np.random.default_rng(2)
+    rows = []
+    for c in range(6):
+        for t in range(30):
+            q = rng.random()
+            rows.append({"crop": f"c{c}", "windings": [c], "quality": q + c, "reference_coverage": 1.0, "reference_text": 0.2,
+                         "front_agreement": q - 2 * c + 0.1 * rng.standard_normal()})
+    s = ink.summarize(rows, "front", 200, 0)
+    assert s["spearman_quality_agreement"] < 0
+    assert s["within_crop_spearman"] > 0.9
+    assert s["within_crop_ci95"][0] > 0.8
+    assert s["crops_with_positive_spearman"] == "6 of 6"
+    assert s["between_crop_spearman_of_medians"] < -0.9
+
+
 def test_central_band_picks_the_middle_of_a_plateau():
     coverage = np.concatenate([np.zeros(10), np.ones(50), np.zeros(10)])
     assert ink.central_band(coverage, 10) == 30

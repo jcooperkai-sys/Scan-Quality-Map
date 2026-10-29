@@ -157,6 +157,15 @@ def eligible(rows, side):
             and r["reference_coverage"] >= MIN_REFERENCE_COVERAGE and r["reference_text"] >= MIN_REFERENCE_TEXT]
 
 
+def within_crop_spearman(quality, agreement, groups):
+    quality_centred = quality.astype(np.float64).copy()
+    agreement_centred = agreement.astype(np.float64).copy()
+    for group in groups:
+        quality_centred[group] -= quality[group].mean()
+        agreement_centred[group] -= agreement[group].mean()
+    return float(spearmanr(quality_centred, agreement_centred)[0])
+
+
 def summarize(rows, side, resamples, seed):
     tiles = eligible(rows, side)
     quality = np.array([r["quality"] for r in tiles])
@@ -168,24 +177,36 @@ def summarize(rows, side, resamples, seed):
     rng = np.random.default_rng(seed)
     unique = np.unique(crop_names)
     members = {name: np.flatnonzero(crop_names == name) for name in unique}
-    boot_rho, boot_auc = [], []
+    within = within_crop_spearman(quality, agreement, members.values())
+    boot_rho, boot_auc, boot_within = [], [], []
     for _ in range(resamples):
-        pick = np.concatenate([members[name] for name in rng.choice(unique, len(unique))])
+        chosen = rng.choice(unique, len(unique))
+        pick = np.concatenate([members[name] for name in chosen])
         if len(np.unique(quality[pick])) < 3:
             continue
         boot_rho.append(spearmanr(quality[pick], agreement[pick])[0])
         cut = agreement[pick] <= np.percentile(agreement[pick], 100 / 3)
         boot_auc.append(auc(-quality[pick], cut))
+        offsets = np.cumsum([0] + [len(members[name]) for name in chosen])
+        boot_within.append(within_crop_spearman(quality[pick], agreement[pick],
+                                                [np.arange(a, b) for a, b in zip(offsets[:-1], offsets[1:])]))
+    crop_rhos = {name: float(spearmanr(quality[idx], agreement[idx])[0]) for name, idx in members.items() if len(idx) >= 10}
     fifths = np.percentile(quality, [20, 80])
     per_crop = []
     for name in unique:
         idx = members[name]
         per_crop.append({"crop": name, "windings": tiles[idx[0]]["windings"], "tiles": int(len(idx)),
-                         "median_quality": float(np.median(quality[idx])), "median_agreement": float(np.median(agreement[idx]))})
+                         "median_quality": float(np.median(quality[idx])), "median_agreement": float(np.median(agreement[idx])),
+                         "spearman": crop_rhos.get(name)})
+    medians = np.array([[np.median(quality[idx]), np.median(agreement[idx])] for idx in members.values()])
     return {
         "side": side, "tiles": int(len(tiles)), "crops": int(len(unique)),
         "spearman_quality_agreement": rho, "spearman_ci95": [float(np.nanpercentile(boot_rho, 2.5)), float(np.nanpercentile(boot_rho, 97.5))],
         "auc_low_quality_worst_third": worst_auc, "auc_ci95": [float(np.nanpercentile(boot_auc, 2.5)), float(np.nanpercentile(boot_auc, 97.5))],
+        "within_crop_spearman": within,
+        "within_crop_ci95": [float(np.nanpercentile(boot_within, 2.5)), float(np.nanpercentile(boot_within, 97.5))],
+        "crops_with_positive_spearman": f"{sum(v > 0 for v in crop_rhos.values())} of {len(crop_rhos)}",
+        "between_crop_spearman_of_medians": float(spearmanr(medians[:, 0], medians[:, 1])[0]),
         "median_agreement_lowest_fifth": float(np.median(agreement[quality <= fifths[0]])),
         "median_agreement_highest_fifth": float(np.median(agreement[quality >= fifths[1]])),
         "median_agreement_all": float(np.median(agreement)),
@@ -242,7 +263,9 @@ def compare(args):
     print(f"text side {side}: {s['tiles']} tiles in {s['crops']} crops, Spearman {s['spearman_quality_agreement']:.3f} "
           f"(95% CI {s['spearman_ci95'][0]:.2f} to {s['spearman_ci95'][1]:.2f}), AUC worst third {s['auc_low_quality_worst_third']:.3f} "
           f"(95% CI {s['auc_ci95'][0]:.2f} to {s['auc_ci95'][1]:.2f}), median agreement lowest fifth "
-          f"{s['median_agreement_lowest_fifth']:.3f}, highest fifth {s['median_agreement_highest_fifth']:.3f}")
+          f"{s['median_agreement_lowest_fifth']:.3f}, highest fifth {s['median_agreement_highest_fifth']:.3f}, within crop Spearman "
+          f"{s['within_crop_spearman']:.3f} (95% CI {s['within_crop_ci95'][0]:.2f} to {s['within_crop_ci95'][1]:.2f}, positive in "
+          f"{s['crops_with_positive_spearman']} crops), between crop {s['between_crop_spearman_of_medians']:.3f}")
 
 
 def main():
@@ -259,8 +282,8 @@ def main():
     cut.add_argument("--out", type=Path, required=True)
     test = commands.add_parser("compare", help="compare ink maps of the crops with the reference map, tile by tile")
     test.add_argument("--crops", type=Path, required=True)
-    test.add_argument("--front", default="maps/*__reader3__L66s25.tif")
-    test.add_argument("--back", default="maps/*__reader3__L66s25_reverse.tif")
+    test.add_argument("--front", default="maps/*__gp__L66s17.tif")
+    test.add_argument("--back", default="maps/*__gp__L66s17_reverse.tif")
     test.add_argument("--resamples", type=int, default=2000)
     test.add_argument("--seed", type=int, default=11)
     test.add_argument("--out", type=Path, required=True)

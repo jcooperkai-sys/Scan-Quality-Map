@@ -89,6 +89,34 @@ I applied the frozen model unchanged to two more scrolls that have hand labels a
 
 Both scans resolve almost all of the labelled sheets (medians near 100%), because annotators tend to label where the papyrus is clear. That leaves little haze to find in these tests, so they are weaker than the Paris 4 test.
 
+### Does a low score mean ink detection fails there?
+
+The tests above check sheets. This one checks ink. The Vesuvius Challenge team fitted a spiral segment through the whole of Paris 4 in the 2.4 um scan and ran ink detection on it (`PHercParis4/segments/20260926044226-spiral-output-generation-19`). I moved that segment into the 7.91 um scan with the catalogue transform, cut 14 crops spread evenly from the outer to the inner windings, rendered each one from the 7.91 um scan, and ran the 2023 Grand Prize ink model on the renders (`scrollprize/timesformer_GP_scroll1`, Youssef Nader, MIT). For every tile of about 6.7 by 6.7 mm, I correlated that ink map with the 2.4 um ink map and compared the result with the SQM score of the same tile. The measure, tile rules and statistics were fixed before the first result: tiles need at least half their area covered by the reference and at least 5% of it marked as ink, and confidence intervals resample whole crops.
+
+![SQM quality against ink agreement on 442 tiles](docs/ink_agreement.png)
+
+| 442 tiles in 14 crops | Grand Prize model |
+|---|---|
+| Spearman, SQM quality against ink agreement | 0.22 (95% CI 0.06 to 0.37) |
+| Finding the worst third of tiles by agreement (AUC) | 0.58 (95% CI 0.51 to 0.68) |
+| Median agreement in the fifth of tiles SQM rates lowest | 0.08 |
+| Median agreement in the fifth of tiles SQM rates highest | 0.13 |
+| Spearman within crops (each crop centred) | 0.18 (95% CI 0.07 to 0.28), positive in 9 of 12 crops |
+| Spearman between crop medians | 0.06 |
+
+The effect is modest and it is local. Inside one crop, tiles that SQM rates lower agree less with the 2.4 um ink, but the median score of a crop says almost nothing about its median agreement. Use the map to find where ink detection will be weakest within a region, not to rank distant regions against each other.
+
+The result holds up under a few changes I tried after the fact: shifting the reference by the 2 to 3 pixel offset I measured between the two maps (Spearman 0.17), and smoothing both maps to letter scale (0.21 at 1.5 pixels, 0.21 at 3 pixels). Smoothing raises the agreement itself from 0.11 to 0.23 but not the link with the score.
+
+Where the score is wrong:
+
+- Crops c09 and c10 (windings 75 to 76 and 66) have some of the highest scores of the test (median 0.83) but low agreement (0.07 and 0.09). The layers there look clean, so SQM rates them well, yet the ink model finds little. Crop c12, scored about the same, has the best agreement (0.29). Something other than scan clarity limits ink detection in c09 and c10, and SQM cannot see it.
+- In 3 of 12 crops (c02, c11, c12) the score runs the wrong way within the crop (Spearman about minus 0.2). Two of them have a narrow range of scores (0.5 to 0.9), where small differences in quality matter less than the text itself.
+- Agreement is low everywhere (median r 0.11): the 7.91 um scan is hard for ink detection, and the 2.4 um map is itself a model prediction, not ground truth.
+- The first ink model I tried, reader v3 (`domenicor046/reader-v3`), does not transfer to this scan and finds blobs even in the clearest crops. With it, the pooled Spearman is 0.06 (95% CI minus 0.07 to 0.21), although within crops it is still 0.15 (95% CI 0.05 to 0.24). How much SQM can tell you about ink depends on whether the ink model works on that scan at all.
+
+Reproduce on a GPU machine with VC3D: `scripts/paris4_ink.sh` (set `MODEL=reader3` for the reader v3 run).
+
 ## Atlas of the First Letters scrolls
 
 `sqm atlas` mapped all 22 scrolls still eligible for a First Letters prize on a coarse grid (one block every 6.6 mm, about 12,500 blocks in total). The table ranks scrolls within each scan protocol and gives the height band where each scroll's scan is clearest. Height profiles for every scroll: `docs/atlas_profiles.png`. Raw numbers: `docs/atlas.json`.
@@ -160,6 +188,7 @@ In August 2026, Lutfiya Miller and Chris Müller ran the published First Letters
 ## Limits
 
 - SQM measures whether the scan resolves the layers. Inside the 2.4 um Paris 4 scan it does not predict where surface prediction models disagree with hand labels: held out AUC 0.53 for the recto model and 0.54 for the m7 model, which is chance level.
+- On the 7.91 um Paris 4 scan, lower scores go with weaker ink detection inside a region (within crop Spearman 0.18), but the score does not rank regions far apart by how well ink detection will work there.
 - I fitted the model on one scan (Paris 4 at 7.91 um). On very different scanners or energies, read the scores as a ranking within that scan.
 - On the PHerc. 343 First Letters segment, patches with letters score a median of 0.69 against 0.64 for the rest of the segment, and the segment's blocks in the band map score a median of 0.63 against 0.51 for the whole band. This is one example, picked after the fact, so treat it as an illustration.
 - Block size sets the resolution of the map, about 0.8 mm per block. The atlas uses a coarser grid (6.6 mm) to cover whole scrolls.
@@ -177,6 +206,8 @@ In August 2026, Lutfiya Miller and Chris Müller ran the published First Letters
 ## Data
 
 Data from the EduceLab Scrolls dataset, via the Vesuvius Challenge: Parsons, S., Parker, C. S., Chapman, C., Hayashida, M., and Seales, W. B. (2023). EduceLab Scrolls: Verifiable Recovery of Text from Herculaneum Papyri using X ray CT. arXiv:2304.02084. Data used in this work were obtained from the EduceLab Scrolls dataset. No scan data is included in this repository.
+
+The ink test uses the Paris 4 spiral segment and its 2.4 um ink map published by the Vesuvius Challenge, the 2023 Grand Prize TimeSformer ink model by Youssef Nader (huggingface.co/scrollprize/timesformer_GP_scroll1, MIT) and reader v3 (huggingface.co/domenicor046/reader-v3, MIT). Renders use VC3D from ScrollPrize/villa. Weights are downloaded and checked by SHA256, never stored here.
 
 The PHerc. 343 example uses the published First Letters segment by Erwin Nieuwlaar (github.com/Nieuwlaar/pherc343-first-letters, MIT).
 
